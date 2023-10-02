@@ -1,0 +1,280 @@
+Microchip MPLAB XC8 PIC(R) Assembler V2.40
+
+Linker command line:
+
+-W-3 \
+  --edf=C:\Program Files\Microchip\xc8\v2.40\pic\dat\20220703182018_en.msgs \
+  -cs -h+dist/default/production\MOTOR_PIC1947_V2.00.production.sym \
+  --cmf=dist/default/production\MOTOR_PIC1947_V2.00.production.cmf -z \
+  -Q16F1947 -oC:\Users\Peter\AppData\Local\Temp\xcAsgjo.4 -pmain=0h \
+  -ptool=0D00h --fixupoverflow=error -ver=XC8 PIC(R) Assembler \
+  --fixupoverflow=lstwarn \
+  -Mdist/default/production/MOTOR_PIC1947_V2.00.production.map -E1 \
+  --acfsm=1493 -ACODE=00h-07FFhx8 -ASTRCODE=00h-03FFFh -ASTRING=00h-0FFhx64 \
+  -ACONST=00h-0FFhx64 -AENTRY=00h-0FFhx64 -ACOMMON=070h-07Fh \
+  -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0120h-016Fh \
+  -ABANK3=01A0h-01EFh -ABANK4=0220h-026Fh -ABANK5=02A0h-02EFh \
+  -ABANK6=0320h-036Fh -ABANK7=03A0h-03EFh -ABANK8=0420h-046Fh \
+  -ABANK9=04A0h-04EFh -ABANK10=0520h-056Fh -ABANK11=05A0h-05EFh \
+  -ABANK12=0620h-064Fh -ABIGRAM=02000h-023EFh \
+  -ARAM=020h-06Fh,0A0h-0EFh,0120h-016Fh,01A0h-01EFh,0220h-026Fh,02A0h-02EFh,0320h-036Fh,03A0h-03EFh,0420h-046Fh,04A0h-04EFh,0520h-056Fh,05A0h-05EFh,0620h-064Fh \
+  -AABS1=020h-07Fh,0A0h-0EFh,0120h-016Fh,01A0h-01EFh,0220h-026Fh,02A0h-02EFh,0320h-036Fh,03A0h-03EFh,0420h-046Fh,04A0h-04EFh,0520h-056Fh,05A0h-05EFh,0620h-064Fh \
+  -ASFR0=00h-01Fh -ASFR1=080h-09Fh -ASFR2=0100h-011Fh -ASFR3=0180h-019Fh \
+  -ASFR4=0200h-021Fh -ASFR5=0280h-029Fh -ASFR6=0300h-031Fh \
+  -ASFR7=0380h-039Fh -ASFR8=0400h-041Fh -ASFR9=0480h-049Fh \
+  -ASFR10=0500h-051Fh -ASFR11=0580h-059Fh -ASFR12=0600h-061Fh \
+  -ASFR13=0680h-06EFh -ASFR14=0700h-076Fh -ASFR15=0780h-07EFh \
+  -ASFR16=0800h-086Fh -ASFR17=0880h-08EFh -ASFR18=0900h-096Fh \
+  -ASFR19=0980h-09EFh -ASFR20=0A00h-0A6Fh -ASFR21=0A80h-0AEFh \
+  -ASFR22=0B00h-0B6Fh -ASFR23=0B80h-0BEFh -ASFR24=0C00h-0C6Fh \
+  -ASFR25=0C80h-0CEFh -ASFR26=0D00h-0D6Fh -ASFR27=0D80h-0DEFh \
+  -ASFR28=0E00h-0E6Fh -ASFR29=0E80h-0EEFh -ASFR30=0F00h-0F6Fh \
+  -ASFR31=0F80h-0FEFh -ACONFIG=08007h-08008h -DCONFIG=2 \
+  -AIDLOC=08000h-08003h -DIDLOC=2 -AEEDATA=00h-0FFh/0F000h -DEEDATA=2 \
+  -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
+  build/default/production/modbus-rtu.o \
+  build/default/production/MOTOR_1947_V2.00.o 
+
+Object code version is 3.11
+
+Machine type is 16F1947
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+build/default/production/modbus-rtu.o
+                tool                                D00      D00       4B     1A00       0
+                config                             8007     8007        2        0       4
+build/default/production/MOTOR_1947_V2.00.o
+                config                             8007     8007        2        0       4
+                main                                  0        0      7B5        0       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   CODE           
+                tool                                D00      D00       4B         0
+                main                                  0        0      7B5         0
+
+        CLASS   STRCODE        
+
+        CLASS   STRING         
+
+        CLASS   CONST          
+
+        CLASS   ENTRY          
+
+        CLASS   COMMON         
+
+        CLASS   BANK0          
+
+        CLASS   BANK1          
+
+        CLASS   BANK2          
+
+        CLASS   BANK3          
+
+        CLASS   BANK4          
+
+        CLASS   BANK5          
+
+        CLASS   BANK6          
+
+        CLASS   BANK7          
+
+        CLASS   BANK8          
+
+        CLASS   BANK9          
+
+        CLASS   BANK10         
+
+        CLASS   BANK11         
+
+        CLASS   BANK12         
+
+        CLASS   BIGRAM         
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   SFR2           
+
+        CLASS   SFR3           
+
+        CLASS   SFR4           
+
+        CLASS   SFR5           
+
+        CLASS   SFR6           
+
+        CLASS   SFR7           
+
+        CLASS   SFR8           
+
+        CLASS   SFR9           
+
+        CLASS   SFR10          
+
+        CLASS   SFR11          
+
+        CLASS   SFR12          
+
+        CLASS   SFR13          
+
+        CLASS   SFR14          
+
+        CLASS   SFR15          
+
+        CLASS   SFR16          
+
+        CLASS   SFR17          
+
+        CLASS   SFR18          
+
+        CLASS   SFR19          
+
+        CLASS   SFR20          
+
+        CLASS   SFR21          
+
+        CLASS   SFR22          
+
+        CLASS   SFR23          
+
+        CLASS   SFR24          
+
+        CLASS   SFR25          
+
+        CLASS   SFR26          
+
+        CLASS   SFR27          
+
+        CLASS   SFR28          
+
+        CLASS   SFR29          
+
+        CLASS   SFR30          
+
+        CLASS   SFR31          
+
+        CLASS   CONFIG         
+                config                             8007     8007        2         4
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                main                           000000  0007B5  0007B5         0       0  CODE        2
+                tool                           000D00  00004B  000D4B      1A00       0  CODE        2
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            00020-0006F              50           1
+        BANK1            000A0-000EF              50           1
+        BANK10           00520-0056F              50           1
+        BANK11           005A0-005EF              50           1
+        BANK12           00620-0064F              30           1
+        BANK2            00120-0016F              50           1
+        BANK3            001A0-001EF              50           1
+        BANK4            00220-0026F              50           1
+        BANK5            002A0-002EF              50           1
+        BANK6            00320-0036F              50           1
+        BANK7            003A0-003EF              50           1
+        BANK8            00420-0046F              50           1
+        BANK9            004A0-004EF              50           1
+        BIGRAM           02000-023EF             3F0           1
+        CODE             007B5-00CFF              4B           2
+                         00D4B-03FFF             800
+        COMMON           00070-0007F              10           1
+        CONST            007B5-00CFF             100           2
+                         00D4B-03FFF             100
+        EEDATA           0F000-0F0FF             100           2
+        ENTRY            007B5-00CFF             100           2
+                         00D4B-03FFF             100
+        IDLOC            08000-08003               4           2
+        RAM              00020-0006F              50           1
+                         000A0-000EF              50
+                         00120-0016F              50
+                         001A0-001EF              50
+                         00220-0026F              50
+                         002A0-002EF              50
+                         00320-0036F              50
+                         003A0-003EF              50
+                         00420-0046F              50
+                         004A0-004EF              50
+                         00520-0056F              50
+                         005A0-005EF              50
+                         00620-0064F              30
+        SFR30            00F6A-00F6F               6           1
+        SFR31            00F80-00FEF              70           1
+        STRCODE          007B5-00CFF             54B           2
+                         00D4B-03FFF            32B5
+        STRING           007B5-00CFF             100           2
+                         00D4B-03FFF             100
+
+                                  Symbol Table
+
+MODBUS_INTPUT_FUNCTION tool         00D1F
+SET_MODBUS_MODE_ENABLE tool         00D08
+__Hcode                code         01A96
+__Hconfig              config       08009
+__Hdata                data         01A96
+__Hedata               edata        01A96
+__Hmain                main         007B5
+__Hspace_0             (abs)        01A96
+__Hspace_1             (abs)        00000
+__Hspace_3             (abs)        00000
+__Hspace_4             (abs)        10010
+__Htool                tool         00D4B
+__Hudata               udata        01A96
+__Hudata_bank0         udata_bank0  01A96
+__Hudata_bank1         udata_bank1  01A96
+__Hudata_bank10        udata_bank10 01A96
+__Hudata_bank11        udata_bank11 01A96
+__Hudata_bank12        udata_bank12 01A96
+__Hudata_bank2         udata_bank2  01A96
+__Hudata_bank3         udata_bank3  01A96
+__Hudata_bank4         udata_bank4  01A96
+__Hudata_bank5         udata_bank5  01A96
+__Hudata_bank6         udata_bank6  01A96
+__Hudata_bank7         udata_bank7  01A96
+__Hudata_bank8         udata_bank8  01A96
+__Hudata_bank9         udata_bank9  01A96
+__Hudata_shr           udata_shr    01A96
+__Lcode                code         01A96
+__Lconfig              config       00000
+__Ldata                data         01A96
+__Ledata               edata        01A96
+__Lmain                main         00000
+__Lspace_0             (abs)        00000
+__Lspace_1             (abs)        00000
+__Lspace_3             (abs)        00000
+__Lspace_4             (abs)        00000
+__Ltool                tool         00D00
+__Ludata               udata        01A96
+__Ludata_bank0         udata_bank0  01A96
+__Ludata_bank1         udata_bank1  01A96
+__Ludata_bank10        udata_bank10 01A96
+__Ludata_bank11        udata_bank11 01A96
+__Ludata_bank12        udata_bank12 01A96
+__Ludata_bank2         udata_bank2  01A96
+__Ludata_bank3         udata_bank3  01A96
+__Ludata_bank4         udata_bank4  01A96
+__Ludata_bank5         udata_bank5  01A96
+__Ludata_bank6         udata_bank6  01A96
+__Ludata_bank7         udata_bank7  01A96
+__Ludata_bank8         udata_bank8  01A96
+__Ludata_bank9         udata_bank9  01A96
+__Ludata_shr           udata_shr    01A96
+__S0                   (abs)        00000
+__S1                   (abs)        00000
+__S3                   (abs)        00000

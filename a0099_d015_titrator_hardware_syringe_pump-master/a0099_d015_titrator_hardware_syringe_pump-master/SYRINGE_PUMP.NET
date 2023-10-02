@@ -1,0 +1,7856 @@
+PROTEL NETLIST 2.0
+[
+DESIGNATOR
+C1
+FOOTPRINT
+0603C-A1
+PARTTYPE
+N_100nF_50V
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+C10
+FOOTPRINT
+0603C-A1
+PARTTYPE
+100nF_50V
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+C11
+FOOTPRINT
+0603C-A1
+PARTTYPE
+100nF_50V
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+C12
+FOOTPRINT
+0805C-A1
+PARTTYPE
+10uF
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+C13
+FOOTPRINT
+0603C-A1
+PARTTYPE
+1nF_50V
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+C14
+FOOTPRINT
+0603C-A1
+PARTTYPE
+100pF_50V
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+C15
+FOOTPRINT
+0603C-A1
+PARTTYPE
+100nF_50V
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+C16
+FOOTPRINT
+SCAP-EC-P630I-A1
+PARTTYPE
+47uF_50V
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+C17
+FOOTPRINT
+SCAP-EC-P630I-A1
+PARTTYPE
+47uF_50V
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+C2
+FOOTPRINT
+0603C-A1
+PARTTYPE
+N_1uF_25V
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+C3
+FOOTPRINT
+SCAP-EC-P630I-A1
+PARTTYPE
+47uF_50V
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+C4
+FOOTPRINT
+SCAP-EC-P850I-A1
+PARTTYPE
+100uF_50V
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+C5
+FOOTPRINT
+0603C-A1
+PARTTYPE
+100nF_50V
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+C6
+FOOTPRINT
+0603C-A1
+PARTTYPE
+100nF_50V
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+C7
+FOOTPRINT
+0805C-A1
+PARTTYPE
+10uF
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+C8
+FOOTPRINT
+0603C-A1
+PARTTYPE
+1nF_50V
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+C9
+FOOTPRINT
+0603C-A1
+PARTTYPE
+100pF_50V
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+D1
+FOOTPRINT
+DO214AC-A1
+PARTTYPE
+SS34
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+D2
+FOOTPRINT
+DO214AC-A1
+PARTTYPE
+SS34
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+D3
+FOOTPRINT
+0603D-A1
+PARTTYPE
+LED_G
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+D4
+FOOTPRINT
+0603D-A1
+PARTTYPE
+LED_R
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+D5
+FOOTPRINT
+0603D-A1
+PARTTYPE
+LED_G
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+D6
+FOOTPRINT
+0603D-A1
+PARTTYPE
+LED_R
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+D7
+FOOTPRINT
+0603D-A1
+PARTTYPE
+LED_G
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+D8
+FOOTPRINT
+DO214AC-A1
+PARTTYPE
+SS34
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+DPS1
+FOOTPRINT
+SDIPSW254-4P
+PARTTYPE
+DIP-SWITCH-4
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+DPS2
+FOOTPRINT
+SDIPSW254-4P
+PARTTYPE
+DIP-SWITCH-4
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+DPS4
+FOOTPRINT
+SDIPSW254-4P
+PARTTYPE
+DIP-SWITCH-4
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+DPS5
+FOOTPRINT
+SDIPSW254-4P
+PARTTYPE
+DIP-SWITCH-4
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+F1
+FOOTPRINT
+1206R-B1
+PARTTYPE
+24V_1A
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+F2
+FOOTPRINT
+1206R-B1
+PARTTYPE
+24V_1A
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+J1
+FOOTPRINT
+GX16-90
+PARTTYPE
+GX16-5PL
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+J11
+FOOTPRINT
+XH250-4PI
+PARTTYPE
+XH250-4PI
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+J12
+FOOTPRINT
+XH250-4PI
+PARTTYPE
+XH250-4PI
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+J13
+FOOTPRINT
+XH250-3PI
+PARTTYPE
+XH-3P
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+J2
+FOOTPRINT
+GX16-90
+PARTTYPE
+GX16-5PL
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+J3
+FOOTPRINT
+XH250-5PI
+PARTTYPE
+XH-5PI
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+J4
+FOOTPRINT
+XH250-6PI
+PARTTYPE
+XH-6PI
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+J7
+FOOTPRINT
+MICROCHIP-B
+PARTTYPE
+MicroChip Debug
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+J8
+FOOTPRINT
+XH250-3PI
+PARTTYPE
+XH-3P
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+J9
+FOOTPRINT
+HEADER254-8PI
+PARTTYPE
+HEADER254-8PI
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+L1
+FOOTPRINT
+SIND-PW-P1200-B1A
+PARTTYPE
+47uH
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+L2
+FOOTPRINT
+SIND-PW-P400-B1
+PARTTYPE
+4.7uH
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+Q1
+FOOTPRINT
+SOT23-B1
+PARTTYPE
+MMBT3906
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+Q2
+FOOTPRINT
+SOT23-B1
+PARTTYPE
+MMBT3906
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+Q3
+FOOTPRINT
+SOT23-B1
+PARTTYPE
+MMBT3906
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+Q4
+FOOTPRINT
+SOT23-B1
+PARTTYPE
+AO3401
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+Q5
+FOOTPRINT
+SOT23-B1
+PARTTYPE
+2N7002
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+Q6
+FOOTPRINT
+SOT23-B1
+PARTTYPE
+A03401
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+Q7
+FOOTPRINT
+SOT23-B1
+PARTTYPE
+2N7002
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+Q8
+FOOTPRINT
+SOT23-B1
+PARTTYPE
+2N7002
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+Q9
+FOOTPRINT
+TO252-B2
+PARTTYPE
+STP10P6F6
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R1
+FOOTPRINT
+1206R-A1
+PARTTYPE
+0R
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R10
+FOOTPRINT
+0603R-A1
+PARTTYPE
+5K1
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R11
+FOOTPRINT
+0603R-A1
+PARTTYPE
+220R
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R12
+FOOTPRINT
+0603R-A1
+PARTTYPE
+5K1
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R13
+FOOTPRINT
+0603R-A1
+PARTTYPE
+1K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R14
+FOOTPRINT
+0603R-A1
+PARTTYPE
+1K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R15
+FOOTPRINT
+0603R-A1
+PARTTYPE
+N_0R
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R16
+FOOTPRINT
+0603R-A1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R17
+FOOTPRINT
+0603R-A1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R19
+FOOTPRINT
+0603R-A1
+PARTTYPE
+220R
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R2
+FOOTPRINT
+0603R-A1
+PARTTYPE
+9K1
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R20
+FOOTPRINT
+0603R-A1
+PARTTYPE
+5K1
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R22
+FOOTPRINT
+0603R-A1
+PARTTYPE
+1K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R24
+FOOTPRINT
+0603R-A1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R26
+FOOTPRINT
+2512R-A1
+PARTTYPE
+0R22
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R27
+FOOTPRINT
+2512R-A1
+PARTTYPE
+0R22
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R28
+FOOTPRINT
+0603R-A1
+PARTTYPE
+47K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R3
+FOOTPRINT
+0603R-A1
+PARTTYPE
+1K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R32
+FOOTPRINT
+0603R-A1
+PARTTYPE
+N_0R
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R33
+FOOTPRINT
+0603R-A1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R35
+FOOTPRINT
+0603R-A1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R36
+FOOTPRINT
+0603R-A1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R41
+FOOTPRINT
+2512R-A1
+PARTTYPE
+0R22
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R42
+FOOTPRINT
+2512R-A1
+PARTTYPE
+0R22
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R44
+FOOTPRINT
+0603R-A1
+PARTTYPE
+47K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R47
+FOOTPRINT
+0603R-A1
+PARTTYPE
+N_0R
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R48
+FOOTPRINT
+0603R-A1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R50
+FOOTPRINT
+0603R-A1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R51
+FOOTPRINT
+0603R-A1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R53
+FOOTPRINT
+4P8R0603-B1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R56
+FOOTPRINT
+0603R-A1
+PARTTYPE
+10K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R57
+FOOTPRINT
+0603R-A1
+PARTTYPE
+10K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R58
+FOOTPRINT
+0603R-A1
+PARTTYPE
+10K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R59
+FOOTPRINT
+0603R-A1
+PARTTYPE
+10K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R6
+FOOTPRINT
+0603R-A1
+PARTTYPE
+N_0R
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R60
+FOOTPRINT
+0603R-A1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R61
+FOOTPRINT
+0603R-A1
+PARTTYPE
+N_0R
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R62
+FOOTPRINT
+0603R-A1
+PARTTYPE
+N_0R
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R64
+FOOTPRINT
+0603R-A1
+PARTTYPE
+N_0R
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R68
+FOOTPRINT
+0603R-A1
+PARTTYPE
+N_0R
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R69
+FOOTPRINT
+0603R-A1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R7
+FOOTPRINT
+0603R-A1
+PARTTYPE
+N_0R
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R70
+FOOTPRINT
+4P8R0603-B1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R71
+FOOTPRINT
+4P8R0603-B1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R72
+FOOTPRINT
+0603R-A1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R73
+FOOTPRINT
+0603R-A1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R74
+FOOTPRINT
+0603R-A1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R75
+FOOTPRINT
+0603R-A1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R76
+FOOTPRINT
+4P8R0603-B1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R77
+FOOTPRINT
+4P8R0603-B1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R78
+FOOTPRINT
+4P8R0603-B1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R79
+FOOTPRINT
+1206R-A1
+PARTTYPE
+N_0R
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R8
+FOOTPRINT
+0603R-A1
+PARTTYPE
+2K
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R80
+FOOTPRINT
+0603R-A1
+PARTTYPE
+4K7
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R81
+FOOTPRINT
+0603R-A1
+PARTTYPE
+4K7
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+R9
+FOOTPRINT
+0603R-A1
+PARTTYPE
+220R
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+RT1
+FOOTPRINT
+1206R-B1
+PARTTYPE
+FUSE PPTC
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+RT2
+FOOTPRINT
+1206R-B1
+PARTTYPE
+FUSE PPTC
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+TVS1
+FOOTPRINT
+DO214AC-A1
+PARTTYPE
+SMAJ6.5CA
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+TVS2
+FOOTPRINT
+DO214AC-A1
+PARTTYPE
+SMAJ6.5CA
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+U1
+FOOTPRINT
+SOT89P-B2
+PARTTYPE
+N_78L05
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+U2
+FOOTPRINT
+TO263-5-B2
+PARTTYPE
+LM2596
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+U3
+FOOTPRINT
+SOIC8A-P127-B1
+PARTTYPE
+MAX485
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+U4
+FOOTPRINT
+TQFP64-P050-B1
+PARTTYPE
+PIC16F1947-I/PT
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+U5
+FOOTPRINT
+GP1S56
+PARTTYPE
+GP1S56
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+U6
+FOOTPRINT
+GP1S56
+PARTTYPE
+GP1S56
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+U7
+FOOTPRINT
+LV8728
+PARTTYPE
+LV8728
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+U8
+FOOTPRINT
+LV8728
+PARTTYPE
+LV8728
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+[
+DESIGNATOR
+U9
+FOOTPRINT
+TO220-P254L-A1
+PARTTYPE
+L7805
+DESCRIPTION
+
+Part Field 1
+*
+Part Field 2
+*
+Part Field 3
+*
+Part Field 4
+*
+Part Field 5
+*
+Part Field 6
+*
+Part Field 7
+*
+Part Field 8
+*
+Part Field 9
+*
+Part Field 10
+*
+Part Field 11
+*
+Part Field 12
+*
+Part Field 13
+*
+Part Field 14
+*
+Part Field 15
+*
+Part Field 16
+*
+LIBRARYFIELD1
+
+LIBRARYFIELD2
+
+LIBRARYFIELD3
+
+LIBRARYFIELD4
+
+LIBRARYFIELD5
+
+LIBRARYFIELD6
+
+LIBRARYFIELD7
+
+LIBRARYFIELD8
+
+]
+(
+485_D+
+J1-4 GX16-5PL-4 PASSIVE
+J2-4 GX16-5PL-4 PASSIVE
+J3-4 XH-5PI-4 PASSIVE
+RT1-2 FUSE PPTC-2 PASSIVE
+)
+(
+485_D-
+J1-5 GX16-5PL-5 PASSIVE
+J2-5 GX16-5PL-5 PASSIVE
+J3-5 XH-5PI-5 PASSIVE
+RT2-2 FUSE PPTC-2 PASSIVE
+)
+(
+ADDSEL_0
+U4-58 PIC16F1947-I/PT-RD0/P2D PASSIVE
+DPS4-1 DIP-SWITCH-4-1 PASSIVE
+R53-1 2K-R1-A PASSIVE
+)
+(
+ADDSEL_1
+U4-55 PIC16F1947-I/PT-RD1/P2C PASSIVE
+DPS4-2 DIP-SWITCH-4-2 PASSIVE
+R53-2 2K-R2-A PASSIVE
+)
+(
+ADDSEL_2
+U4-54 PIC16F1947-I/PT-RD2/P2B PASSIVE
+DPS4-3 DIP-SWITCH-4-3 PASSIVE
+R53-3 2K-R3-A PASSIVE
+)
+(
+ADDSEL_3
+U4-53 PIC16F1947-I/PT-RD3/P3C PASSIVE
+DPS4-4 DIP-SWITCH-4-4 PASSIVE
+R53-4 2K-R4-A PASSIVE
+)
+(
+ADDSEL_4
+U4-40 PIC16F1947-I/PT-RA6/OSC2/CLKOUT PASSIVE
+R78-1 2K-R1-A PASSIVE
+DPS5-1 DIP-SWITCH-4-1 PASSIVE
+)
+(
+ADDSEL_5
+U4-39 PIC16F1947-I/PT-RA7/OSC1/CLKIN PASSIVE
+R78-2 2K-R2-A PASSIVE
+DPS5-2 DIP-SWITCH-4-2 PASSIVE
+)
+(
+ADDSEL_6
+R74-1 2K-1 PASSIVE
+R78-3 2K-R3-A PASSIVE
+DPS5-3 DIP-SWITCH-4-3 PASSIVE
+)
+(
+ADDSEL_7
+R75-1 2K-1 PASSIVE
+R78-4 2K-R4-A PASSIVE
+DPS5-4 DIP-SWITCH-4-4 PASSIVE
+)
+(
+FREQ_SEL
+U4-8 PIC16F1947-I/PT-RG4/AN12/CPS12/C3IN1-/CCP5/P1D PASSIVE
+R81-1 4K7-1 PASSIVE
+R80-2 4K7-2 PASSIVE
+)
+(
+GND
+U5-2 GP1S56-Cathode PASSIVE
+U5-4 GP1S56-E PASSIVE
+J1-3 GX16-5PL-3 PASSIVE
+U3-5 MAX485-GND PASSIVE
+J8-3 XH-3P-3 PASSIVE
+J2-3 GX16-5PL-3 PASSIVE
+U4-25 PIC16F1947-I/PT-VSS1 PASSIVE
+U4-9 PIC16F1947-I/PT-VSS0 PASSIVE
+U4-56 PIC16F1947-I/PT-VSS3 PASSIVE
+U4-41 PIC16F1947-I/PT-VSS2 PASSIVE
+U4-20 PIC16F1947-I/PT-AVSS PASSIVE
+J7-5 MicroChip Debug-GND PASSIVE
+R1-2 0R-2 PASSIVE
+C3-2 47uF_50V-2 PASSIVE
+D3-1 LED_G-ANODE PASSIVE
+C5-1 100nF_50V-1 PASSIVE
+C4-2 100uF_50V-2 PASSIVE
+U2-3 LM2596-GND PASSIVE
+U2-5 LM2596-#ON/OFF PASSIVE
+D2-2 SS34-ANODE PASSIVE
+R3-2 1K-2 PASSIVE
+DPS4-5 DIP-SWITCH-4-5 PASSIVE
+DPS4-6 DIP-SWITCH-4-6 PASSIVE
+DPS4-7 DIP-SWITCH-4-7 PASSIVE
+DPS4-8 DIP-SWITCH-4-8 PASSIVE
+J3-3 XH-5PI-3 PASSIVE
+R16-2 2K-2 PASSIVE
+R24-2 2K-2 PASSIVE
+U6-2 GP1S56-Cathode PASSIVE
+U6-4 GP1S56-E PASSIVE
+R17-2 2K-2 PASSIVE
+J4-6 XH-6PI-6 PASSIVE
+R64-2 N_0R-2 PASSIVE
+U9-2 L7805-GND PASSIVE
+C1-2 N_100nF_50V-2 PASSIVE
+U1-2 N_78L05-GND PASSIVE
+C2-2 N_1uF_25V-2 PASSIVE
+Q8-2 2N7002-SOURCE PASSIVE
+R69-2 2K-2 PASSIVE
+TVS1-2 SMAJ6.5CA-ANODE PASSIVE
+TVS2-2 SMAJ6.5CA-ANODE PASSIVE
+R70-1 2K-R1-A PASSIVE
+R70-2 2K-R2-A PASSIVE
+R70-3 2K-R3-A PASSIVE
+R71-1 2K-R1-A PASSIVE
+R71-2 2K-R2-A PASSIVE
+R71-3 2K-R3-A PASSIVE
+J13-3 XH-3P-3 PASSIVE
+C16-2 47uF_50V-2 PASSIVE
+C17-2 47uF_50V-2 PASSIVE
+R76-8 2K-R1-B PASSIVE
+R76-7 2K-R2-B PASSIVE
+R76-6 2K-R3-B PASSIVE
+R76-5 2K-R4-B PASSIVE
+R77-8 2K-R1-B PASSIVE
+R77-7 2K-R2-B PASSIVE
+R77-6 2K-R3-B PASSIVE
+R77-5 2K-R4-B PASSIVE
+DPS5-5 DIP-SWITCH-4-5 PASSIVE
+DPS5-6 DIP-SWITCH-4-6 PASSIVE
+DPS5-7 DIP-SWITCH-4-7 PASSIVE
+DPS5-8 DIP-SWITCH-4-8 PASSIVE
+R81-2 4K7-2 PASSIVE
+R60-2 2K-2 PASSIVE
+)
+(
+GND_SIGNAL
+R1-1 0R-1 PASSIVE
+R27-1 0R22-1 PASSIVE
+R26-1 0R22-1 PASSIVE
+C7-2 10uF-2 PASSIVE
+U7-4 LV8728-PGND1 PASSIVE
+U7-12 LV8728-PGND2 PASSIVE
+U7-14 LV8728-GND PASSIVE
+U7-17 LV8728-DOWN PASSIVE
+U7-23 LV8728-GND PASSIVE
+C8-1 1nF_50V-1 PASSIVE
+C9-1 100pF_50V-1 PASSIVE
+C10-1 100nF_50V-1 PASSIVE
+R42-1 0R22-1 PASSIVE
+C13-1 1nF_50V-1 PASSIVE
+C12-2 10uF-2 PASSIVE
+R41-1 0R22-1 PASSIVE
+U8-4 LV8728-PGND1 PASSIVE
+U8-12 LV8728-PGND2 PASSIVE
+U8-14 LV8728-GND PASSIVE
+U8-17 LV8728-DOWN PASSIVE
+U8-23 LV8728-GND PASSIVE
+C14-1 100pF_50V-1 PASSIVE
+C15-1 100nF_50V-1 PASSIVE
+Q5-2 2N7002-SOURCE PASSIVE
+D4-1 LED_R-ANODE PASSIVE
+R35-2 2K-2 PASSIVE
+Q7-2 2N7002-SOURCE PASSIVE
+D6-1 LED_R-ANODE PASSIVE
+R50-2 2K-2 PASSIVE
+D7-1 LED_G-ANODE PASSIVE
+D5-1 LED_G-ANODE PASSIVE
+)
+(
+M1_BTN_LIMIT
+U4-1 PIC16F1947-I/PT-RE1/P2C PASSIVE
+R76-2 2K-R2-A PASSIVE
+)
+(
+M1_ENCODER
+U4-47 PIC16F1947-I/PT-RB1/IOC PASSIVE
+Q2-3 MMBT3906-C PASSIVE
+R17-1 2K-1 PASSIVE
+)
+(
+M1_FR
+U4-29 PIC16F1947-I/PT-RC1/T1OSI/CCP2/P2A PASSIVE
+U7-22 LV8728-FR PASSIVE
+)
+(
+M1_MO
+U4-24 PIC16F1947-I/PT-RA0/AN0/CPS0 PASSIVE
+R32-2 N_0R-2 PASSIVE
+)
+(
+M1_OUT1A
+U7-3 LV8728-OUT1A PASSIVE
+J11-1 XH250-4PI-1 PASSIVE
+)
+(
+M1_OUT1B
+U7-7 LV8728-OUT1B PASSIVE
+J11-2 XH250-4PI-2 PASSIVE
+)
+(
+M1_OUT2A
+U7-9 LV8728-OUT2A PASSIVE
+J11-3 XH250-4PI-3 PASSIVE
+)
+(
+M1_OUT2B
+U7-13 LV8728-OUT2B PASSIVE
+J11-4 XH250-4PI-4 PASSIVE
+)
+(
+M1_ST
+U4-30 PIC16F1947-I/PT-RC0/T1OSO/T1CKI PASSIVE
+Q4-2 AO3401-SOURCE PASSIVE
+)
+(
+M1_ST_IC
+U7-29 LV8728-ST PASSIVE
+R36-1 2K-1 PASSIVE
+R35-1 2K-1 PASSIVE
+Q4-3 AO3401-DRAIN PASSIVE
+J13-1 XH-3P-1 PASSIVE
+)
+(
+M1_TOP_LIMIT
+U4-2 PIC16F1947-I/PT-RE0/P2D PASSIVE
+R24-1 2K-1 PASSIVE
+Q3-3 MMBT3906-C PASSIVE
+)
+(
+M2_BTN_LIMIT
+U4-63 PIC16F1947-I/PT-RE3/P3C PASSIVE
+R76-4 2K-R4-A PASSIVE
+)
+(
+M2_ENCODER
+U4-46 PIC16F1947-I/PT-RB2/IOC PASSIVE
+Q1-3 MMBT3906-C PASSIVE
+R16-1 2K-1 PASSIVE
+)
+(
+M2_FR
+U4-34 PIC16F1947-I/PT-RC3/SCK1/SCL1 PASSIVE
+U8-22 LV8728-FR PASSIVE
+)
+(
+M2_MO
+U4-23 PIC16F1947-I/PT-RA1/AN1/CPS1 PASSIVE
+R47-2 N_0R-2 PASSIVE
+)
+(
+M2_OUT1A
+U8-3 LV8728-OUT1A PASSIVE
+J12-1 XH250-4PI-1 PASSIVE
+)
+(
+M2_OUT1B
+U8-7 LV8728-OUT1B PASSIVE
+J12-2 XH250-4PI-2 PASSIVE
+)
+(
+M2_OUT2A
+U8-9 LV8728-OUT2A PASSIVE
+J12-3 XH250-4PI-3 PASSIVE
+)
+(
+M2_OUT2B
+U8-13 LV8728-OUT2B PASSIVE
+J12-4 XH250-4PI-4 PASSIVE
+)
+(
+M2_ST
+U4-33 PIC16F1947-I/PT-RC2/CCP1/P1A PASSIVE
+Q6-2 A03401-SOURCE PASSIVE
+)
+(
+M2_ST_IC
+U8-29 LV8728-ST PASSIVE
+Q6-3 A03401-DRAIN PASSIVE
+R51-1 2K-1 PASSIVE
+R50-1 2K-1 PASSIVE
+J13-2 XH-3P-2 PASSIVE
+)
+(
+M2_TOP_LIMIT
+U4-64 PIC16F1947-I/PT-RE2/P2B PASSIVE
+R76-3 2K-R3-A PASSIVE
+)
+(
+M3_BTN_LIMIT
+U4-61 PIC16F1947-I/PT-RE5/P1C PASSIVE
+R77-2 2K-R2-A PASSIVE
+)
+(
+M3_ENCODER
+U4-45 PIC16F1947-I/PT-RB3/IOC PASSIVE
+)
+(
+M3_FR
+U4-36 PIC16F1947-I/PT-RC5/SDO1 PASSIVE
+)
+(
+M3_MO
+U4-22 PIC16F1947-I/PT-RA2/AN2/CPS2/VREF- PASSIVE
+)
+(
+M3_ST
+U4-35 PIC16F1947-I/PT-RC4/SDI1/SDA1 PASSIVE
+)
+(
+M3_TOP_LIMIT
+U4-62 PIC16F1947-I/PT-RE4/P3B PASSIVE
+R77-1 2K-R1-A PASSIVE
+)
+(
+M4_BTN_LIMIT
+U4-59 PIC16F1947-I/PT-RE7/CCP2/P2A PASSIVE
+R77-4 2K-R4-A PASSIVE
+)
+(
+M4_ENCODER
+U4-44 PIC16F1947-I/PT-RB4/IOC PASSIVE
+)
+(
+M4_FR
+U4-32 PIC16F1947-I/PT-RC7/RX1/DT1 PASSIVE
+)
+(
+M4_MO
+U4-21 PIC16F1947-I/PT-RA3/AN3/CPS3/VREF+ PASSIVE
+)
+(
+M4_ST
+U4-31 PIC16F1947-I/PT-RC6/TX1/CK1 PASSIVE
+)
+(
+M4_TOP_LIMIT
+U4-60 PIC16F1947-I/PT-RE6/P1B PASSIVE
+R77-3 2K-R3-A PASSIVE
+)
+(
+MAX485_RX
+U3-4 MAX485-DI PASSIVE
+U4-4 PIC16F1947-I/PT-RG1/AN15/CPS15/C3OUT/TX2/CK2 PASSIVE
+)
+(
+MAX485_SELECT
+U3-2 MAX485-RE- PASSIVE
+U3-3 MAX485-DE PASSIVE
+U4-6 PIC16F1947-I/PT-RG3/AN13/CPS13/C3IN0-/CCP4/P3D PASSIVE
+)
+(
+MAX485_TX
+U3-1 MAX485-RO PASSIVE
+U4-5 PIC16F1947-I/PT-RG2/AN14/CPS14/C3IN+/RX2/DT2 PASSIVE
+)
+(
+M_OE
+U4-28 PIC16F1947-I/PT-RA4/T0CKI PASSIVE
+R28-2 47K-2 PASSIVE
+U7-25 LV8728-OE PASSIVE
+U7-30 LV8728-VREG1 PASSIVE
+C10-2 100nF_50V-2 PASSIVE
+U8-25 LV8728-OE PASSIVE
+U8-30 LV8728-VREG1 PASSIVE
+R44-2 47K-2 PASSIVE
+C15-2 100nF_50V-2 PASSIVE
+)
+(
+M_RST
+U4-27 PIC16F1947-I/PT-RA5/AN4/CPS4 PASSIVE
+U7-24 LV8728-RST PASSIVE
+U8-24 LV8728-RST PASSIVE
+)
+(
+N1105493
+U7-20 LV8728-OSC1 PASSIVE
+C9-2 100pF_50V-2 PASSIVE
+)
+(
+N1105698
+U7-28 LV8728-MD1 PASSIVE
+DPS1-2 DIP-SWITCH-4-2 PASSIVE
+R70-6 2K-R3-B PASSIVE
+)
+(
+N1105702
+U7-27 LV8728-MD2 PASSIVE
+DPS1-3 DIP-SWITCH-4-3 PASSIVE
+R70-7 2K-R2-B PASSIVE
+)
+(
+N1105706
+U7-26 LV8728-MD3 PASSIVE
+DPS1-4 DIP-SWITCH-4-4 PASSIVE
+R70-8 2K-R1-B PASSIVE
+)
+(
+N1109850
+R8-2 2K-2 PASSIVE
+D3-2 LED_G-CATHODE PASSIVE
+)
+(
+N1125842
+C11-2 100nF_50V-2 PASSIVE
+U8-1 LV8728-VREG2 PASSIVE
+)
+(
+N1125974
+U8-28 LV8728-MD1 PASSIVE
+DPS2-2 DIP-SWITCH-4-2 PASSIVE
+R71-6 2K-R3-B PASSIVE
+)
+(
+N1126002
+U8-27 LV8728-MD2 PASSIVE
+DPS2-3 DIP-SWITCH-4-3 PASSIVE
+R71-7 2K-R2-B PASSIVE
+)
+(
+N1126054
+U8-26 LV8728-MD3 PASSIVE
+DPS2-4 DIP-SWITCH-4-4 PASSIVE
+R71-8 2K-R1-B PASSIVE
+)
+(
+N1126094
+R41-2 0R22-2 PASSIVE
+U8-6 LV8728-RF1 PASSIVE
+)
+(
+N1126274
+R42-2 0R22-2 PASSIVE
+U8-10 LV8728-RF2 PASSIVE
+)
+(
+N1126286
+U8-20 LV8728-OSC1 PASSIVE
+C14-2 100pF_50V-2 PASSIVE
+)
+(
+N1126310
+C13-2 1nF_50V-2 PASSIVE
+U8-19 LV8728-OSC2 PASSIVE
+)
+(
+N1126466
+R47-1 N_0R-1 PASSIVE
+U8-16 LV8728-MO PASSIVE
+R44-1 47K-1 PASSIVE
+)
+(
+N1134491
+L1-1 47uH-1 PASSIVE
+U2-2 LM2596-Output PASSIVE
+D2-1 SS34-CATHODE PASSIVE
+)
+(
+N1134503
+L1-2 47uH-2 PASSIVE
+C4-1 100uF_50V-1 PASSIVE
+R2-1 9K1-1 PASSIVE
+D1-2 SS34-ANODE PASSIVE
+)
+(
+N1134575
+R2-2 9K1-2 PASSIVE
+U2-4 LM2596-FEEDBACK PASSIVE
+R3-1 1K-1 PASSIVE
+)
+(
+N1150243
+U6-1 GP1S56-Anode PASSIVE
+R19-2 220R-2 PASSIVE
+)
+(
+N1150283
+R20-2 5K1-2 PASSIVE
+U6-3 GP1S56-C PASSIVE
+R22-1 1K-1 PASSIVE
+R68-1 N_0R-1 PASSIVE
+)
+(
+N1150349
+R22-2 1K-2 PASSIVE
+Q3-1 MMBT3906-B PASSIVE
+)
+(
+N1151010
+J8-1 XH-3P-1 PASSIVE
+R12-2 5K1-2 PASSIVE
+R14-1 1K-1 PASSIVE
+R61-1 N_0R-1 PASSIVE
+)
+(
+N1151068
+Q2-1 MMBT3906-B PASSIVE
+R14-2 1K-2 PASSIVE
+)
+(
+N11519991
+R36-2 2K-2 PASSIVE
+D4-2 LED_R-CATHODE PASSIVE
+)
+(
+N11528761
+D6-2 LED_R-CATHODE PASSIVE
+R51-2 2K-2 PASSIVE
+)
+(
+N1152916
+Q7-1 2N7002-GATE PASSIVE
+R71-4 2K-R4-A PASSIVE
+)
+(
+N1158413
+Q6-1 A03401-GATE PASSIVE
+Q7-3 2N7002-DRAIN PASSIVE
+R48-2 2K-2 PASSIVE
+)
+(
+N1173556
+Q5-3 2N7002-DRAIN PASSIVE
+R33-2 2K-2 PASSIVE
+Q4-1 AO3401-GATE PASSIVE
+)
+(
+N1173568
+Q5-1 2N7002-GATE PASSIVE
+R70-4 2K-R4-A PASSIVE
+)
+(
+N1187136
+Q8-3 2N7002-DRAIN PASSIVE
+R57-2 10K-2 PASSIVE
+)
+(
+N1187669
+R56-2 10K-2 PASSIVE
+Q8-1 2N7002-GATE PASSIVE
+R69-1 2K-1 PASSIVE
+)
+(
+N1188105
+R58-2 10K-2 PASSIVE
+R57-1 10K-1 PASSIVE
+Q9-1 STP10P6F6-GATE PASSIVE
+)
+(
+N1205264
+DPS1-1 DIP-SWITCH-4-1 PASSIVE
+R70-5 2K-R4-B PASSIVE
+R72-1 2K-1 PASSIVE
+)
+(
+N1206067
+DPS2-1 DIP-SWITCH-4-1 PASSIVE
+R71-5 2K-R4-B PASSIVE
+R73-1 2K-1 PASSIVE
+)
+(
+N1212328
+D8-1 SS34-CATHODE PASSIVE
+L2-1 4.7uH-1 PASSIVE
+)
+(
+N1224541
+R73-2 2K-2 PASSIVE
+D7-2 LED_G-CATHODE PASSIVE
+)
+(
+N1225126
+D5-2 LED_G-CATHODE PASSIVE
+R72-2 2K-2 PASSIVE
+)
+(
+N1230874
+R13-2 1K-2 PASSIVE
+Q1-1 MMBT3906-B PASSIVE
+)
+(
+N523810
+U7-1 LV8728-VREG2 PASSIVE
+C6-2 100nF_50V-2 PASSIVE
+)
+(
+N523982
+R26-2 0R22-2 PASSIVE
+U7-6 LV8728-RF1 PASSIVE
+)
+(
+N524085
+R27-2 0R22-2 PASSIVE
+U7-10 LV8728-RF2 PASSIVE
+)
+(
+N524939
+R28-1 47K-1 PASSIVE
+U7-16 LV8728-MO PASSIVE
+R32-1 N_0R-1 PASSIVE
+)
+(
+N525295
+U7-19 LV8728-OSC2 PASSIVE
+C8-2 1nF_50V-2 PASSIVE
+)
+(
+N995890
+R7-2 N_0R-2 PASSIVE
+U3-6 MAX485-A PASSIVE
+R6-2 N_0R-2 PASSIVE
+RT1-1 FUSE PPTC-1 PASSIVE
+TVS2-1 SMAJ6.5CA-CATHODE PASSIVE
+)
+(
+N995918
+R7-1 N_0R-1 PASSIVE
+U3-7 MAX485-B PASSIVE
+R6-1 N_0R-1 PASSIVE
+TVS1-1 SMAJ6.5CA-CATHODE PASSIVE
+RT2-1 FUSE PPTC-1 PASSIVE
+)
+(
+N996416
+U5-3 GP1S56-C PASSIVE
+R10-2 5K1-2 PASSIVE
+R13-1 1K-1 PASSIVE
+R15-1 N_0R-1 PASSIVE
+)
+(
+N996429
+U5-1 GP1S56-Anode PASSIVE
+R9-2 220R-2 PASSIVE
+)
+(
+N996966
+R11-2 220R-2 PASSIVE
+J8-2 XH-3P-2 PASSIVE
+)
+(
+PROCESSOR_ICSCLK
+J7-3 MicroChip Debug-ICSPCLK PASSIVE
+U4-42 PIC16F1947-I/PT-RB6/ICSPCLK/IOC PASSIVE
+R75-2 2K-2 PASSIVE
+)
+(
+PROCESSOR_ICSDAT
+J7-4 MicroChip Debug-ICSPDAT PASSIVE
+U4-37 PIC16F1947-I/PT-RB7/ICSPDAT/IOC PASSIVE
+R74-2 2K-2 PASSIVE
+)
+(
+PROCESSOR_MCLR
+J7-2 MicroChip Debug-MCLR PASSIVE
+U4-7 PIC16F1947-I/PT-VPP/#MCLR/RG5 PASSIVE
+)
+(
+PWR_DECTET
+U4-43 PIC16F1947-I/PT-RB5/T1G/IOC PASSIVE
+R59-2 10K-2 PASSIVE
+R60-1 2K-1 PASSIVE
+)
+(
+SPI_SCK
+U4-50 PIC16F1947-I/PT-RD6/P1B/SCK2/SCL2 PASSIVE
+J4-3 XH-6PI-3 PASSIVE
+)
+(
+SPI_SDI
+U4-51 PIC16F1947-I/PT-RD5/P1C/SDI2/SDA2 PASSIVE
+J4-4 XH-6PI-4 PASSIVE
+)
+(
+SPI_SDO
+U4-52 PIC16F1947-I/PT-RD4/P3B/SDO0 PASSIVE
+J4-5 XH-6PI-5 PASSIVE
+)
+(
+SPI_SS
+U4-49 PIC16F1947-I/PT-RD7/SS2 PASSIVE
+J4-2 XH-6PI-2 PASSIVE
+)
+(
+STEP_PWM
+U4-48 PIC16F1947-I/PT-RB0/SRI/FLT0/INT/IOC PASSIVE
+U4-3 PIC16F1947-I/PT-RG0/CCP3/P3A PASSIVE
+U7-21 LV8728-STEP PASSIVE
+U8-21 LV8728-STEP PASSIVE
+)
+(
+TP0
+U4-18 PIC16F1947-I/PT-RF0/AN16/CPS16/C1IN0-/C2IN0- PASSIVE
+R8-1 2K-1 PASSIVE
+J9-1 HEADER254-8PI-1 PASSIVE
+)
+(
+TP1
+U4-17 PIC16F1947-I/PT-RF1/AN6/CPS6/C2OUT/SRNQ PASSIVE
+J9-2 HEADER254-8PI-2 PASSIVE
+)
+(
+TP2
+U4-16 PIC16F1947-I/PT-RF2/AN7/CPS7/C1OUT/SRQ PASSIVE
+J9-3 HEADER254-8PI-3 PASSIVE
+)
+(
+TP3
+U4-15 PIC16F1947-I/PT-RF3/AN8/CPS8/C1IN2-/C2IN2-/C3IN2- PASSIVE
+J9-4 HEADER254-8PI-4 PASSIVE
+)
+(
+TP4_C1IN2N
+U4-14 PIC16F1947-I/PT-RF4/AN9/CPS9/C2IN+ PASSIVE
+J9-5 HEADER254-8PI-5 PASSIVE
+R68-2 N_0R-2 PASSIVE
+)
+(
+TP5_C1IN1N
+U4-13 PIC16F1947-I/PT-RF5/AN10/CPS10/DACOUT/C1IN1-/C2IN1- PASSIVE
+R15-2 N_0R-2 PASSIVE
+J9-6 HEADER254-8PI-6 PASSIVE
+)
+(
+TP6_C1INP
+U4-12 PIC16F1947-I/PT-RF6/AN11/CPS11/C1IN+ PASSIVE
+J9-7 HEADER254-8PI-7 PASSIVE
+R62-2 N_0R-2 PASSIVE
+R64-1 N_0R-1 PASSIVE
+)
+(
+TP7_C1IN3N
+U4-11 PIC16F1947-I/PT-RF7/AN5/CPS5/C1IN3-/C2IN3-/C3IN3-/SS1 PASSIVE
+J9-8 HEADER254-8PI-8 PASSIVE
+R61-2 N_0R-2 PASSIVE
+)
+(
+VCC_12V
+C7-1 10uF-1 PASSIVE
+U7-2 LV8728-VM PASSIVE
+U7-5 LV8728-VM1 PASSIVE
+U7-11 LV8728-VM2 PASSIVE
+C6-1 100nF_50V-1 PASSIVE
+C12-1 10uF-1 PASSIVE
+C11-1 100nF_50V-1 PASSIVE
+U8-2 LV8728-VM PASSIVE
+U8-5 LV8728-VM1 PASSIVE
+U8-11 LV8728-VM2 PASSIVE
+D1-1 SS34-CATHODE PASSIVE
+R59-1 10K-1 PASSIVE
+)
+(
+VCC_5V
+U3-8 MAX485-VCC PASSIVE
+R11-1 220R-1 PASSIVE
+R9-1 220R-1 PASSIVE
+R10-1 5K1-1 PASSIVE
+U4-26 PIC16F1947-I/PT-VDD1 PASSIVE
+U4-10 PIC16F1947-I/PT-VDD0 PASSIVE
+U4-57 PIC16F1947-I/PT-VDD3 PASSIVE
+U4-38 PIC16F1947-I/PT-VDD2 PASSIVE
+U4-19 PIC16F1947-I/PT-AVDD PASSIVE
+J7-1 MicroChip Debug-VDD PASSIVE
+DPS1-5 DIP-SWITCH-4-5 PASSIVE
+DPS1-6 DIP-SWITCH-4-6 PASSIVE
+DPS1-7 DIP-SWITCH-4-7 PASSIVE
+DPS1-8 DIP-SWITCH-4-8 PASSIVE
+C5-2 100nF_50V-2 PASSIVE
+DPS2-5 DIP-SWITCH-4-5 PASSIVE
+DPS2-6 DIP-SWITCH-4-6 PASSIVE
+DPS2-7 DIP-SWITCH-4-7 PASSIVE
+DPS2-8 DIP-SWITCH-4-8 PASSIVE
+R53-8 2K-R1-B PASSIVE
+R53-7 2K-R2-B PASSIVE
+R53-6 2K-R3-B PASSIVE
+R53-5 2K-R4-B PASSIVE
+Q1-2 MMBT3906-E PASSIVE
+R20-1 5K1-1 PASSIVE
+R19-1 220R-1 PASSIVE
+Q3-2 MMBT3906-E PASSIVE
+Q2-2 MMBT3906-E PASSIVE
+R12-1 5K1-1 PASSIVE
+R48-1 2K-1 PASSIVE
+R33-1 2K-1 PASSIVE
+J4-1 XH-6PI-1 PASSIVE
+R62-1 N_0R-1 PASSIVE
+U9-3 L7805-OUT PASSIVE
+U1-1 N_78L05-OUT PASSIVE
+C2-1 N_1uF_25V-1 PASSIVE
+C17-1 47uF_50V-1 PASSIVE
+R78-8 2K-R1-B PASSIVE
+R78-7 2K-R2-B PASSIVE
+R78-6 2K-R3-B PASSIVE
+R78-5 2K-R4-B PASSIVE
+R80-1 4K7-1 PASSIVE
+)
+(
+VCC_PWR
+R58-1 10K-1 PASSIVE
+F2-1 24V_1A-1 PASSIVE
+Q9-3 STP10P6F6-SOURCE PASSIVE
+)
+(
+VCC_PWR_EXT
+J1-1 GX16-5PL-1 PASSIVE
+J2-1 GX16-5PL-1 PASSIVE
+J3-1 XH-5PI-1 PASSIVE
+F2-2 24V_1A-2 PASSIVE
+R79-2 N_0R-2 PASSIVE
+)
+(
+VCC_PWR_INTERNAL
+C3-1 47uF_50V-1 PASSIVE
+U2-1 LM2596-VIN PASSIVE
+Q9-2 STP10P6F6-DRAIN PASSIVE
+)
+(
+VCC_SYS
+D8-2 SS34-ANODE PASSIVE
+F1-1 24V_1A-1 PASSIVE
+)
+(
+VCC_SYS_EXT
+J1-2 GX16-5PL-2 PASSIVE
+J2-2 GX16-5PL-2 PASSIVE
+J3-2 XH-5PI-2 PASSIVE
+F1-2 24V_1A-2 PASSIVE
+R79-1 N_0R-1 PASSIVE
+)
+(
+VCC_SYS_INTERNAL
+U9-1 L7805-IN PASSIVE
+C1-1 N_100nF_50V-1 PASSIVE
+U1-3 N_78L05-IN PASSIVE
+R56-1 10K-1 PASSIVE
+C16-1 47uF_50V-1 PASSIVE
+L2-2 4.7uH-2 PASSIVE
+)

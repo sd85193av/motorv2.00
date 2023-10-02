@@ -1,0 +1,15 @@
+#for orcad schematic
+*_0.DBK
+*_0.OBK
+*.htm
+*.LOG
+*.OLBlck
+*.DSNLck
+*PSpiceFiles/
+*.png
+
+#for altium layout
+History/
+__Previews/
+Project Logs for*/
+Project Outputs for*/
