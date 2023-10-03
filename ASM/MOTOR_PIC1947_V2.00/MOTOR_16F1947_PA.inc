@@ -41,6 +41,11 @@ MODBUS_DAT_REAL_ADRL    EQU     0X40
 ;0X21 0X55-0X21 0X69      MOTOR2
 ;0X21 0X6A-0X21 0X7E      MOTOR3
 ;0X21 0X7F-0X21 0X93      MOTOR4
+
+
+
+
+
 ;-------------------------------------------------------
 ;--------------------------------------------------------  
 ;WATCH用的暫存器設定
@@ -218,6 +223,11 @@ ERROR_06_F              EQU     0X05
 
 FLAG5_BANK0             EQU     0X3C
 RESET_IN_NORMAL_FALG    EQU     0X00
+MODBUS_IN_03_F          EQU     0X01                      ;0表示沒有在功能碼03/1表示有在
+MODBUS_IN_06_F          EQU     0X02                      ;0表示沒有在功能碼06/1表示有在
+
+
+
 
 
 ;0X3D 0X3E 0X3F
@@ -245,9 +255,8 @@ MODBUS_ERROR_COUNTER      EQU     0X49
 MODBUS_TABLE_ADR_TEMP     EQU     0X4A
 MODBUS_TABLE_DAT_TEMP     EQU     0X4B
 
-
-
-
+STANDBY_HBYTE_DAT         EQU     0X4C
+STANDBY_LBYTE_DAT         EQU     0X4D                        ;用來暫存MODBUS中運算的資料
 
 
 

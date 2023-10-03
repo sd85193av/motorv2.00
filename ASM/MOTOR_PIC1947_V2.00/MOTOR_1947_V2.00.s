@@ -77,6 +77,7 @@ BANKSEL     PORTA
 
 ;******************************************************************************
 ;****************************TABLE表區域***************************************
+;******************************************************************************
 ;========================================================
 ;==================中斷UART2 FUNCTION====================
 ;========================================================
@@ -85,19 +86,368 @@ MODBUS_ADR_FUNCTION:
     MOVWF   PCLATH
     MOVF    MODBUS_TABLE_ADR_TEMP,W
     BRW     
-    GOTO    MODBUS_ADR_00_FUNCTION
-    GOTO    MODBUS_ADR_01_FUNCTION
-    GOTO    MODBUS_ADR_02_FUNCTION
-    GOTO    MODBUS_ADR_03_FUNCTION
-    GOTO    MODBUS_ADR_04_FUNCTION
+    GOTO    MODBUS_ADR_A0_FUNCTION          ;00
+    GOTO    MODBUS_ADR_A1_FUNCTION          ;01
+    GOTO    MODBUS_ADR_A2_FUNCTION          ;02
+    GOTO    MODBUS_ADR_A3_FUNCTION          ;03
+    GOTO    MODBUS_ADR_A4_FUNCTION          ;04
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;05
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;06
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;07
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;08
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;09
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;0A
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;0B
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;0C
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;0D
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;0E
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;0F
+;-----------------------------
+    GOTO    MODBUS_ADR_B0_FUNCTION          ;10
+    GOTO    MODBUS_ADR_B1_FUNCTION          ;11
+    GOTO    MODBUS_ADR_B2_FUNCTION          ;12
+    GOTO    MODBUS_ADR_B3_FUNCTION          ;13
+    GOTO    MODBUS_ADR_B4_FUNCTION          ;14
+    GOTO    MODBUS_ADR_B5_FUNCTION          ;15
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;16
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;17
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;18
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;19
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;1A
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;1B
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;1C
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;1D
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;1E
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;1F
+;-----------------------------
+    GOTO    MODBUS_ADR_C0_FUNCTION          ;20
+    GOTO    MODBUS_ADR_C1_FUNCTION          ;21
+    GOTO    MODBUS_ADR_C2_FUNCTION          ;22
+    GOTO    MODBUS_ADR_C3_FUNCTION          ;23
+    GOTO    MODBUS_ADR_C4_FUNCTION          ;24
+    GOTO    MODBUS_ADR_C5_FUNCTION          ;25
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;26
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;27
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;28
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;29
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;2A
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;2B
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;2C
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;2D
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;2E
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;2F
+;-----------------------------
+    GOTO    MODBUS_ADR_D0_FUNCTION          ;30
+    GOTO    MODBUS_ADR_D1_FUNCTION          ;31
+    GOTO    MODBUS_ADR_D2_FUNCTION          ;32
+    GOTO    MODBUS_ADR_D3_FUNCTION          ;33
+    GOTO    MODBUS_ADR_D4_FUNCTION          ;34
+    GOTO    MODBUS_ADR_D5_FUNCTION          ;35
+    GOTO    MODBUS_ADR_D6_FUNCTION          ;36
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;37
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;38
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;39
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;3A
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;3B
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;3C
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;3D
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;3E
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;3F
+;-----------------------------
+    GOTO    MODBUS_ADR_E0_FUNCTION          ;40
+    GOTO    MODBUS_ADR_E1_FUNCTION          ;41
+    GOTO    MODBUS_ADR_E2_FUNCTION          ;42
+    GOTO    MODBUS_ADR_E3_FUNCTION          ;43
+    GOTO    MODBUS_ADR_E4_FUNCTION          ;44
+    GOTO    MODBUS_ADR_E5_FUNCTION          ;45
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;46
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;47
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;48
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;49
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;4A
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;4B
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;4C
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;4D
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;4E
+    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;4F
+;-----------------------------
+
+
+;******************************************************************
+;******************************************************************
+
+;========================================================
+;==================MODBUS 恢復出廠設定===================
+;========================================================
+MODBUS_ADR_A0_FUNCTION:
+    BTFSC   FLAG5_BANK0,MODBUS_IN_03_F
+    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;這邊只能用寫，讀的話算是異常碼02
+;--------------------------------
+    BTFSS   FLAG5_BANK0,MODBUS_IN_06_F
+    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;
+;--------------------------------
+;前面確認過暫存器位址，後面要確認資料格式是否符合
+    MOVLW   MODBUS_DAT_EXTRA_ADRH                 ;20B0
+    MOVWF   FSR1H
+    MOVLW   MODBUS_DAT_EXTRA_ADRL
+    MOVWF   FSR1L
+    MOVLW   0X0D
+    ADDWF   FSR1L,F
+    MOVF    INDF1,W
+    BTFSS   STATUS,Z
+    GOTO    MODBUS_ADR_A0_LV1
+;-----------------------
+    INCF    FSR1L,F
+    MOVF    INDF1,W
+    BTFSC   STATUS,Z
+    GOTO    MODBUS_BUS_03_ERROR_LOOP                ;資料都是0X00
+MODBUS_ADR_A0_LV1:
+;將所有參數設定為預設值
+    RETFIE
+
+;========================================================
+;==================MODBUS 整機初始化=====================
+;========================================================
+MODBUS_ADR_A1_FUNCTION:
+    BTFSC   FLAG5_BANK0,MODBUS_IN_03_F
+    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;這邊只能用寫，讀的話算是異常碼02
+;--------------------------------
+    BTFSS   FLAG5_BANK0,MODBUS_IN_06_F
+    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;如果功能碼不是06表示異常
+;--------------------------------
+;前面確認過暫存器位址，後面要確認資料格式是否符合
+    MOVLW   MODBUS_DAT_EXTRA_ADRH                 ;20B0
+    MOVWF   FSR1H
+    MOVLW   MODBUS_DAT_EXTRA_ADRL
+    MOVWF   FSR1L
+    MOVLW   0X0D
+    ADDWF   FSR1L,F
+    MOVF    INDF1,W
+    BTFSS   STATUS,Z
+    GOTO    MODBUS_ADR_A0_LV1
+;-----------------------
+    INCF    FSR1L,F
+    MOVF    INDF1,W
+    BTFSC   STATUS,Z
+    GOTO    MODBUS_BUS_03_ERROR_LOOP                ;資料都是0X00
+MODBUS_ADR_A1_LV1:
+;將所有參數設定為預設值
+
+
+;========================================================
+;==================MODBUS 換向閥初始化===================
+;========================================================
+MODBUS_ADR_A2_FUNCTION:
+    BTFSC   FLAG5_BANK0,MODBUS_IN_03_F
+    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;這邊只能用寫，讀的話算是異常碼02
+;--------------------------------
+    BTFSS   FLAG5_BANK0,MODBUS_IN_06_F
+    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;
+;--------------------------------
+;前面確認過暫存器位址，後面要確認資料格式是否符合
+    MOVLW   MODBUS_DAT_EXTRA_ADRH                 ;20B0
+    MOVWF   FSR1H
+    MOVLW   MODBUS_DAT_EXTRA_ADRL
+    MOVWF   FSR1L
+    MOVLW   0X0D
+    ADDWF   FSR1L,F
+    MOVF    INDF1,W
+    BTFSS   STATUS,Z
+    GOTO    MODBUS_ADR_A2_LV1
+;-----------------------
+    INCF    FSR1L,F
+    MOVF    INDF1,W
+    BTFSC   STATUS,Z
+    GOTO    MODBUS_BUS_03_ERROR_LOOP                ;資料都是0X00
+MODBUS_ADR_A2_LV1:
+;將所有參數設定為預設值
 
 
 
-MODBUS_ADR_00_FUNCTION:
-MODBUS_ADR_01_FUNCTION:
-MODBUS_ADR_02_FUNCTION:
-MODBUS_ADR_03_FUNCTION:
-MODBUS_ADR_04_FUNCTION:
+
+
+
+
+
+
+
+
+
+
+
+
+
+;========================================================
+;==================MODBUS 活塞初始化=====================
+;========================================================
+MODBUS_ADR_A3_FUNCTION:
+    BTFSC   FLAG5_BANK0,MODBUS_IN_03_F
+    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;這邊只能用寫，讀的話算是異常碼02
+;--------------------------------
+    BTFSS   FLAG5_BANK0,MODBUS_IN_06_F
+    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;
+;--------------------------------
+;前面確認過暫存器位址，後面要確認資料格式是否符合
+    MOVLW   MODBUS_DAT_EXTRA_ADRH                 ;20B0
+    MOVWF   FSR1H
+    MOVLW   MODBUS_DAT_EXTRA_ADRL
+    MOVWF   FSR1L
+    MOVLW   0X0D
+    ADDWF   FSR1L,F
+    MOVF    INDF1,W
+    BTFSS   STATUS,Z
+    GOTO    MODBUS_ADR_A3_LV1
+;-----------------------
+    INCF    FSR1L,F
+    MOVF    INDF1,W
+    BTFSC   STATUS,Z
+    GOTO    MODBUS_BUS_03_ERROR_LOOP                ;資料都是0X00
+MODBUS_ADR_A3_LV1:
+;將所有參數設定為預設值
+
+
+
+
+
+
+
+
+
+;========================================================
+;==================MODBUS 醒目提示=======================
+;========================================================
+MODBUS_ADR_A4_FUNCTION:
+    BTFSC   FLAG5_BANK0,MODBUS_IN_03_F
+    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;這邊只能用寫，讀的話算是異常碼02
+;--------------------------------
+    BTFSS   FLAG5_BANK0,MODBUS_IN_06_F
+    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;
+;--------------------------------
+;前面確認過暫存器位址，後面要確認資料格式是否符合
+    MOVLW   MODBUS_DAT_EXTRA_ADRH                 ;20B0
+    MOVWF   FSR1H
+    MOVLW   MODBUS_DAT_EXTRA_ADRL
+    MOVWF   FSR1L
+    MOVLW   0X0D
+    ADDWF   FSR1L,F
+    MOVF    INDF1,W
+    BTFSS   STATUS,Z
+    GOTO    MODBUS_ADR_A4_LV1
+;-----------------------
+    INCF    FSR1L,F
+    MOVF    INDF1,W
+    BTFSC   STATUS,Z
+    GOTO    MODBUS_BUS_03_ERROR_LOOP                ;資料都是0X00
+MODBUS_ADR_A4_LV1:
+;將所有參數設定為預設值
+
+
+
+
+
+
+
+;========================================================
+;==================MODBUS 閥換向=========================
+;========================================================
+MODBUS_ADR_B0_FUNCTION:
+;========================================================
+;==================MODBUS 活塞移動-絕對位置==============
+;========================================================
+MODBUS_ADR_B1_FUNCTION:
+
+;========================================================
+;==================MODBUS 活塞移動-相對位置==============
+;========================================================
+MODBUS_ADR_B2_FUNCTION:
+;========================================================
+;==================MODBUS 活塞移動-向量-CW===============
+;========================================================
+MODBUS_ADR_B3_FUNCTION:
+;========================================================
+;==================MODBUS 活塞移動-向量-CCW==============
+;========================================================
+MODBUS_ADR_B4_FUNCTION:
+;========================================================
+;==================MODBUS 活塞移動-極限==================
+;========================================================
+MODBUS_ADR_B5_FUNCTION:
+;========================================================
+;==================MODBUS 零點偏移量設定=================
+;========================================================
+MODBUS_ADR_C0_FUNCTION:
+;========================================================
+;==================MODBUS 累計步數=======================
+;========================================================
+MODBUS_ADR_C1_FUNCTION:
+;========================================================
+;==================MODBUS 相對零點設定===================
+;========================================================
+MODBUS_ADR_C2_FUNCTION:
+;========================================================
+;==================MODBUS  反向間隙設定-CW===============
+;========================================================
+MODBUS_ADR_C3_FUNCTION:
+;========================================================
+;==================MODBUS  反向間隙設定-CCW==============
+;========================================================
+MODBUS_ADR_C4_FUNCTION:
+;========================================================
+;==================MODBUS  自動校正反向間隙==============
+;========================================================
+MODBUS_ADR_C5_FUNCTION:
+;========================================================
+;==================MODBUS  安全模式======================
+;========================================================
+MODBUS_ADR_D0_FUNCTION:
+;========================================================
+;==================MODBUS  設備狀態======================
+;========================================================
+MODBUS_ADR_D1_FUNCTION:
+;========================================================
+;==================MODBUS  設備辨識資料==================
+;========================================================
+MODBUS_ADR_D2_FUNCTION:
+;========================================================
+;==================MODBUS  溫度檢測======================
+;========================================================
+MODBUS_ADR_D3_FUNCTION:
+;========================================================
+;==================MODBUS  電流檢測======================
+;========================================================
+MODBUS_ADR_D4_FUNCTION:
+;========================================================
+;==================MODBUS  電壓檢測======================
+;========================================================
+MODBUS_ADR_D5_FUNCTION:
+;========================================================
+;==================MODBUS  上電初始化設定================
+;========================================================
+MODBUS_ADR_D6_FUNCTION:
+;========================================================
+;==================MODBUS  開發人員權限啟動==============
+;========================================================
+MODBUS_ADR_E0_FUNCTION:
+;========================================================
+;==================MODBUS  活塞最大行程設定==============
+;========================================================
+MODBUS_ADR_E1_FUNCTION:
+;========================================================
+;==================MODBUS  微步進模式====================
+;========================================================
+MODBUS_ADR_E2_FUNCTION:
+;========================================================
+;==================MODBUS  活塞移動-光耦合===============
+;========================================================
+MODBUS_ADR_E3_FUNCTION:
+;========================================================
+;==================MODBUS  速度設定======================
+;========================================================
+MODBUS_ADR_E4_FUNCTION:
+;========================================================
+;==================MODBUS  速度==========================
+;========================================================
+MODBUS_ADR_E5_FUNCTION:
 
 ;******************************************************************************
 ;******************************************************************************
@@ -298,11 +648,6 @@ INT_INTF_FUNCTION:
 ;========================================================
 ;表示TIMEOUT到了，可以進行分析的動作
 MODBUS_TIMEOUT_IS_FINISH_LOOP:
-;BANKSEL PORTF
-;BSF PORTF,0X07
-;NOP
-;BCF PORTF,0X07
-;BANKSEL     PORTA
     MOVLW   TMR2_BASE_NUM
     MOVWF   TMR2_BASE_TEMP
 BANKSEL     RC2STA
@@ -369,31 +714,37 @@ BANKSEL     PORTA
 ;============MODBUS的功能碼錯誤=====================
 ;===================================================
 ;MODBUS RTU ERROR CODE 01
+;非法功能，表示非授權的功能碼
 MODBUS_BUS_01_ERROR_LOOP:
     BSF     MODBUS_ERROR_FLAG,ERROR_01_F
     RETFIE
 ;----------------------------------------
 ;MODBUS RTU ERROR CODE 02
+;非法暫存器地址
 MODBUS_BUS_02_ERROR_LOOP:
     BSF     MODBUS_ERROR_FLAG,ERROR_02_F
     RETFIE
 ;----------------------------------------
 ;MODBUS RTU ERROR CODE 03
+;非法資料數值
 MODBUS_BUS_03_ERROR_LOOP:
     BSF     MODBUS_ERROR_FLAG,ERROR_03_F
     RETFIE
 ;----------------------------------------
 ;MODBUS RTU ERROR CODE 04
+;裝置故障，像是自我檢測出現異常
 MODBUS_BUS_04_ERROR_LOOP:
     BSF     MODBUS_ERROR_FLAG,ERROR_04_F
     RETFIE
 ;----------------------------------------
 ;MODBUS RTU ERROR CODE 05
+;確認，有收到指令並且立即執行
 MODBUS_BUS_05_ERROR_LOOP:
     BSF     MODBUS_ERROR_FLAG,ERROR_05_F
     RETFIE
 ;----------------------------------------
 ;MODBUS RTU ERROR CODE 06
+;裝置BUSY，(有收到指令，但因為正在執行其他指令而無法執行)
 MODBUS_BUS_06_ERROR_LOOP:
     BSF     MODBUS_ERROR_FLAG,ERROR_06_F
     RETFIE
@@ -422,12 +773,14 @@ MODBUS_BUS_ID_ERROR_LV1:
     GOTO    MODBUS_BUS_ID_ERROR_LV1
 BANKSEL     RC2STA
     BSF     RC2STA,CREN  
+
     RETFIE
 
 
 ;===================================================
 ;================驗證CRC16是否正確?=================
 ;===================================================
+;這段驗證CRC的時間大約為380uS
 CHECK_CRC16_IS_RIGHT:
 BANKSEL     PORTA
     MOVLW   0XFF
@@ -460,719 +813,802 @@ CHECK_CRC16_IS_RIGHT_LV1:
     GOTO    MODBUS_BUS_ID_ERROR_LOOP          ;CRC16錯誤，模組不做回應
     GOTO    MODBUS_CRC16_CHECK_IS_OK          ;CRC16驗證正確
 
-
-
-
-
-
-
-
 ;========================================================
 ;=============MODBUS 功能碼為0X03========================
 ;========================================================
 ;功能碼:0X03表示要READ
+;先確認ADR是否對應的合法
 ANAY_MODBUS_CMD_03_LOOP:
+    MOVLW   0XF9
+    ANDWF   FLAG5_BANK0,F
+    BSF     FLAG5_BANK0,MODBUS_IN_03_F
+;----------------
     MOVLW   MODBUS_DAT_EXTRA_ADRH
     MOVWF   FSR1H
     MOVLW   MODBUS_DAT_EXTRA_ADRL
     MOVWF   FSR1L
     MOVLW   0X0A
-    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
-    MOVLW   0X05
-    ADDWF   FSR1L,F                          ;要讀取的WORD數
-;-------------------
+    ADDWF   FSR1L,F                           ;這裡是第一筆資料的位置
+    MOVLW   0X02                              ;位置的HBYTE
+    ADDWF   FSR1L,F
+;---------------------------------------------------
     MOVF    INDF1,W
-    ;MOVWF   RTU_COUNTER_DATA                  ;要讀取的資料WORD數
-    MOVWF   CAL_TEMP_LBYTE
-
-
-    MOVLW   MODBUS_DAT_EXTRA_ADRH
-    MOVWF   FSR1H
-    MOVLW   MODBUS_DAT_EXTRA_ADRL
-    MOVWF   FSR1L
-    MOVLW   0X0A
-    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
-    MOVLW   0X03
-    ADDWF   FSR1L,F
-
-
-
-
-
-
-
-
-
-
-
-;-------------------------------
-    MOVLW   0X70
-    ADDWF   INDF1,W
-    BTFSC   STATUS,C
-    GOTO    ANAY_MODBUS_READ_0X90_LOOP
-
-
-    MOVLW   0X80
-    ADDWF   INDF1,W
-    BTFSC   STATUS,C
-    GOTO    ANAY_MODBUS_READ_0X80_LOOP                ;表示使用的CMD是共用型
-
-;-----------------------------------------------
-
-
-
-    MOVLW   MODBUS_DAT_EXTRA_ADRH
-    MOVWF   FSR1H
-    MOVLW   MODBUS_DAT_EXTRA_ADRL
-    MOVWF   FSR1L
-    MOVLW   0X0A
-    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
-    MOVLW   0X05
-    ADDWF   FSR1L,F                          ;要讀取的WORD數
-
-
-
-
-    MOVLW   0X02
-    SUBWF   FSR1L,F                           ;判斷要讀取的ADR
-;------------------
+    MOVWF   STANDBY_HBYTE_DAT
+    INCF    FSR1L,F
     MOVF    INDF1,W
-    MOVWF   CAL_TEMP_HBYTE
-    MOVWF   ADR_TEST_TEMP
-    MOVLW   0XF0
-    ANDWF   CAL_TEMP_HBYTE,F
-;-----------------
-    MOVLW   0X10
-    XORWF   CAL_TEMP_HBYTE,W
-    BTFSC   STATUS,Z
-    GOTO    READ_MOTOR_1_SOME_DATA
-;-------------------
-    MOVLW   0X20
-    XORWF   CAL_TEMP_HBYTE,W
-    BTFSC   STATUS,Z
-    GOTO    READ_MOTOR_2_SOME_DATA
-;-------------------
-    MOVLW   0X30
-    XORWF   CAL_TEMP_HBYTE,W
-    BTFSC   STATUS,Z
-    GOTO    READ_MOTOR_3_SOME_DATA
-;-------------------
-    MOVLW   0X40
-    XORWF   CAL_TEMP_HBYTE,W
-    BTFSC   STATUS,Z
-    GOTO    READ_MOTOR_4_SOME_DATA
-;-------------------
-GOTO MODBUS_BUS_01_ERROR_LOOP
-ANAY_MODBUS_CMD_03_LEVEL1:
-    MOVLW   0X0F
-    ANDWF   ADR_TEST_TEMP,F
-;    MOVF    ADR_TEST_TEMP,W
-;    ADDWF   FSR0L,F
-
-BCF STATUS,C
-RLF ADR_TEST_TEMP,F
-MOVF ADR_TEST_TEMP,W
-ADDWF   FSR0L,F
-
-
-
-
-    BCF     STATUS,C
-    RLF     CAL_TEMP_LBYTE,F
-    MOVF    CAL_TEMP_LBYTE,W
-    MOVWF   RTU_COUNTER_DATA                  ;要讀的BYTE數
-;------------------
-    MOVLW   MODBUS_DAT_EXTRA_ADRH
-    MOVWF   FSR1H
-    MOVLW   MODBUS_DAT_EXTRA_ADRL
-    MOVWF   FSR1L
-    MOVLW   0X0A
-    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
-    MOVLW   0X02
-    ADDWF   FSR1L,F
-    MOVF    RTU_COUNTER_DATA,W
-    MOVWF   INDF1
-    INCF    FSR1L,F
-;--------
-ANAY_MODBUS_CMD_03_LEVEL2:
-    MOVF    INDF0,W
-    MOVWF   INDF1
-
-;MOVWF 0X71
-;CALL AAAA_1800
-
-
-    INCF    FSR1L,F
-    INCF    FSR0L,F
-    DECFSZ  CAL_TEMP_LBYTE,F
-    GOTO    ANAY_MODBUS_CMD_03_LEVEL2
-    MOVF    RTU_COUNTER_DATA,W
-    MOVWF   CAL_TEMP_LBYTE
-    MOVLW   0X03
-    ADDWF   RTU_COUNTER_DATA,F  
-;----------------------------------------------------------
-    CALL    MODBUS_RTU_READ_LV2
-    MOVF    CAL_TEMP_LBYTE,W
-    MOVWF   TX_DATA_COUNTER
-    MOVLW   0X05
-    ADDWF   TX_DATA_COUNTER,F
-    BSF     FLAG1_BANK0,CAN_SEND_TX_FLAG
-    RETFIE
-;----------------------------------------------------------
-ANAY_MODBUS_READ_0X90_LOOP:
-    MOVLW   MODBUS_DAT_EXTRA_ADRH
-    MOVWF   FSR1H
-    MOVLW   MODBUS_DAT_EXTRA_ADRL
-    MOVWF   FSR1L
-    MOVLW   0X0A
-    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
-    MOVLW   0X03
-    ADDWF   FSR1L,F
-    MOVLW   0X80
-    SUBWF   INDF1,F
-    GOTO    ANAY_MODBUS_READ_LV0
-;----------------------------------------------------------
-ANAY_MODBUS_READ_0X80_LOOP:
-    MOVLW   MODBUS_DAT_EXTRA_ADRH
-    MOVWF   FSR1H
-    MOVLW   MODBUS_DAT_EXTRA_ADRL
-    MOVWF   FSR1L
-    MOVLW   0X0A
-    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
-    MOVLW   0X03
-    ADDWF   FSR1L,F
-    MOVLW   0X80
-    SUBWF   INDF1,F
-
-    BCF     STATUS,C
-    RLF     INDF1,F
-ANAY_MODBUS_READ_LV0:
-;-----------------------------------
-    MOVLW   COMMON_DATA_HBYTE
-    MOVWF   FSR0H
-    MOVLW   COMMON_DATA_LBYTE
-    MOVWF   FSR0L
-    MOVF    INDF1,W
-    ADDWF   FSR0L,F
-;-------------
-    BCF     STATUS,C
-    RLF     CAL_TEMP_LBYTE,F
-    MOVF    CAL_TEMP_LBYTE,W
-    MOVWF   RTU_COUNTER_DATA                  ;要讀的BYTE數
-;------------------
-    MOVLW   MODBUS_DAT_EXTRA_ADRH
-    MOVWF   FSR1H
-    MOVLW   MODBUS_DAT_EXTRA_ADRL
-    MOVWF   FSR1L
-    MOVLW   0X0A
-    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
-    MOVLW   0X02
-    ADDWF   FSR1L,F
-    MOVF    RTU_COUNTER_DATA,W
-    MOVWF   INDF1
-    INCF    FSR1L,F
-;-----------------------------------
-ANAY_MODBUS_READ_0X80_LV1:
-    MOVF    INDF0,W
-    MOVWF   INDF1
-    INCF    FSR0L,F
-    INCF    FSR1L,F
-    DECFSZ  CAL_TEMP_LBYTE,F
-    GOTO    ANAY_MODBUS_READ_0X80_LV1
-    MOVF    RTU_COUNTER_DATA,W
-    MOVWF   CAL_TEMP_LBYTE
-    MOVLW   0X03
-    ADDWF   RTU_COUNTER_DATA,F  
-;----------------------------------------------------------
-    CALL    MODBUS_RTU_READ_LV2
-    MOVF    CAL_TEMP_LBYTE,W
-    MOVWF   TX_DATA_COUNTER
-    MOVLW   0X05
-    ADDWF   TX_DATA_COUNTER,F
-    BSF     FLAG1_BANK0,CAN_SEND_TX_FLAG
-    RETFIE
-
-
-;----------------------------------------------------------
-;----------------------------------------------------------
-READ_MOTOR_1_SOME_DATA:
-    MOVLW   MODBUS_DAT_REAL_ADRH
-    MOVWF   FSR0H
-    MOVLW   MODBUS_DAT_REAL_ADRL
-    MOVWF   FSR0L
-    GOTO    ANAY_MODBUS_CMD_03_LEVEL1
-READ_MOTOR_2_SOME_DATA:
-    MOVLW   MODBUS_DAT_REAL_ADRH
-    MOVWF   FSR0H
-    MOVLW   MODBUS_DAT_REAL_ADRL
-    MOVWF   FSR0L
-    MOVLW   0X15
-    ADDWF   FSR0L,F
-    GOTO    ANAY_MODBUS_CMD_03_LEVEL1
-READ_MOTOR_3_SOME_DATA:
-    MOVLW   MODBUS_DAT_REAL_ADRH
-    MOVWF   FSR0H
-    MOVLW   MODBUS_DAT_REAL_ADRL
-    MOVWF   FSR0L
-    MOVLW   0X2A
-    ADDWF   FSR0L,F
-    GOTO    ANAY_MODBUS_CMD_03_LEVEL1
-READ_MOTOR_4_SOME_DATA:
-    MOVLW   MODBUS_DAT_REAL_ADRH
-    MOVWF   FSR0H
-    MOVLW   MODBUS_DAT_REAL_ADRL
-    MOVWF   FSR0L
-    MOVLW   0X3F
-    ADDWF   FSR0L,F
-    GOTO    ANAY_MODBUS_CMD_03_LEVEL1
-
-STORE_WRITE_ACK_LOOP:
-    MOVLW   MODBUS_DAT_EXTRA_ADRH
-    MOVWF   FSR0H
-    MOVLW   MODBUS_DAT_EXTRA_ADRL
-    MOVWF   FSR0L
-    MOVLW   0X0A
-    ADDWF   FSR0L,F                          ;這裡是第一筆資料的位置
-;-------------
-    MOVLW   0X22
-    MOVWF   FSR1H
-    MOVLW   0X40
-    MOVWF   FSR1L                                   ;ADR_90_DAT00的位置
-    MOVLW   0X08
-    MOVWF   ACK_COUNTER_TEMP
-;-------------
-STORE_WRITE_ACK_LV1:
-    MOVF    INDF0,W
-    MOVWF   INDF1
-    INCF    FSR0L,F
-    INCF    FSR1L,F
-    DECFSZ  ACK_COUNTER_TEMP,F
-    GOTO    STORE_WRITE_ACK_LV1
-    RETURN
-
-
+    MOVWF   STANDBY_LBYTE_DAT
+;----------------------------------------------------         將位置資料先複製出來
+    MOVLW   0XA0
+    SUBWF   STANDBY_LBYTE_DAT,F
+    MOVLW   0X00
+    SUBWFB  STANDBY_HBYTE_DAT,F
+;----------------------------------------------------         由於後面會用TABLE，所以從0開始會比較好
+    MOVF    STANDBY_LBYTE_DAT,W
+    MOVWF   MODBUS_TABLE_ADR_TEMP
+    GOTO    MODBUS_ADR_FUNCTION                              ;MODBUS ADR TABLE
+    
 ;========================================================
 ;=============MODBUS 功能碼為0X06========================
 ;========================================================
+;功能碼:0X06表示要WRITE
+;先確認ADR是否對應的合法
 ANAY_MODBUS_CMD_06_LOOP:
 BANKSEL     PORTA
-    CALL    STORE_WRITE_ACK_LOOP
+    MOVLW   0XF9
+    ANDWF   FLAG5_BANK0,F
+    BSF     FLAG5_BANK0,MODBUS_IN_06_F                        ;先將MODBUS FLAG重新設定為功能碼06
+;----------------
     MOVLW   MODBUS_DAT_EXTRA_ADRH
     MOVWF   FSR1H
     MOVLW   MODBUS_DAT_EXTRA_ADRL
     MOVWF   FSR1L
     MOVLW   0X0A
-    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
-    MOVLW   0X03
+    ADDWF   FSR1L,F                                           ;這裡是第一筆資料的位置
+    MOVLW   0X02                                              ;位置的HBYTE
     ADDWF   FSR1L,F
-    MOVLW   0X80
-    ADDWF   INDF1,W
-    BTFSC   STATUS,C
-    GOTO    ANAY_MODBUS_WRITE_0X80_LOOP                ;表示使用的CMD是共用型
-
-
-
-
-
-
-    MOVLW   MODBUS_DAT_EXTRA_ADRH
-    MOVWF   FSR1H
-    MOVLW   MODBUS_DAT_EXTRA_ADRL
-    MOVWF   FSR1L
-    MOVLW   0X0A
-    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
-    MOVLW   0X03
-    ADDWF   FSR1L,F
-;-------------------
-;-------------------
+;---------------------------------------------------
     MOVF    INDF1,W
-    MOVWF   CAL_TEMP_HBYTE
-    MOVWF   CAL_TEMP_LBYTE
-    MOVWF   ADR_TEST_TEMP
-    MOVLW   0XF0
-    ANDWF   CAL_TEMP_HBYTE,F
-;------------
-    MOVLW   0X0F
-    ANDWF   CAL_TEMP_LBYTE,F
-;-----------------
-    MOVLW   0X10
-    XORWF   CAL_TEMP_HBYTE,W
-    BTFSC   STATUS,Z
-    GOTO    WRITE_MOTOR_1_SOME_DATA
-;-------------------
-    MOVLW   0X20
-    XORWF   CAL_TEMP_HBYTE,W
-    BTFSC   STATUS,Z
-    GOTO    WRITE_MOTOR_2_SOME_DATA
-;-------------------
-    MOVLW   0X30
-    XORWF   CAL_TEMP_HBYTE,W
-    BTFSC   STATUS,Z
-    GOTO    WRITE_MOTOR_3_SOME_DATA
-;-------------------
-    MOVLW   0X40
-    XORWF   CAL_TEMP_HBYTE,W
-    BTFSC   STATUS,Z
-    GOTO    WRITE_MOTOR_4_SOME_DATA
-;-------------------
-GOTO MODBUS_BUS_01_ERROR_LOOP
-ANAY_MODBUS_CMD_06_LEVEL1:
-    ;MOVF    CAL_TEMP_LBYTE,W
-BCF STATUS,C
-RLF CAL_TEMP_LBYTE,F
-MOVF CAL_TEMP_LBYTE,W
-ADDWF   FSR0L,F
-;--------------------------------------
-    MOVLW   MODBUS_DAT_EXTRA_ADRH
-    MOVWF   FSR1H
-    MOVLW   MODBUS_DAT_EXTRA_ADRL
-    MOVWF   FSR1L
-    MOVLW   0X0A
-    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
-    MOVLW   0X04
-    ADDWF   FSR1L,F
-
-    MOVF    INDF1,W
-    MOVWF   INDF0
-    INCF    FSR1L,F
-    INCF    FSR0L,F
-    MOVF    INDF1,W
-    MOVWF   INDF0
-;--------------------------------------
-    MOVLW   0X08
-    MOVWF   TX_DATA_COUNTER
-    BSF     FLAG1_BANK0,CAN_SEND_TX_FLAG
-
-MOVF ADR_TEST_TEMP,W
-MOVWF CAL_TEMP_LBYTE
-MOVLW 0X0F
-ANDWF CAL_TEMP_LBYTE,F
-
-;------------------------------------------------
-    MOVLW   0X09
-    XORWF   CAL_TEMP_LBYTE,W
-    BTFSC   STATUS,Z
-    GOTO    STRONG_STOP_FUNCTION
-;------------------------
-    MOVLW   0X00
-    XORWF   CAL_TEMP_LBYTE,W
-    BTFSC   STATUS,Z
-    GOTO    CW_STEP_FUNCTION
-;------------------------
-    MOVLW   0X01
-    XORWF   CAL_TEMP_LBYTE,W
-    BTFSC   STATUS,Z
-    GOTO    CCW_STEP_FUNCTION
-;------------------------
-    MOVLW   0X04
-    XORWF   CAL_TEMP_LBYTE,W
-    BTFSC   STATUS,Z    
-    GOTO    RESET_STEP_FUNCTION
-
-;------------------------------------------------
-ANAY_MODBUS_CMD_06_EXIT:
-    BCF     FLAG2_BANK0,NOW_MOTOR_1_FLAG
-    BCF     FLAG2_BANK0,NOW_MOTOR_2_FLAG
-    BCF     FLAG2_BANK0,NOW_MOTOR_3_FLAG
-    BCF     FLAG2_BANK0,NOW_MOTOR_4_FLAG
-    RETFIE
-
-
-
-;-------------------------------------------
-;-------------0X80以上的WRITE CMD-----------
-;-------------------------------------------
-ANAY_MODBUS_WRITE_0X80_LOOP:
-    MOVLW   0X08
-    MOVWF   TX_DATA_COUNTER
-    BSF     FLAG1_BANK0,CAN_SEND_TX_FLAG
-    MOVLW   0X83
-    XORWF   INDF1,W
-    BTFSC   STATUS,Z
-    CALL    COMMON_CMD_0X83_LOOP
-    GOTO    ANAY_MODBUS_CMD_06_EXIT
-COMMON_CMD_0X83_LOOP:
-    INCF    FSR1L,F
+    MOVWF   STANDBY_HBYTE_DAT
     INCF    FSR1L,F
     MOVF    INDF1,W
-    BTFSC   STATUS,Z
-    GOTO    RECOVER_MODULE_LOOP
-BANKSEL     BANK7
-    MOVLW   0X02
-    MOVWF   ADR_83_L_DAT
-    MOVLW   0X02
-    MOVWF   ADR_81_L_DAT
-
-
-RECOVER_MODULE_LOOP_LV1:
-BANKSEL     MOTOR_CONTROL_PORT
-    BCF     MOTOR_CONTROL_PORT,M1_ST
-    BCF     MOTOR_CONTROL_PORT,M2_ST
-BANKSEL     PORTA
-    BSF     FLAG3_BANK0,ALL_MOTOR_STOP_FLAG
-    BCF     MOTOR2_FLAG0,MOTOR_2_RESET
-    BCF     MOTOR1_FLAG0,MOTOR_1_RESET
-    BCF     MOTOR1_FLAG0,MOTOR_1_HI_ZERO
-    BCF     MOTOR1_FLAG0,MOTOR_1_ING_ZERO
-    BCF     FLAG1_BANK0,CAN_WORK_FLAG
-
-    BCF     MOTOR2_FLAG0,MOTOR_2_WORK
-    BCF     MOTOR2_FLAG1,MOTOR2_IN_ZERO_FLAG
-    BCF     MOTOR2_FLAG1,MOTOR2_IN_ROAT_FLAG
-    BCF     FLAG3_BANK0,TEN_TIME_EN
-    BCF     MOTOR1_FLAG1,MOTOR1_IN_ROAT_FLAG
-    BCF     MOTOR1_FLAG1,MOTOR1_IN_ZERO_FLAG
-    BCF     MOTOR1_FLAG0,MOTOR_1_WORK
-
-    MOVLW   MODBUS_DAT_REAL_ADRH
-    MOVWF   FSR0H
-    MOVLW   MODBUS_DAT_REAL_ADRL
-    MOVWF   FSR0L
-    MOVLW   0X07                                      ;CMD 0X13詢問目前MOTOR1狀態
-    ADDWF   FSR0L,F
+    MOVWF   STANDBY_LBYTE_DAT
+;----------------------------------------------------         將位置資料先複製出來
+    MOVLW   0XA0
+    SUBWF   STANDBY_LBYTE_DAT,F
     MOVLW   0X00
-    MOVWF   INDF0
-    MOVLW   MODBUS_DAT_REAL_ADRH
-    MOVWF   FSR0H
-    MOVLW   MODBUS_DAT_REAL_ADRL
-    MOVWF   FSR0L
-    MOVLW   0X15
-    ADDWF   FSR0L,F
-    MOVLW   0X07
-    ADDWF   FSR0L,F
-    MOVLW   0X00
-    MOVWF   INDF0
-;---------------------------------------------------------------------------
-
-
-    MOVLW   MODBUS_DAT_REAL_ADRH
-    MOVWF   FSR0H
-    MOVLW   MODBUS_DAT_REAL_ADRL
-    MOVWF   FSR0L
-    CLRF    INDF0
-    INCF    FSR0L,F
-;-------------
-    CLRF    INDF0
-    INCF    FSR0L,F
-;-------------
-    CLRF    INDF0
-    INCF    FSR0L,F
-;-------------
-    CLRF    INDF0
-    INCF    FSR0L,F
-;-------------
-;=============================================
-
-    MOVLW   MODBUS_DAT_REAL_ADRH
-    MOVWF   FSR0H
-    MOVLW   MODBUS_DAT_REAL_ADRL
-    MOVWF   FSR0L
-    MOVLW   0X15
-    ADDWF   FSR0L,F
-    CLRF    INDF0
-    INCF    FSR0L,F
-;-------------
-    CLRF    INDF0
-    INCF    FSR0L,F
-;-------------
-    CLRF    INDF0
-    INCF    FSR0L,F
-;-------------
-    CLRF    INDF0
-    INCF    FSR0L,F
-;-------------
-    RETURN
-;-----------------------------------------------------
-;停止動作
-RECOVER_MODULE_LOOP:
-BANKSEL     BANK7
-    MOVLW   0X00
-    MOVWF   ADR_83_L_DAT
-    MOVLW   0X00
-    MOVWF   ADR_81_L_DAT
-BANKSEL     PORTA
-CALL RECOVER_MODULE_LOOP_LV1
-    BCF     FLAG3_BANK0,ALL_MOTOR_STOP_FLAG
-    RETURN
- 
+    SUBWFB  STANDBY_HBYTE_DAT,F
+;----------------------------------------------------         由於後面會用TABLE，所以從0開始會比較好
+    MOVF    STANDBY_LBYTE_DAT,W
+    MOVWF   MODBUS_TABLE_ADR_TEMP
+    GOTO    MODBUS_ADR_FUNCTION                              ;MODBUS ADR TABLE
+;----------------------------------------------------------------------------------------------------
 
 
 
 
-;--------------------------------------------------------------------------
-;---------------------------------------------------------------------------
-;---------------------------------------------------------------------------
-;========================================================
-;=============ADDR IS 0X04===============================
-;========================================================
-RESET_STEP_FUNCTION:
-    BTFSC   FLAG2_BANK0,NOW_MOTOR_1_FLAG
-    CALL    STRONG_RESET_MOTOR_1_FUNC
-    BTFSC   FLAG2_BANK0,NOW_MOTOR_2_FLAG
-    CALL    STRONG_RESET_MOTOR_2_FUNC
-    GOTO    ANAY_MODBUS_CMD_06_EXIT
-STRONG_RESET_MOTOR_1_FUNC:
-BANKSEL MOTOR_CONTROL_PORT
-BCF     MOTOR_CONTROL_PORT,M1_FR
-BANKSEL PORTA
-    BSF     MOTOR1_FLAG0,MOTOR_1_RESET
-    RETURN
-STRONG_RESET_MOTOR_2_FUNC:
-    BSF     MOTOR2_FLAG0,MOTOR_2_RESET
-    RETURN
 
 
-;========================================================
-;=============ADDR IS 0X00===============================
-;========================================================
-CW_STEP_FUNCTION:
-    BTFSC   FLAG2_BANK0,NOW_MOTOR_1_FLAG
-    CALL    STRONG_CW_MOTOR_1_FUNC
-    BTFSC   FLAG2_BANK0,NOW_MOTOR_2_FLAG
-    CALL    STRONG_CW_MOTOR_2_FUNC
-    GOTO    ANAY_MODBUS_CMD_06_EXIT
-STRONG_CW_MOTOR_1_FUNC:
-BANKSEL MOTOR_CONTROL_PORT
-BCF     MOTOR_CONTROL_PORT,M1_FR
-BANKSEL PORTA
-BSF FLAG5_BANK0,RESET_IN_NORMAL_FALG
-    BSF     MOTOR1_FLAG0,MOTOR_1_RESET
-    BSF     FLAG1_BANK0,CAN_WORK_FLAG
-    BSF     MOTOR1_FLAG0,MOTOR_1_WORK
-    RETURN
-STRONG_CW_MOTOR_2_FUNC:
-    BSF     FLAG1_BANK0,CAN_WORK_FLAG
-    BSF     MOTOR2_FLAG0,MOTOR_2_WORK
-    RETURN
-;========================================================
-;=============ADDR IS 0X01===============================
-;========================================================
-CCW_STEP_FUNCTION:
-    BTFSC   FLAG2_BANK0,NOW_MOTOR_1_FLAG
-    CALL    STRONG_CCW_MOTOR_1_FUNC
-    BTFSC   FLAG2_BANK0,NOW_MOTOR_2_FLAG
-    CALL    STRONG_CCW_MOTOR_2_FUNC
-    GOTO    ANAY_MODBUS_CMD_06_EXIT
-STRONG_CCW_MOTOR_1_FUNC:
-BANKSEL MOTOR_CONTROL_PORT
-BSF     MOTOR_CONTROL_PORT,M1_FR
-BANKSEL PORTA
-BSF FLAG5_BANK0,RESET_IN_NORMAL_FALG
-    BSF     MOTOR1_FLAG0,MOTOR_1_RESET
-    BSF     FLAG1_BANK0,CAN_WORK_FLAG
-    BSF     MOTOR1_FLAG0,MOTOR_1_WORK
-    RETURN
-STRONG_CCW_MOTOR_2_FUNC:
-    BSF     FLAG1_BANK0,CAN_WORK_FLAG
-    BSF     MOTOR2_FLAG0,MOTOR_2_WORK
-    RETURN
-;========================================================
-;=============ADDR IS 0X09===============================
-;========================================================
-STRONG_STOP_FUNCTION:
-    BTFSC   FLAG2_BANK0,NOW_MOTOR_1_FLAG
-    CALL    STRONG_STOP_MOTOR_1_FUNC
-    BTFSC   FLAG2_BANK0,NOW_MOTOR_2_FLAG
-    CALL    STRONG_STOP_MOTOR_2_FUNC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;;--------------------------------------------------------------------
+;    MOVLW   MODBUS_DAT_EXTRA_ADRH
+;    MOVWF   FSR1H
+;    MOVLW   MODBUS_DAT_EXTRA_ADRL
+;    MOVWF   FSR1L
+;    MOVLW   0X0A
+;    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
+;    MOVLW   0X05
+;    ADDWF   FSR1L,F                          ;要讀取的WORD數
+;;-------------------
+;    MOVF    INDF1,W
+;    ;MOVWF   RTU_COUNTER_DATA                  ;要讀取的資料WORD數
+;    MOVWF   CAL_TEMP_LBYTE
+;
+;
+;    MOVLW   MODBUS_DAT_EXTRA_ADRH
+;    MOVWF   FSR1H
+;    MOVLW   MODBUS_DAT_EXTRA_ADRL
+;    MOVWF   FSR1L
+;    MOVLW   0X0A
+;    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
+;    MOVLW   0X03
+;    ADDWF   FSR1L,F
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;;-------------------------------
+;    MOVLW   0X70
+;    ADDWF   INDF1,W
+;    BTFSC   STATUS,C
+;    GOTO    ANAY_MODBUS_READ_0X90_LOOP
+;
+;
+;    MOVLW   0X80
+;    ADDWF   INDF1,W
+;    BTFSC   STATUS,C
+;    GOTO    ANAY_MODBUS_READ_0X80_LOOP                ;表示使用的CMD是共用型
+;
+;;-----------------------------------------------
+;
+;
+;
+;    MOVLW   MODBUS_DAT_EXTRA_ADRH
+;    MOVWF   FSR1H
+;    MOVLW   MODBUS_DAT_EXTRA_ADRL
+;    MOVWF   FSR1L
+;    MOVLW   0X0A
+;    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
+;    MOVLW   0X05
+;    ADDWF   FSR1L,F                          ;要讀取的WORD數
+;
+;
+;
+;
+;    MOVLW   0X02
+;    SUBWF   FSR1L,F                           ;判斷要讀取的ADR
+;;------------------
+;    MOVF    INDF1,W
+;    MOVWF   CAL_TEMP_HBYTE
+;    MOVWF   ADR_TEST_TEMP
+;    MOVLW   0XF0
+;    ANDWF   CAL_TEMP_HBYTE,F
+;;-----------------
+;    MOVLW   0X10
+;    XORWF   CAL_TEMP_HBYTE,W
+;    BTFSC   STATUS,Z
+;    GOTO    READ_MOTOR_1_SOME_DATA
+;;-------------------
+;    MOVLW   0X20
+;    XORWF   CAL_TEMP_HBYTE,W
+;    BTFSC   STATUS,Z
+;    GOTO    READ_MOTOR_2_SOME_DATA
+;;-------------------
+;    MOVLW   0X30
+;    XORWF   CAL_TEMP_HBYTE,W
+;    BTFSC   STATUS,Z
+;    GOTO    READ_MOTOR_3_SOME_DATA
+;;-------------------
+;    MOVLW   0X40
+;    XORWF   CAL_TEMP_HBYTE,W
+;    BTFSC   STATUS,Z
+;    GOTO    READ_MOTOR_4_SOME_DATA
+;;-------------------
+;GOTO MODBUS_BUS_01_ERROR_LOOP
+;ANAY_MODBUS_CMD_03_LEVEL1:
+;    MOVLW   0X0F
+;    ANDWF   ADR_TEST_TEMP,F
+;;    MOVF    ADR_TEST_TEMP,W
+;;    ADDWF   FSR0L,F
+;
+;BCF STATUS,C
+;RLF ADR_TEST_TEMP,F
+;MOVF ADR_TEST_TEMP,W
+;ADDWF   FSR0L,F
+;
+;
+;
+;
+;    BCF     STATUS,C
+;    RLF     CAL_TEMP_LBYTE,F
+;    MOVF    CAL_TEMP_LBYTE,W
+;    MOVWF   RTU_COUNTER_DATA                  ;要讀的BYTE數
+;;------------------
+;    MOVLW   MODBUS_DAT_EXTRA_ADRH
+;    MOVWF   FSR1H
+;    MOVLW   MODBUS_DAT_EXTRA_ADRL
+;    MOVWF   FSR1L
+;    MOVLW   0X0A
+;    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
+;    MOVLW   0X02
+;    ADDWF   FSR1L,F
+;    MOVF    RTU_COUNTER_DATA,W
+;    MOVWF   INDF1
+;    INCF    FSR1L,F
+;;--------
+;ANAY_MODBUS_CMD_03_LEVEL2:
+;    MOVF    INDF0,W
+;    MOVWF   INDF1
+;
+;;MOVWF 0X71
+;;CALL AAAA_1800
+;
+;
+;    INCF    FSR1L,F
+;    INCF    FSR0L,F
+;    DECFSZ  CAL_TEMP_LBYTE,F
+;    GOTO    ANAY_MODBUS_CMD_03_LEVEL2
+;    MOVF    RTU_COUNTER_DATA,W
+;    MOVWF   CAL_TEMP_LBYTE
+;    MOVLW   0X03
+;    ADDWF   RTU_COUNTER_DATA,F  
+;;----------------------------------------------------------
+;    CALL    MODBUS_RTU_READ_LV2
+;    MOVF    CAL_TEMP_LBYTE,W
+;    MOVWF   TX_DATA_COUNTER
+;    MOVLW   0X05
+;    ADDWF   TX_DATA_COUNTER,F
+;    BSF     FLAG1_BANK0,CAN_SEND_TX_FLAG
+;    RETFIE
+;;----------------------------------------------------------
+;ANAY_MODBUS_READ_0X90_LOOP:
+;    MOVLW   MODBUS_DAT_EXTRA_ADRH
+;    MOVWF   FSR1H
+;    MOVLW   MODBUS_DAT_EXTRA_ADRL
+;    MOVWF   FSR1L
+;    MOVLW   0X0A
+;    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
+;    MOVLW   0X03
+;    ADDWF   FSR1L,F
+;    MOVLW   0X80
+;    SUBWF   INDF1,F
+;    GOTO    ANAY_MODBUS_READ_LV0
+;;----------------------------------------------------------
+;ANAY_MODBUS_READ_0X80_LOOP:
+;    MOVLW   MODBUS_DAT_EXTRA_ADRH
+;    MOVWF   FSR1H
+;    MOVLW   MODBUS_DAT_EXTRA_ADRL
+;    MOVWF   FSR1L
+;    MOVLW   0X0A
+;    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
+;    MOVLW   0X03
+;    ADDWF   FSR1L,F
+;    MOVLW   0X80
+;    SUBWF   INDF1,F
+;
+;    BCF     STATUS,C
+;    RLF     INDF1,F
+;ANAY_MODBUS_READ_LV0:
+;;-----------------------------------
+;    MOVLW   COMMON_DATA_HBYTE
+;    MOVWF   FSR0H
+;    MOVLW   COMMON_DATA_LBYTE
+;    MOVWF   FSR0L
+;    MOVF    INDF1,W
+;    ADDWF   FSR0L,F
+;;-------------
+;    BCF     STATUS,C
+;    RLF     CAL_TEMP_LBYTE,F
+;    MOVF    CAL_TEMP_LBYTE,W
+;    MOVWF   RTU_COUNTER_DATA                  ;要讀的BYTE數
+;;------------------
+;    MOVLW   MODBUS_DAT_EXTRA_ADRH
+;    MOVWF   FSR1H
+;    MOVLW   MODBUS_DAT_EXTRA_ADRL
+;    MOVWF   FSR1L
+;    MOVLW   0X0A
+;    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
+;    MOVLW   0X02
+;    ADDWF   FSR1L,F
+;    MOVF    RTU_COUNTER_DATA,W
+;    MOVWF   INDF1
+;    INCF    FSR1L,F
+;;-----------------------------------
+;ANAY_MODBUS_READ_0X80_LV1:
+;    MOVF    INDF0,W
+;    MOVWF   INDF1
+;    INCF    FSR0L,F
+;    INCF    FSR1L,F
+;    DECFSZ  CAL_TEMP_LBYTE,F
+;    GOTO    ANAY_MODBUS_READ_0X80_LV1
+;    MOVF    RTU_COUNTER_DATA,W
+;    MOVWF   CAL_TEMP_LBYTE
+;    MOVLW   0X03
+;    ADDWF   RTU_COUNTER_DATA,F  
+;;----------------------------------------------------------
+;    CALL    MODBUS_RTU_READ_LV2
+;    MOVF    CAL_TEMP_LBYTE,W
+;    MOVWF   TX_DATA_COUNTER
+;    MOVLW   0X05
+;    ADDWF   TX_DATA_COUNTER,F
+;    BSF     FLAG1_BANK0,CAN_SEND_TX_FLAG
+;    RETFIE
+;
+;
+;;----------------------------------------------------------
+;;----------------------------------------------------------
+;READ_MOTOR_1_SOME_DATA:
+;    MOVLW   MODBUS_DAT_REAL_ADRH
+;    MOVWF   FSR0H
+;    MOVLW   MODBUS_DAT_REAL_ADRL
+;    MOVWF   FSR0L
+;    GOTO    ANAY_MODBUS_CMD_03_LEVEL1
+;READ_MOTOR_2_SOME_DATA:
+;    MOVLW   MODBUS_DAT_REAL_ADRH
+;    MOVWF   FSR0H
+;    MOVLW   MODBUS_DAT_REAL_ADRL
+;    MOVWF   FSR0L
+;    MOVLW   0X15
+;    ADDWF   FSR0L,F
+;    GOTO    ANAY_MODBUS_CMD_03_LEVEL1
+;READ_MOTOR_3_SOME_DATA:
+;    MOVLW   MODBUS_DAT_REAL_ADRH
+;    MOVWF   FSR0H
+;    MOVLW   MODBUS_DAT_REAL_ADRL
+;    MOVWF   FSR0L
+;    MOVLW   0X2A
+;    ADDWF   FSR0L,F
+;    GOTO    ANAY_MODBUS_CMD_03_LEVEL1
+;READ_MOTOR_4_SOME_DATA:
+;    MOVLW   MODBUS_DAT_REAL_ADRH
+;    MOVWF   FSR0H
+;    MOVLW   MODBUS_DAT_REAL_ADRL
+;    MOVWF   FSR0L
+;    MOVLW   0X3F
+;    ADDWF   FSR0L,F
+;    GOTO    ANAY_MODBUS_CMD_03_LEVEL1
+;
+;STORE_WRITE_ACK_LOOP:
+;    MOVLW   MODBUS_DAT_EXTRA_ADRH
+;    MOVWF   FSR0H
+;    MOVLW   MODBUS_DAT_EXTRA_ADRL
+;    MOVWF   FSR0L
+;    MOVLW   0X0A
+;    ADDWF   FSR0L,F                          ;這裡是第一筆資料的位置
+;;-------------
+;    MOVLW   0X22
+;    MOVWF   FSR1H
+;    MOVLW   0X40
+;    MOVWF   FSR1L                                   ;ADR_90_DAT00的位置
+;    MOVLW   0X08
+;    MOVWF   ACK_COUNTER_TEMP
+;;-------------
+;STORE_WRITE_ACK_LV1:
+;    MOVF    INDF0,W
+;    MOVWF   INDF1
+;    INCF    FSR0L,F
+;    INCF    FSR1L,F
+;    DECFSZ  ACK_COUNTER_TEMP,F
+;    GOTO    STORE_WRITE_ACK_LV1
+;    RETURN
+
+
+;;========================================================
+;;=============MODBUS 功能碼為0X06========================
+;;========================================================
+;ANAY_MODBUS_CMD_06_LOOP:
+;BANKSEL     PORTA
+;    ;CALL    STORE_WRITE_ACK_LOOP
+;    MOVLW   MODBUS_DAT_EXTRA_ADRH
+;    MOVWF   FSR1H
+;    MOVLW   MODBUS_DAT_EXTRA_ADRL
+;    MOVWF   FSR1L
+;    MOVLW   0X0A
+;    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
+;    MOVLW   0X03
+;    ADDWF   FSR1L,F
+;    MOVLW   0X80
+;    ADDWF   INDF1,W
+;    BTFSC   STATUS,C
+;    GOTO    ANAY_MODBUS_WRITE_0X80_LOOP                ;表示使用的CMD是共用型
+;
+;
+;
+;
+;
+;
+;    MOVLW   MODBUS_DAT_EXTRA_ADRH
+;    MOVWF   FSR1H
+;    MOVLW   MODBUS_DAT_EXTRA_ADRL
+;    MOVWF   FSR1L
+;    MOVLW   0X0A
+;    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
+;    MOVLW   0X03
+;    ADDWF   FSR1L,F
+;;-------------------
+;;-------------------
+;    MOVF    INDF1,W
+;    MOVWF   CAL_TEMP_HBYTE
+;    MOVWF   CAL_TEMP_LBYTE
+;    MOVWF   ADR_TEST_TEMP
+;    MOVLW   0XF0
+;    ANDWF   CAL_TEMP_HBYTE,F
+;;------------
+;    MOVLW   0X0F
+;    ANDWF   CAL_TEMP_LBYTE,F
+;;-----------------
+;    MOVLW   0X10
+;    XORWF   CAL_TEMP_HBYTE,W
+;    BTFSC   STATUS,Z
+;    GOTO    WRITE_MOTOR_1_SOME_DATA
+;;-------------------
+;    MOVLW   0X20
+;    XORWF   CAL_TEMP_HBYTE,W
+;    BTFSC   STATUS,Z
+;    GOTO    WRITE_MOTOR_2_SOME_DATA
+;;-------------------
+;    MOVLW   0X30
+;    XORWF   CAL_TEMP_HBYTE,W
+;    BTFSC   STATUS,Z
+;    GOTO    WRITE_MOTOR_3_SOME_DATA
+;;-------------------
+;    MOVLW   0X40
+;    XORWF   CAL_TEMP_HBYTE,W
+;    BTFSC   STATUS,Z
+;    GOTO    WRITE_MOTOR_4_SOME_DATA
+;;-------------------
+;GOTO MODBUS_BUS_01_ERROR_LOOP
+;ANAY_MODBUS_CMD_06_LEVEL1:
+;    ;MOVF    CAL_TEMP_LBYTE,W
+;BCF STATUS,C
+;RLF CAL_TEMP_LBYTE,F
+;MOVF CAL_TEMP_LBYTE,W
+;ADDWF   FSR0L,F
+;;--------------------------------------
+;    MOVLW   MODBUS_DAT_EXTRA_ADRH
+;    MOVWF   FSR1H
+;    MOVLW   MODBUS_DAT_EXTRA_ADRL
+;    MOVWF   FSR1L
+;    MOVLW   0X0A
+;    ADDWF   FSR1L,F                          ;這裡是第一筆資料的位置
+;    MOVLW   0X04
+;    ADDWF   FSR1L,F
+;
+;    MOVF    INDF1,W
+;    MOVWF   INDF0
+;    INCF    FSR1L,F
+;    INCF    FSR0L,F
+;    MOVF    INDF1,W
+;    MOVWF   INDF0
+;;--------------------------------------
+;    MOVLW   0X08
+;    MOVWF   TX_DATA_COUNTER
+;    BSF     FLAG1_BANK0,CAN_SEND_TX_FLAG
+;
+;MOVF ADR_TEST_TEMP,W
+;MOVWF CAL_TEMP_LBYTE
+;MOVLW 0X0F
+;ANDWF CAL_TEMP_LBYTE,F
+;
+;;------------------------------------------------
+;    MOVLW   0X09
+;    XORWF   CAL_TEMP_LBYTE,W
+;    BTFSC   STATUS,Z
+;    GOTO    STRONG_STOP_FUNCTION
+;;------------------------
+;    MOVLW   0X00
+;    XORWF   CAL_TEMP_LBYTE,W
+;    BTFSC   STATUS,Z
+;    GOTO    CW_STEP_FUNCTION
+;;------------------------
+;    MOVLW   0X01
+;    XORWF   CAL_TEMP_LBYTE,W
+;    BTFSC   STATUS,Z
+;    GOTO    CCW_STEP_FUNCTION
+;;------------------------
+;    MOVLW   0X04
+;    XORWF   CAL_TEMP_LBYTE,W
+;    BTFSC   STATUS,Z    
+;    GOTO    RESET_STEP_FUNCTION
+;
+;;------------------------------------------------
+;ANAY_MODBUS_CMD_06_EXIT:
+;    BCF     FLAG2_BANK0,NOW_MOTOR_1_FLAG
+;    BCF     FLAG2_BANK0,NOW_MOTOR_2_FLAG
+;    BCF     FLAG2_BANK0,NOW_MOTOR_3_FLAG
+;    BCF     FLAG2_BANK0,NOW_MOTOR_4_FLAG
+;    RETFIE
+;
+;
+;
+;;-------------------------------------------
+;;-------------0X80以上的WRITE CMD-----------
+;;-------------------------------------------
+;ANAY_MODBUS_WRITE_0X80_LOOP:
+;    MOVLW   0X08
+;    MOVWF   TX_DATA_COUNTER
+;    BSF     FLAG1_BANK0,CAN_SEND_TX_FLAG
+;    MOVLW   0X83
+;    XORWF   INDF1,W
+;    BTFSC   STATUS,Z
+;    CALL    COMMON_CMD_0X83_LOOP
+;    GOTO    ANAY_MODBUS_CMD_06_EXIT
+;COMMON_CMD_0X83_LOOP:
+;    INCF    FSR1L,F
+;    INCF    FSR1L,F
+;    MOVF    INDF1,W
+;    BTFSC   STATUS,Z
+;    GOTO    RECOVER_MODULE_LOOP
+;BANKSEL     BANK7
+;    MOVLW   0X02
+;    MOVWF   ADR_83_L_DAT
+;    MOVLW   0X02
+;    MOVWF   ADR_81_L_DAT
+;
+;
+;RECOVER_MODULE_LOOP_LV1:
+;BANKSEL     MOTOR_CONTROL_PORT
+;    BCF     MOTOR_CONTROL_PORT,M1_ST
+;    BCF     MOTOR_CONTROL_PORT,M2_ST
+;BANKSEL     PORTA
+;    BSF     FLAG3_BANK0,ALL_MOTOR_STOP_FLAG
+;    BCF     MOTOR2_FLAG0,MOTOR_2_RESET
+;    BCF     MOTOR1_FLAG0,MOTOR_1_RESET
+;    BCF     MOTOR1_FLAG0,MOTOR_1_HI_ZERO
+;    BCF     MOTOR1_FLAG0,MOTOR_1_ING_ZERO
+;    BCF     FLAG1_BANK0,CAN_WORK_FLAG
+;
+;    BCF     MOTOR2_FLAG0,MOTOR_2_WORK
+;    BCF     MOTOR2_FLAG1,MOTOR2_IN_ZERO_FLAG
+;    BCF     MOTOR2_FLAG1,MOTOR2_IN_ROAT_FLAG
+;    BCF     FLAG3_BANK0,TEN_TIME_EN
+;    BCF     MOTOR1_FLAG1,MOTOR1_IN_ROAT_FLAG
+;    BCF     MOTOR1_FLAG1,MOTOR1_IN_ZERO_FLAG
+;    BCF     MOTOR1_FLAG0,MOTOR_1_WORK
+;
+;    MOVLW   MODBUS_DAT_REAL_ADRH
+;    MOVWF   FSR0H
+;    MOVLW   MODBUS_DAT_REAL_ADRL
+;    MOVWF   FSR0L
+;    MOVLW   0X07                                      ;CMD 0X13詢問目前MOTOR1狀態
+;    ADDWF   FSR0L,F
+;    MOVLW   0X00
+;    MOVWF   INDF0
+;    MOVLW   MODBUS_DAT_REAL_ADRH
+;    MOVWF   FSR0H
+;    MOVLW   MODBUS_DAT_REAL_ADRL
+;    MOVWF   FSR0L
+;    MOVLW   0X15
+;    ADDWF   FSR0L,F
+;    MOVLW   0X07
+;    ADDWF   FSR0L,F
+;    MOVLW   0X00
+;    MOVWF   INDF0
+;;---------------------------------------------------------------------------
+;
+;
+;    MOVLW   MODBUS_DAT_REAL_ADRH
+;    MOVWF   FSR0H
+;    MOVLW   MODBUS_DAT_REAL_ADRL
+;    MOVWF   FSR0L
+;    CLRF    INDF0
+;    INCF    FSR0L,F
+;;-------------
+;    CLRF    INDF0
+;    INCF    FSR0L,F
+;;-------------
+;    CLRF    INDF0
+;    INCF    FSR0L,F
+;;-------------
+;    CLRF    INDF0
+;    INCF    FSR0L,F
+;;-------------
+;;=============================================
+;
+;    MOVLW   MODBUS_DAT_REAL_ADRH
+;    MOVWF   FSR0H
+;    MOVLW   MODBUS_DAT_REAL_ADRL
+;    MOVWF   FSR0L
+;    MOVLW   0X15
+;    ADDWF   FSR0L,F
+;    CLRF    INDF0
+;    INCF    FSR0L,F
+;;-------------
+;    CLRF    INDF0
+;    INCF    FSR0L,F
+;;-------------
+;    CLRF    INDF0
+;    INCF    FSR0L,F
+;;-------------
+;    CLRF    INDF0
+;    INCF    FSR0L,F
+;;-------------
+;    RETURN
+;;-----------------------------------------------------
+;;停止動作
+;RECOVER_MODULE_LOOP:
+;BANKSEL     BANK7
+;    MOVLW   0X00
+;    MOVWF   ADR_83_L_DAT
+;    MOVLW   0X00
+;    MOVWF   ADR_81_L_DAT
+;BANKSEL     PORTA
+;CALL RECOVER_MODULE_LOOP_LV1
+;    BCF     FLAG3_BANK0,ALL_MOTOR_STOP_FLAG
+;    RETURN
+; 
+;
+;
+;
+;
+;;--------------------------------------------------------------------------
+;;---------------------------------------------------------------------------
+;;---------------------------------------------------------------------------
+;;========================================================
+;;=============ADDR IS 0X04===============================
+;;========================================================
+;RESET_STEP_FUNCTION:
+;    BTFSC   FLAG2_BANK0,NOW_MOTOR_1_FLAG
+;    CALL    STRONG_RESET_MOTOR_1_FUNC
+;    BTFSC   FLAG2_BANK0,NOW_MOTOR_2_FLAG
+;    CALL    STRONG_RESET_MOTOR_2_FUNC
+;    GOTO    ANAY_MODBUS_CMD_06_EXIT
+;STRONG_RESET_MOTOR_1_FUNC:
+;BANKSEL MOTOR_CONTROL_PORT
+;BCF     MOTOR_CONTROL_PORT,M1_FR
+;BANKSEL PORTA
+;    BSF     MOTOR1_FLAG0,MOTOR_1_RESET
+;    RETURN
+;STRONG_RESET_MOTOR_2_FUNC:
+;    BSF     MOTOR2_FLAG0,MOTOR_2_RESET
+;    RETURN
+;
+;
+;;========================================================
+;;=============ADDR IS 0X00===============================
+;;========================================================
+;CW_STEP_FUNCTION:
+;    BTFSC   FLAG2_BANK0,NOW_MOTOR_1_FLAG
+;    CALL    STRONG_CW_MOTOR_1_FUNC
+;    BTFSC   FLAG2_BANK0,NOW_MOTOR_2_FLAG
+;    CALL    STRONG_CW_MOTOR_2_FUNC
+;    GOTO    ANAY_MODBUS_CMD_06_EXIT
+;STRONG_CW_MOTOR_1_FUNC:
+;BANKSEL MOTOR_CONTROL_PORT
+;BCF     MOTOR_CONTROL_PORT,M1_FR
+;BANKSEL PORTA
+;BSF FLAG5_BANK0,RESET_IN_NORMAL_FALG
+;    BSF     MOTOR1_FLAG0,MOTOR_1_RESET
+;    BSF     FLAG1_BANK0,CAN_WORK_FLAG
+;    BSF     MOTOR1_FLAG0,MOTOR_1_WORK
+;    RETURN
+;STRONG_CW_MOTOR_2_FUNC:
+;    BSF     FLAG1_BANK0,CAN_WORK_FLAG
+;    BSF     MOTOR2_FLAG0,MOTOR_2_WORK
+;    RETURN
+;;========================================================
+;;=============ADDR IS 0X01===============================
+;;========================================================
+;CCW_STEP_FUNCTION:
+;    BTFSC   FLAG2_BANK0,NOW_MOTOR_1_FLAG
+;    CALL    STRONG_CCW_MOTOR_1_FUNC
+;    BTFSC   FLAG2_BANK0,NOW_MOTOR_2_FLAG
+;    CALL    STRONG_CCW_MOTOR_2_FUNC
+;    GOTO    ANAY_MODBUS_CMD_06_EXIT
+;STRONG_CCW_MOTOR_1_FUNC:
+;BANKSEL MOTOR_CONTROL_PORT
+;BSF     MOTOR_CONTROL_PORT,M1_FR
+;BANKSEL PORTA
+;BSF FLAG5_BANK0,RESET_IN_NORMAL_FALG
+;    BSF     MOTOR1_FLAG0,MOTOR_1_RESET
+;    BSF     FLAG1_BANK0,CAN_WORK_FLAG
+;    BSF     MOTOR1_FLAG0,MOTOR_1_WORK
+;    RETURN
+;STRONG_CCW_MOTOR_2_FUNC:
+;    BSF     FLAG1_BANK0,CAN_WORK_FLAG
+;    BSF     MOTOR2_FLAG0,MOTOR_2_WORK
+;    RETURN
+;;========================================================
+;;=============ADDR IS 0X09===============================
+;;========================================================
+;STRONG_STOP_FUNCTION:
 ;    BTFSC   FLAG2_BANK0,NOW_MOTOR_1_FLAG
 ;    CALL    STRONG_STOP_MOTOR_1_FUNC
-;    BTFSC   FLAG2_BANK0,NOW_MOTOR_1_FLAG
-;    CALL    STRONG_STOP_MOTOR_1_FUNC
-
-
-    GOTO    ANAY_MODBUS_CMD_06_EXIT
-
-STRONG_STOP_MOTOR_1_FUNC:
-    MOVLW   MODBUS_DAT_REAL_ADRH
-    MOVWF   FSR0H
-    MOVLW   MODBUS_DAT_REAL_ADRL
-    MOVWF   FSR0L
-    MOVLW   0X07
-    ADDWF   FSR0L,F
-    MOVLW   0X04
-    MOVWF   INDF0
-;----------
-    MOVLW   0X01
-    MOVWF   STRONG_STOP_TEMP1
-BANKSEL     MOTOR_CONTROL_PORT
-    BCF     MOTOR_CONTROL_PORT,M1_ST
-BANKSEL     PORTA
-    RETURN
-STRONG_STOP_MOTOR_2_FUNC:
-    MOVLW   MODBUS_DAT_REAL_ADRH
-    MOVWF   FSR0H
-    MOVLW   MODBUS_DAT_REAL_ADRL
-    MOVWF   FSR0L
-    MOVLW   0X15
-    ADDWF   FSR0L,F
-    MOVLW   0X07
-    ADDWF   FSR0L,F
-    MOVLW   0X04
-    MOVWF   INDF0
-;----------
-    MOVLW   0X01
-    MOVWF   STRONG_STOP_TEMP2
-BANKSEL     MOTOR_CONTROL_PORT
-    BCF     MOTOR_CONTROL_PORT,M2_ST
-BANKSEL     PORTA
-    RETURN
-
-
-
-
-
-
-
-;----------------------------------------------------------
-WRITE_MOTOR_1_SOME_DATA:
-    BSF     FLAG2_BANK0,NOW_MOTOR_1_FLAG
-    MOVLW   MODBUS_DAT_REAL_ADRH
-    MOVWF   FSR0H
-    MOVLW   MODBUS_DAT_REAL_ADRL
-    MOVWF   FSR0L
-    GOTO    ANAY_MODBUS_CMD_06_LEVEL1
-WRITE_MOTOR_2_SOME_DATA:
-    BSF     FLAG2_BANK0,NOW_MOTOR_2_FLAG
-    MOVLW   MODBUS_DAT_REAL_ADRH
-    MOVWF   FSR0H
-    MOVLW   MODBUS_DAT_REAL_ADRL
-    MOVWF   FSR0L
-    MOVLW   0X15
-    ADDWF   FSR0L,F
-    GOTO    ANAY_MODBUS_CMD_06_LEVEL1
-WRITE_MOTOR_3_SOME_DATA:
-    BSF     FLAG2_BANK0,NOW_MOTOR_3_FLAG
-    MOVLW   MODBUS_DAT_REAL_ADRH
-    MOVWF   FSR0H
-    MOVLW   MODBUS_DAT_REAL_ADRL
-    MOVWF   FSR0L
-    MOVLW   0X2A
-    ADDWF   FSR0L,F
-    GOTO    ANAY_MODBUS_CMD_06_LEVEL1
-WRITE_MOTOR_4_SOME_DATA:
-    BSF     FLAG2_BANK0,NOW_MOTOR_4_FLAG
-    MOVLW   MODBUS_DAT_REAL_ADRH
-    MOVWF   FSR0H
-    MOVLW   MODBUS_DAT_REAL_ADRL
-    MOVWF   FSR0L
-    MOVLW   0X3F
-    ADDWF   FSR0L,F
-    GOTO    ANAY_MODBUS_CMD_06_LEVEL1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+;    BTFSC   FLAG2_BANK0,NOW_MOTOR_2_FLAG
+;    CALL    STRONG_STOP_MOTOR_2_FUNC
+;;    BTFSC   FLAG2_BANK0,NOW_MOTOR_1_FLAG
+;;    CALL    STRONG_STOP_MOTOR_1_FUNC
+;;    BTFSC   FLAG2_BANK0,NOW_MOTOR_1_FLAG
+;;    CALL    STRONG_STOP_MOTOR_1_FUNC
+;
+;
+;    GOTO    ANAY_MODBUS_CMD_06_EXIT
+;
+;STRONG_STOP_MOTOR_1_FUNC:
+;    MOVLW   MODBUS_DAT_REAL_ADRH
+;    MOVWF   FSR0H
+;    MOVLW   MODBUS_DAT_REAL_ADRL
+;    MOVWF   FSR0L
+;    MOVLW   0X07
+;    ADDWF   FSR0L,F
+;    MOVLW   0X04
+;    MOVWF   INDF0
+;;----------
+;    MOVLW   0X01
+;    MOVWF   STRONG_STOP_TEMP1
+;BANKSEL     MOTOR_CONTROL_PORT
+;    BCF     MOTOR_CONTROL_PORT,M1_ST
+;BANKSEL     PORTA
+;    RETURN
+;STRONG_STOP_MOTOR_2_FUNC:
+;    MOVLW   MODBUS_DAT_REAL_ADRH
+;    MOVWF   FSR0H
+;    MOVLW   MODBUS_DAT_REAL_ADRL
+;    MOVWF   FSR0L
+;    MOVLW   0X15
+;    ADDWF   FSR0L,F
+;    MOVLW   0X07
+;    ADDWF   FSR0L,F
+;    MOVLW   0X04
+;    MOVWF   INDF0
+;;----------
+;    MOVLW   0X01
+;    MOVWF   STRONG_STOP_TEMP2
+;BANKSEL     MOTOR_CONTROL_PORT
+;    BCF     MOTOR_CONTROL_PORT,M2_ST
+;BANKSEL     PORTA
+;    RETURN
+;
+;
+;
+;
+;
+;
+;
+;;----------------------------------------------------------
+;WRITE_MOTOR_1_SOME_DATA:
+;    BSF     FLAG2_BANK0,NOW_MOTOR_1_FLAG
+;    MOVLW   MODBUS_DAT_REAL_ADRH
+;    MOVWF   FSR0H
+;    MOVLW   MODBUS_DAT_REAL_ADRL
+;    MOVWF   FSR0L
+;    GOTO    ANAY_MODBUS_CMD_06_LEVEL1
+;WRITE_MOTOR_2_SOME_DATA:
+;    BSF     FLAG2_BANK0,NOW_MOTOR_2_FLAG
+;    MOVLW   MODBUS_DAT_REAL_ADRH
+;    MOVWF   FSR0H
+;    MOVLW   MODBUS_DAT_REAL_ADRL
+;    MOVWF   FSR0L
+;    MOVLW   0X15
+;    ADDWF   FSR0L,F
+;    GOTO    ANAY_MODBUS_CMD_06_LEVEL1
+;WRITE_MOTOR_3_SOME_DATA:
+;    BSF     FLAG2_BANK0,NOW_MOTOR_3_FLAG
+;    MOVLW   MODBUS_DAT_REAL_ADRH
+;    MOVWF   FSR0H
+;    MOVLW   MODBUS_DAT_REAL_ADRL
+;    MOVWF   FSR0L
+;    MOVLW   0X2A
+;    ADDWF   FSR0L,F
+;    GOTO    ANAY_MODBUS_CMD_06_LEVEL1
+;WRITE_MOTOR_4_SOME_DATA:
+;    BSF     FLAG2_BANK0,NOW_MOTOR_4_FLAG
+;    MOVLW   MODBUS_DAT_REAL_ADRH
+;    MOVWF   FSR0H
+;    MOVLW   MODBUS_DAT_REAL_ADRL
+;    MOVWF   FSR0L
+;    MOVLW   0X3F
+;    ADDWF   FSR0L,F
+;    GOTO    ANAY_MODBUS_CMD_06_LEVEL1
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
 
 
 
@@ -1397,17 +1833,11 @@ CHECK_PWM_FREQ_FUCNTION:
 ;========================================================
 ;=====================ID SELECT==========================
 ;========================================================
+;這邊判斷ID的條件是由ADC RF0的數值來判斷
 ID_SELECT_LOOP:
 BANKSEL     PORTA
     CLRF    MODULE_ID_DAT
-    BTFSC   ADDR_4_5_PORT,ADDSEL_4
-    BSF     MODULE_ID_DAT,0X00
-    BTFSC   ADDR_4_5_PORT,ADDSEL_5
-    BSF     MODULE_ID_DAT,0X01
-    BTFSC   ADDR_6_7_PORT,ADDSEL_6
-    BSF     MODULE_ID_DAT,0X02
-    BTFSC   ADDR_6_7_PORT,ADDSEL_7
-    BSF     MODULE_ID_DAT,0X03
+
 ;========================================================
 ;===================POWER LED輸出========================
 ;========================================================
@@ -1464,35 +1894,35 @@ BANKSEL     BANK7
     MOVLW   0X00
     MOVWF   ADR_83_L_DAT
 BANKSEL     PORTA
-;MOVLW 0X04
-;MOVWF MODULE_ID_DAT
+MOVLW 0X04
+MOVWF MODULE_ID_DAT
 GOTO SYSTEM_START
 
 
 
-
-TEST_FUNCTION_LOOP:
-BANKSEL     PORTA
-CALL DELAY_10ms
-BANKSEL     MAX485_PORT
-    BSF     MAX485_PORT,MAX485_SELECT
-;---------------------------------------------
-TEST_FUNCTION_LOOP1:
-BANKSEL     TX2STA
-    BTFSS   TX2STA,TRMT
-    GOTO    TEST_FUNCTION_LOOP1
-BANKSEL     TX2REG
-MOVLW 0XA5
-    MOVWF   TX2REG
-BANKSEL     PORTA
-TEST_FUNCTION_LOOP2:
-BANKSEL     TX2STA
-    BTFSS   TX2STA,TRMT
-    GOTO    TEST_FUNCTION_LOOP2
-GOTO TEST_FUNCTION_LOOP
-
-;CALL MOTOR_1_ZERO_FUNCTION
-;CALL MOTOR_2_ZERO_FUNCTION
+;
+;TEST_FUNCTION_LOOP:
+;BANKSEL     PORTA
+;CALL DELAY_10ms
+;BANKSEL     MAX485_PORT
+;    BSF     MAX485_PORT,MAX485_SELECT
+;;---------------------------------------------
+;TEST_FUNCTION_LOOP1:
+;BANKSEL     TX2STA
+;    BTFSS   TX2STA,TRMT
+;    GOTO    TEST_FUNCTION_LOOP1
+;BANKSEL     TX2REG
+;MOVLW 0XA5
+;    MOVWF   TX2REG
+;BANKSEL     PORTA
+;TEST_FUNCTION_LOOP2:
+;BANKSEL     TX2STA
+;    BTFSS   TX2STA,TRMT
+;    GOTO    TEST_FUNCTION_LOOP2
+;GOTO TEST_FUNCTION_LOOP
+;
+;;CALL MOTOR_1_ZERO_FUNCTION
+;;CALL MOTOR_2_ZERO_FUNCTION
 
 
 
@@ -2702,7 +3132,7 @@ BANKSEL     PORTA
 
 
 ;========================================================
-;====================測試用將資料送出====================
+;====================測試用將資料送出====================OK
 ;========================================================
 ;這個部分是顯示內部資料的副程式
 WATCH_SUB_FUNCTION:
@@ -2738,8 +3168,9 @@ BANKSEL     WATCH_OUT_P
 BANKSEL     PORTA
     RETURN
 ;========================================================
-;====================CRC-16運算副程式====================
+;====================CRC-16運算副程式====================OK
 ;========================================================
+;做一個BYTE大概40-50uS
 CRC_16_FUNCTION_LOOP:
 BANKSEL     PORTA
     MOVF    CAL_DATA_TEMP,W

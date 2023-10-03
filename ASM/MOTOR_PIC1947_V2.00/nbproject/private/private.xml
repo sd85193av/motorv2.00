@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="98">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="102">
+        <file>
+            <url>MOTOR_1947_V2.00.s</url>
+            <bookmark id="99">
+                <name/>
+                <line>83</line>
+                <key/>
+            </bookmark>
+            <bookmark id="100">
+                <name/>
+                <line>649</line>
+                <key/>
+            </bookmark>
+            <bookmark id="101">
+                <name/>
+                <line>908</line>
+                <key/>
+            </bookmark>
+            <bookmark id="102">
+                <name/>
+                <line>1839</line>
+                <key/>
+            </bookmark>
+        </file>
         <file>
             <url>aMOTOR_1947.s</url>
             <bookmark id="86">
@@ -209,8 +232,9 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/FOR_INTER/A0099-D0XX-5000MIILON/20230417-ASM/MOTOR_PIC1947/MOTOR_16F1947_PA.inc</file>
-            <file>file:/E:/FOR_INTER/A0099-D0XX-5000MIILON/20230417-ASM/MOTOR_PIC1947/MOTOR_1947.s</file>
+            <file>file:/E:/FOR_INTER/MOTOR-SHOT-V2.00/ASM/MOTOR_PIC1947_V2.00/MOTOR_16F1947_PA.inc</file>
+            <file>file:/E:/FOR_INTER/MOTOR-SHOT-V2.00/ASM/MOTOR_PIC1947_V2.00/MOTOR_1947_V2.00.s</file>
+            <file>file:/E:/FOR_INTER/MOTOR-SHOT-V2.00/ASM/MOTOR_PIC1947_V2.00/MODBUS-RTU.inc</file>
         </group>
     </open-files>
 </project-private>
