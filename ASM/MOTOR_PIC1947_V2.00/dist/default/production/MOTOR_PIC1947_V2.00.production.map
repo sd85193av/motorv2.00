@@ -6,7 +6,7 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v2.40\pic\dat\20220703182018_en.msgs \
   -cs -h+dist/default/production\MOTOR_PIC1947_V2.00.production.sym \
   --cmf=dist/default/production\MOTOR_PIC1947_V2.00.production.cmf -z \
-  -Q16F1947 -oC:\Users\Peter\AppData\Local\Temp\xcAsen4.4 -pmain=0h \
+  -Q16F1947 -oC:\Users\Peter\AppData\Local\Temp\xcAshds.4 -pmain=0h \
   -ptool=0D00h --fixupoverflow=error -ver=XC8 PIC(R) Assembler \
   --fixupoverflow=lstwarn \
   -Mdist/default/production/MOTOR_PIC1947_V2.00.production.map -E1 \
@@ -47,12 +47,12 @@ build/default/production/modbus-rtu.o
                 config                             8007     8007        2        0       4
 build/default/production/MOTOR_1947_V2.00.o
                 config                             8007     8007        2        0       4
-                main                                  0        0      697        0       0
+                main                                  0        0      66C        0       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 tool                                D00      D00       4B         0
-                main                                  0        0      697         0
+                main                                  0        0      66C         0
 
         CLASS   STRCODE        
 
@@ -171,7 +171,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
-                main                           000000  000697  000697         0       0  CODE        2
+                main                           000000  00066C  00066C         0       0  CODE        2
                 tool                           000D00  00004B  000D4B      1A00       0  CODE        2
 
 
@@ -192,13 +192,13 @@ UNUSED ADDRESS RANGES
         BANK8            00420-0046F              50           1
         BANK9            004A0-004EF              50           1
         BIGRAM           02000-023EF             3F0           1
-        CODE             00697-00CFF             169           2
+        CODE             0066C-00CFF             194           2
                          00D4B-03FFF             800
         COMMON           00070-0007F              10           1
-        CONST            00697-00CFF             100           2
+        CONST            0066C-00CFF             100           2
                          00D4B-03FFF             100
         EEDATA           0F000-0F0FF             100           2
-        ENTRY            00697-00CFF             100           2
+        ENTRY            0066C-00CFF             100           2
                          00D4B-03FFF             100
         IDLOC            08000-08003               4           2
         RAM              00020-0006F              50           1
@@ -214,15 +214,16 @@ UNUSED ADDRESS RANGES
                          00520-0056F              50
                          005A0-005EF              50
                          00620-0064F              30
-        SFR26            00D2E-00D6F              42           1
+        SFR25            00CD8-00CEF              18           1
+        SFR26            00D00-00D6F              70           1
         SFR27            00D80-00DEF              70           1
         SFR28            00E00-00E6F              70           1
         SFR29            00E80-00EEF              70           1
         SFR30            00F00-00F6F              70           1
         SFR31            00F80-00FEF              70           1
-        STRCODE          00697-00CFF             669           2
+        STRCODE          0066C-00CFF             694           2
                          00D4B-03FFF            32B5
-        STRING           00697-00CFF             100           2
+        STRING           0066C-00CFF             100           2
                          00D4B-03FFF             100
 
                                   Symbol Table
@@ -233,7 +234,7 @@ __Hcode                code         01A96
 __Hconfig              config       08009
 __Hdata                data         01A96
 __Hedata               edata        01A96
-__Hmain                main         00697
+__Hmain                main         0066C
 __Hspace_0             (abs)        01A96
 __Hspace_1             (abs)        00000
 __Hspace_3             (abs)        00000

@@ -33,10 +33,36 @@ TMR2_BASE_NUM           EQU     0X04
 
 
 MODBUS_DAT_EXTRA_ADRH   EQU     0X20
-MODBUS_DAT_EXTRA_ADRL   EQU     0XB0  
+MODBUS_DAT_EXTRA_ADRL   EQU     0XB0              ;存放從485送進來的資料
 
+MODBUS_DAT_WORK_ADRH    EQU     0X21
+MODBUS_DAT_WORK_ADRL    EQU     0X40              ;將485送的資料複製出來，之後的判斷都使用這個地方
+
+
+
+
+
+
+
+;這邊主要是因為有4個馬達，可以直接選擇要使用哪個資料
+;注射泵2.00來說，轉向馬達是MOTOR1 活塞馬達是MOTOR2
 MODBUS_DAT_REAL_ADRH    EQU     0X21
-MODBUS_DAT_REAL_ADRL    EQU     0X40
+MODBUS_DAT_REAL_ADRL    EQU     0X90
+;MOTOR1 0X2190-0X21AF
+;CW:4BYTE
+;CCW:4BYTE
+;-----------------------------------------------
+;MOTOR2 0X21B0-0X21CF
+
+;MOTOR3 0X21D0-0X21EF
+
+;MOTOR4 0X21F0-0X220F
+
+
+
+
+
+
 ;0X21 0X40-0X21 0X54      MOTOR1
 ;0X21 0X55-0X21 0X69      MOTOR2
 ;0X21 0X6A-0X21 0X7E      MOTOR3
@@ -93,6 +119,15 @@ M3_FR                   EQU     0X05
 M4_ST                   EQU     0X06
 M4_FR                   EQU     0X07
 
+
+
+
+
+
+
+
+
+
 POWER_CHECK_PORT        EQU     PORTB
 PWR_DECTET              EQU     0X05              ;0->表示電源沒有進入 1->表示有電源
 
@@ -138,13 +173,13 @@ MODBUS_DAT_COUNT        EQU     0X2F
 ;--------------------------------------
 FLAG1_BANK0             EQU     0X30
 CAN_SEND_TX_FLAG        EQU     0X00          ;可以回傳資料FLAG
-CAN_WORK_FLAG           EQU     0X01          ;可以動作FLAG
+CAN_WORK_FLAG           EQU     0X01          ;表示目前馬達可以動作
 TX_DATA_ERROR_FLAG      EQU     0X02          ;RX資料有錯誤
 MANDATORY_WORK_FLAG     EQU     0X03          ;強制命令執行後SET
 INT_TRIG_TIME_FLAG      EQU     0X04          ;表示INT地一次觸發啟動INT_TIMER功能
 ;--------------------------------------------------------
 ;馬達1為轉向馬達(目前使用在注射泵)
-MOTOR1_FLAG0            EQU     0X72
+MOTOR1_FLAG0            EQU     0X31
 MOTOR_1_WORK            EQU     0X01          ;馬達1收到指令可以進行運作
 MOTOR_1_CW              EQU     0X02          ;馬達1順時針
 MOTOR_1_CCW             EQU     0X03          ;馬達1逆時針
@@ -228,9 +263,23 @@ MODBUS_IN_06_F          EQU     0X02                      ;0表示沒有在功能碼06/1
 
 
 
+FLAG6_BANK0             EQU     0X3D                      ;FLAG6_BANK0，為MODBUS動作前FLAG
+A0_F                    EQU     0X00                      ;恢復出廠設定
+A1_F                    EQU     0X01                      ;整機初始化
+A2_F                    EQU     0X02                      ;換向閥初始化
+A3_F                    EQU     0X03                      ;活塞初始化
+A4_F                    EQU     0X04                      ;進入醒目提示_F
+
+LED_WORK_FLAG           EQU     0X3E
+LED_00_F                EQU     0X00                      ;未初始化
+LED_01_F                EQU     0X01                      ;設備在線
+LED_02_F                EQU     0X02                      ;安全模式
+LED_03_F                EQU     0X03                      ;設備異常
+LED_04_F                EQU     0X04                      ;醒目提示
 
 
-;0X3D 0X3E 0X3F
+
+; 0X3F
 
 
 
