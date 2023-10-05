@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=modbus-rtu.s MOTOR_1947_V2.00.s
+SOURCEFILES_QUOTED_IF_SPACED=modbus-rtu.s MOTOR_1947_V2.00.s MODBUS_COMMAND.s
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/modbus-rtu.o ${OBJECTDIR}/MOTOR_1947_V2.00.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/modbus-rtu.o.d ${OBJECTDIR}/MOTOR_1947_V2.00.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/modbus-rtu.o ${OBJECTDIR}/MOTOR_1947_V2.00.o ${OBJECTDIR}/MODBUS_COMMAND.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/modbus-rtu.o.d ${OBJECTDIR}/MOTOR_1947_V2.00.o.d ${OBJECTDIR}/MODBUS_COMMAND.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/modbus-rtu.o ${OBJECTDIR}/MOTOR_1947_V2.00.o
+OBJECTFILES=${OBJECTDIR}/modbus-rtu.o ${OBJECTDIR}/MOTOR_1947_V2.00.o ${OBJECTDIR}/MODBUS_COMMAND.o
 
 # Source Files
-SOURCEFILES=modbus-rtu.s MOTOR_1947_V2.00.s
+SOURCEFILES=modbus-rtu.s MOTOR_1947_V2.00.s MODBUS_COMMAND.s
 
 
 
@@ -101,7 +101,7 @@ ${OBJECTDIR}/modbus-rtu.o: modbus-rtu.s  nbproject/Makefile-${CND_CONF}.mk
 	${MP_AS} -mcpu=PIC16F1947 -c \
 	-o ${OBJECTDIR}/modbus-rtu.o \
 	modbus-rtu.s \
-	 -D__DEBUG=1  -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -fmax-errors=20 -mwarn=0 -xassembler-with-cpp -Wa,-a -Wl,-pmain=0h,-ptool=0D00h
+	 -D__DEBUG=1  -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -fmax-errors=20 -mwarn=0 -xassembler-with-cpp -Wa,-a -Wl,-pmain=0h,-ptool=0D00h,-pcmd=0800h
 	
 ${OBJECTDIR}/MOTOR_1947_V2.00.o: MOTOR_1947_V2.00.s  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -109,7 +109,15 @@ ${OBJECTDIR}/MOTOR_1947_V2.00.o: MOTOR_1947_V2.00.s  nbproject/Makefile-${CND_CO
 	${MP_AS} -mcpu=PIC16F1947 -c \
 	-o ${OBJECTDIR}/MOTOR_1947_V2.00.o \
 	MOTOR_1947_V2.00.s \
-	 -D__DEBUG=1  -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -fmax-errors=20 -mwarn=0 -xassembler-with-cpp -Wa,-a -Wl,-pmain=0h,-ptool=0D00h
+	 -D__DEBUG=1  -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -fmax-errors=20 -mwarn=0 -xassembler-with-cpp -Wa,-a -Wl,-pmain=0h,-ptool=0D00h,-pcmd=0800h
+	
+${OBJECTDIR}/MODBUS_COMMAND.o: MODBUS_COMMAND.s  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/MODBUS_COMMAND.o 
+	${MP_AS} -mcpu=PIC16F1947 -c \
+	-o ${OBJECTDIR}/MODBUS_COMMAND.o \
+	MODBUS_COMMAND.s \
+	 -D__DEBUG=1  -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -fmax-errors=20 -mwarn=0 -xassembler-with-cpp -Wa,-a -Wl,-pmain=0h,-ptool=0D00h,-pcmd=0800h
 	
 else
 ${OBJECTDIR}/modbus-rtu.o: modbus-rtu.s  nbproject/Makefile-${CND_CONF}.mk 
@@ -118,7 +126,7 @@ ${OBJECTDIR}/modbus-rtu.o: modbus-rtu.s  nbproject/Makefile-${CND_CONF}.mk
 	${MP_AS} -mcpu=PIC16F1947 -c \
 	-o ${OBJECTDIR}/modbus-rtu.o \
 	modbus-rtu.s \
-	 -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -fmax-errors=20 -mwarn=0 -xassembler-with-cpp -Wa,-a -Wl,-pmain=0h,-ptool=0D00h
+	 -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -fmax-errors=20 -mwarn=0 -xassembler-with-cpp -Wa,-a -Wl,-pmain=0h,-ptool=0D00h,-pcmd=0800h
 	
 ${OBJECTDIR}/MOTOR_1947_V2.00.o: MOTOR_1947_V2.00.s  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -126,7 +134,15 @@ ${OBJECTDIR}/MOTOR_1947_V2.00.o: MOTOR_1947_V2.00.s  nbproject/Makefile-${CND_CO
 	${MP_AS} -mcpu=PIC16F1947 -c \
 	-o ${OBJECTDIR}/MOTOR_1947_V2.00.o \
 	MOTOR_1947_V2.00.s \
-	 -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -fmax-errors=20 -mwarn=0 -xassembler-with-cpp -Wa,-a -Wl,-pmain=0h,-ptool=0D00h
+	 -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -fmax-errors=20 -mwarn=0 -xassembler-with-cpp -Wa,-a -Wl,-pmain=0h,-ptool=0D00h,-pcmd=0800h
+	
+${OBJECTDIR}/MODBUS_COMMAND.o: MODBUS_COMMAND.s  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/MODBUS_COMMAND.o 
+	${MP_AS} -mcpu=PIC16F1947 -c \
+	-o ${OBJECTDIR}/MODBUS_COMMAND.o \
+	MODBUS_COMMAND.s \
+	 -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -fmax-errors=20 -mwarn=0 -xassembler-with-cpp -Wa,-a -Wl,-pmain=0h,-ptool=0D00h,-pcmd=0800h
 	
 endif
 
@@ -137,13 +153,13 @@ ${DISTDIR}/MOTOR_PIC1947_V2.00.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  n
 	@${MKDIR} ${DISTDIR} 
 	${MP_LD} -mcpu=PIC16F1947 ${OBJECTFILES_QUOTED_IF_SPACED} \
 	-o ${DISTDIR}/MOTOR_PIC1947_V2.00.${IMAGE_TYPE}.${OUTPUT_SUFFIX} \
-	 -D__DEBUG=1  -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -mcallgraph=std -Wl,-Map=${FINAL_IMAGE_NAME_MINUS_EXTENSION}.map -mno-download-hex -Wa,-a -Wl,-pmain=0h,-ptool=0D00h
+	 -D__DEBUG=1  -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -mcallgraph=std -Wl,-Map=${FINAL_IMAGE_NAME_MINUS_EXTENSION}.map -mno-download-hex -Wa,-a -Wl,-pmain=0h,-ptool=0D00h,-pcmd=0800h
 else
 ${DISTDIR}/MOTOR_PIC1947_V2.00.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
 	@${MKDIR} ${DISTDIR} 
 	${MP_LD} -mcpu=PIC16F1947 ${OBJECTFILES_QUOTED_IF_SPACED} \
 	-o ${DISTDIR}/MOTOR_PIC1947_V2.00.${IMAGE_TYPE}.${OUTPUT_SUFFIX} \
-	 -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -mcallgraph=std -Wl,-Map=${FINAL_IMAGE_NAME_MINUS_EXTENSION}.map -mno-download-hex -Wa,-a -Wl,-pmain=0h,-ptool=0D00h
+	 -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -mcallgraph=std -Wl,-Map=${FINAL_IMAGE_NAME_MINUS_EXTENSION}.map -mno-download-hex -Wa,-a -Wl,-pmain=0h,-ptool=0D00h,-pcmd=0800h
 endif
 
 

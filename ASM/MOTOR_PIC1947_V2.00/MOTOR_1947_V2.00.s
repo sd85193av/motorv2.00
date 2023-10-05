@@ -37,6 +37,7 @@
 ;** ***************************************************************************************
 #include    "p16f1947.inc"
 #include    "MOTOR_16F1947_PA.inc"
+
 PSECT main, class=CODE,delta=2,SIZE=0800H
    ORG    0X0000
    GOTO   BOOTLOADER_LOOP 
@@ -63,471 +64,12 @@ BANKSEL     PORTA
     BTFSC   PIR1,TMR2IF
     GOTO    TMR2IF_FUNCTION_LOOP                         ;TIMER2基準為1mS
 ;--------------------------
-
-
-
-
-
-;    BTFSC   INTCON,INTF
-;    GOTO    INT_INTF_FUNCTION                       ;PWM INT
-;;-----------
-;    BTFSC   INTCON,IOCIF
-;    GOTO    IOC_INT_FUNCTION                        ;光遮斷器觸發
+    BTFSC   INTCON,INTF
+    GOTO    INT_INTF_FUNCTION                             ;PWM INT
+;-----------
+    BTFSC   INTCON,IOCIF
+    GOTO    IOC_INT_FUNCTION                              ;光遮斷器觸發
     RETFIE
-
-;******************************************************************************
-;****************************TABLE表區域***************************************
-;******************************************************************************
-;========================================================
-;==================中斷UART2 FUNCTION====================
-;========================================================
-MODBUS_ADR_FUNCTION:
-    MOVLW   0X00
-    MOVWF   PCLATH
-    MOVF    MODBUS_TABLE_ADR_TEMP,W
-    BRW     
-    GOTO    MODBUS_ADR_A0_FUNCTION          ;00
-    GOTO    MODBUS_ADR_A1_FUNCTION          ;01
-    GOTO    MODBUS_ADR_A2_FUNCTION          ;02
-    GOTO    MODBUS_ADR_A3_FUNCTION          ;03
-    GOTO    MODBUS_ADR_A4_FUNCTION          ;04
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;05
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;06
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;07
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;08
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;09
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;0A
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;0B
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;0C
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;0D
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;0E
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;0F
-;-----------------------------
-    GOTO    MODBUS_ADR_B0_FUNCTION          ;10
-    GOTO    MODBUS_ADR_B1_FUNCTION          ;11
-    GOTO    MODBUS_ADR_B2_FUNCTION          ;12
-    GOTO    MODBUS_ADR_B3_FUNCTION          ;13
-    GOTO    MODBUS_ADR_B4_FUNCTION          ;14
-    GOTO    MODBUS_ADR_B5_FUNCTION          ;15
-    GOTO    MODBUS_ADR_B6_FUNCTION          ;16
-    GOTO    MODBUS_ADR_B7_FUNCTION          ;17
-    GOTO    MODBUS_ADR_B8_FUNCTION          ;18
-    GOTO    MODBUS_ADR_B9_FUNCTION          ;19
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;1A
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;1B
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;1C
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;1D
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;1E
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;1F
-;-----------------------------
-    GOTO    MODBUS_ADR_C0_FUNCTION          ;20
-    GOTO    MODBUS_ADR_C1_FUNCTION          ;21
-    GOTO    MODBUS_ADR_C2_FUNCTION          ;22
-    GOTO    MODBUS_ADR_C3_FUNCTION          ;23
-    GOTO    MODBUS_ADR_C4_FUNCTION          ;24
-    GOTO    MODBUS_ADR_C5_FUNCTION          ;25
-    GOTO    MODBUS_ADR_C6_FUNCTION          ;26
-    GOTO    MODBUS_ADR_C7_FUNCTION          ;27
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;28
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;29
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;2A
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;2B
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;2C
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;2D
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;2E
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;2F
-;-----------------------------
-    GOTO    MODBUS_ADR_D0_FUNCTION          ;30
-    GOTO    MODBUS_ADR_D1_FUNCTION          ;31
-    GOTO    MODBUS_ADR_D2_FUNCTION          ;32
-    GOTO    MODBUS_ADR_D3_FUNCTION          ;33
-    GOTO    MODBUS_ADR_D4_FUNCTION          ;34
-    GOTO    MODBUS_ADR_D5_FUNCTION          ;35
-    GOTO    MODBUS_ADR_D6_FUNCTION          ;36
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;37
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;38
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;39
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;3A
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;3B
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;3C
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;3D
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;3E
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;3F
-;-----------------------------
-    GOTO    MODBUS_ADR_E0_FUNCTION          ;40
-    GOTO    MODBUS_ADR_E1_FUNCTION          ;41
-    GOTO    MODBUS_ADR_E2_FUNCTION          ;42
-    GOTO    MODBUS_ADR_E3_FUNCTION          ;43
-    GOTO    MODBUS_ADR_E4_FUNCTION          ;44
-    GOTO    MODBUS_ADR_E5_FUNCTION          ;45
-    GOTO    MODBUS_ADR_E6_FUNCTION          ;46
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;47
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;48
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;49
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;4A
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;4B
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;4C
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;4D
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;4E
-    GOTO    MODBUS_BUS_02_ERROR_LOOP        ;4F
-;-----------------------------
-
-
-;******************************************************************
-;******************************************************************
-
-;========================================================
-;==================MODBUS 恢復出廠設定===================
-;========================================================
-MODBUS_ADR_A0_FUNCTION:
-    BTFSC   FLAG5_BANK0,MODBUS_IN_03_F
-    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;這邊只能用寫，讀的話算是異常碼02
-;--------------------------------
-    BTFSS   FLAG5_BANK0,MODBUS_IN_06_F
-    GOTO    MODBUS_BUS_01_ERROR_LOOP                  ;這邊主要是確保功能碼的部分只能有0X03和0X06之外的
-;--------------------------------
-
-;前面確認過暫存器位址，後面要確認資料格式是否符合
-BANKSEL     PORTA
-    MOVLW   MODBUS_DAT_WORK_ADRH                        ;21
-    MOVWF   FSR1H
-    MOVLW   MODBUS_DAT_WORK_ADRL                        ;E0
-    MOVWF   FSR1L
-    MOVLW   0X04
-    ADDWF   FSR1L,F
-    MOVF    INDF1,W
-    BTFSS   STATUS,Z
-    GOTO    MODBUS_ADR_A0_LV1                       ;資料不為0
-;-----------------------
-    INCF    FSR1L,F
-    MOVF    INDF1,W
-    BTFSC   STATUS,Z
-    GOTO    MODBUS_BUS_03_ERROR_LOOP                ;資料都是0X00表示異常
-MODBUS_ADR_A0_LV1:
-;將所有參數設定為預設值
-;直接設定TX輸出暫存器就直接使用RX陣列
-    BSF     FLAG1_BANK0,CAN_SEND_TX_FLAG
-    MOVLW   0X08
-    MOVWF   TX_DATA_COUNTER
-;------------------------------------------
-;實際要做的事:
-    BSF     FLAG6_BANK0,A0_F
-    RETFIE
-
-;========================================================
-;==================MODBUS 整機初始化=====================
-;========================================================
-MODBUS_ADR_A1_FUNCTION:
-    BTFSC   FLAG5_BANK0,MODBUS_IN_03_F
-    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;這邊只能用寫，讀的話算是異常碼02
-;--------------------------------
-    BTFSS   FLAG5_BANK0,MODBUS_IN_06_F
-    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;如果功能碼不是06表示異常
-;--------------------------------
-;前面確認過暫存器位址，後面要確認資料格式是否符合
-BANKSEL     PORTA
-    MOVLW   MODBUS_DAT_WORK_ADRH                        ;21
-    MOVWF   FSR1H
-    MOVLW   MODBUS_DAT_WORK_ADRL                        ;E0
-    MOVWF   FSR1L
-    MOVLW   0X04
-    ADDWF   FSR1L,F
-    MOVF    INDF1,W
-    BTFSS   STATUS,Z
-    GOTO    MODBUS_ADR_A1_LV1                           ;資料不為0
-;-----------------------
-    INCF    FSR1L,F
-    MOVF    INDF1,W
-    BTFSC   STATUS,Z
-    GOTO    MODBUS_BUS_03_ERROR_LOOP                    ;資料都是0X00
-MODBUS_ADR_A1_LV1:
-;將所有參數設定為預設值
-    BSF     FLAG1_BANK0,CAN_SEND_TX_FLAG
-    MOVLW   0X08
-    MOVWF   TX_DATA_COUNTER
-;------------------------------------------
-;實際要做的事:
-    RETFIE
-
-;========================================================
-;==================MODBUS 換向閥初始化===================
-;========================================================
-MODBUS_ADR_A2_FUNCTION:
-    BTFSC   FLAG5_BANK0,MODBUS_IN_03_F
-    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;這邊只能用寫，讀的話算是異常碼02
-;--------------------------------
-    BTFSS   FLAG5_BANK0,MODBUS_IN_06_F
-    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;
-;--------------------------------
-;前面確認過暫存器位址，後面要確認資料格式是否符合
-BANKSEL     PORTA
-    MOVLW   MODBUS_DAT_WORK_ADRH                        ;21
-    MOVWF   FSR1H
-    MOVLW   MODBUS_DAT_WORK_ADRL                        ;E0
-    MOVWF   FSR1L
-    MOVLW   0X04
-    ADDWF   FSR1L,F
-    MOVF    INDF1,W
-    BTFSS   STATUS,Z
-    GOTO    MODBUS_ADR_A2_LV1
-;-----------------------
-    INCF    FSR1L,F
-    MOVF    INDF1,W
-    BTFSC   STATUS,Z
-    GOTO    MODBUS_BUS_03_ERROR_LOOP                ;資料都是0X00
-MODBUS_ADR_A2_LV1:
-;將所有參數設定為預設值
-    BSF     FLAG1_BANK0,CAN_SEND_TX_FLAG
-    MOVLW   0X08
-    MOVWF   TX_DATA_COUNTER
-;------------------------------------------
-;實際要做的事:
-    RETFIE
-;========================================================
-;==================MODBUS 活塞初始化=====================
-;========================================================
-MODBUS_ADR_A3_FUNCTION:
-    BTFSC   FLAG5_BANK0,MODBUS_IN_03_F
-    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;這邊只能用寫，讀的話算是異常碼02
-;--------------------------------
-    BTFSS   FLAG5_BANK0,MODBUS_IN_06_F
-    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;
-;--------------------------------
-;前面確認過暫存器位址，後面要確認資料格式是否符合
-BANKSEL     PORTA
-    MOVLW   MODBUS_DAT_WORK_ADRH                        ;21
-    MOVWF   FSR1H
-    MOVLW   MODBUS_DAT_WORK_ADRL                        ;E0
-    MOVWF   FSR1L
-    MOVLW   0X04
-    ADDWF   FSR1L,F
-    MOVF    INDF1,W
-    BTFSS   STATUS,Z
-    GOTO    MODBUS_ADR_A3_LV1
-;-----------------------
-    INCF    FSR1L,F
-    MOVF    INDF1,W
-    BTFSC   STATUS,Z
-    GOTO    MODBUS_BUS_03_ERROR_LOOP                ;資料都是0X00
-MODBUS_ADR_A3_LV1:
-;將所有參數設定為預設值
-    BSF     FLAG1_BANK0,CAN_SEND_TX_FLAG
-    MOVLW   0X08
-    MOVWF   TX_DATA_COUNTER
-;------------------------------------------
-;實際要做的事:
-    RETFIE
-;========================================================
-;==================MODBUS 醒目提示=======================
-;========================================================
-MODBUS_ADR_A4_FUNCTION:
-    BTFSC   FLAG5_BANK0,MODBUS_IN_03_F
-    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;這邊只能用寫，讀的話算是異常碼02
-;--------------------------------
-    BTFSS   FLAG5_BANK0,MODBUS_IN_06_F
-    GOTO    MODBUS_BUS_02_ERROR_LOOP                  ;
-;--------------------------------
-;前面確認過暫存器位址，後面要確認資料格式是否符合
-BANKSEL     PORTA
-    MOVLW   MODBUS_DAT_WORK_ADRH                        ;21
-    MOVWF   FSR1H
-    MOVLW   MODBUS_DAT_WORK_ADRL                        ;E0
-    MOVWF   FSR1L
-    MOVLW   0X04
-    ADDWF   FSR1L,F
-    MOVF    INDF1,W
-    BTFSS   STATUS,Z
-    GOTO    MODBUS_BUS_03_ERROR_LOOP
-;-----------------------
-    INCF    FSR1L,F
-    MOVLW   0X01
-    XORWF   INDF1,W
-    BTFSS   STATUS,Z
-    GOTO    MODBUS_BUS_03_ERROR_LOOP                ;資料都是0X00
-MODBUS_ADR_A4_LV1:
-;將所有參數設定為預設值
-    BSF     FLAG1_BANK0,CAN_SEND_TX_FLAG
-    MOVLW   0X08
-    MOVWF   TX_DATA_COUNTER
-;------------------------------------------
-;實際要做的事:
-    RETFIE
-;========================================================
-;==================MODBUS 閥換向=========================
-;========================================================
-MODBUS_ADR_B0_FUNCTION:
-    BTFSC   FLAG5_BANK0,MODBUS_IN_03_F
-    GOTO    MODBUS_ADR_B0_03_LOOP                           ;ADR 為閥換向，使用READ 1 BYTE 功能碼
-;--------------------------------
-    BTFSS   FLAG5_BANK0,MODBUS_IN_06_F
-    GOTO    MODBUS_ADR_B0_06_LOOP                           ;ADR 為閥換向，使用WRITE 1 BYTE 功能碼
-;--------------------------------
-    GOTO    MODBUS_BUS_01_ERROR_LOOP                        ;表示功能碼都不是
-    RETFIE
-;-----------------------------------------------------------
-;--------------------MODBUS B0 寫1BYTE----------------------
-;-----------------------------------------------------------
-MODBUS_ADR_B0_06_LOOP:
-;前面確認過暫存器位址，後面要確認資料格式是否符合
-BANKSEL     PORTA
-    MOVLW   MODBUS_DAT_WORK_ADRH                        ;21
-    MOVWF   FSR1H
-    MOVLW   MODBUS_DAT_WORK_ADRL                        ;E0
-    MOVWF   FSR1L
-    MOVLW   0X04
-    ADDWF   FSR1L,F
-    MOVF    INDF1,W
-    BTFSS   STATUS,Z
-    GOTO    MODBUS_BUS_03_ERROR_LOOP
-;-----------------------
-    INCF    FSR1L,F
-    MOVLW   0XFE
-    ADDWF   INDF1,W
-    BTFSC   STATUS,C
-    GOTO    MODBUS_BUS_03_ERROR_LOOP                ;資料不是0X00就是0X01，超過範圍就算是異常碼03
-;------------------------
-;資料範圍正確，將資料存放到相應的馬達模組存放資料地方，並回覆485
-    MOVLW   MODBUS_DAT_REAL_ADRH
-    MOVWF   FSR0H
-    MOVLW   MODBUS_DAT_REAL_ADRL
-    MOVWF   FSR0L
-    MOVLW   0X04
-    ADDWF   FSR0L,F 
-    MOVF    INDF1,W
-    MOVWF   INDF0
-;------------------------
-    BSF     FLAG1_BANK0,CAN_SEND_TX_FLAG
-    MOVLW   0X08
-    MOVWF   TX_DATA_COUNTER
-    RETFIE
-;-----------------------------------------------------------
-;--------------------MODBUS B0 讀1BYTE----------------------
-;-----------------------------------------------------------
-MODBUS_ADR_B0_03_LOOP:
-;設定好要讀取的位置之後用485功能碼0X03就可以了
-;    MOVLW   MODBUS_DAT_REAL_ADRH
-;    MOVWF   FSR0H
-;    MOVLW   MODBUS_DAT_REAL_ADRL
-;    MOVWF   FSR0L
-
-
-
-    RETFIE
-
-;========================================================
-;==================MODBUS 活塞移動-絕對位置==============
-;========================================================
-;這邊的資料主要是4個BYTE，所以要執行動作的話，需要等到ADR_B2被寫入才會動作
-MODBUS_ADR_B1_FUNCTION:
-MODBUS_ADR_B2_FUNCTION:
-;========================================================
-;==================MODBUS 活塞移動-相對位置==============
-;========================================================
-MODBUS_ADR_B3_FUNCTION:
-MODBUS_ADR_B4_FUNCTION:
-;========================================================
-;==================MODBUS 活塞移動-向量-CW===============
-;========================================================
-MODBUS_ADR_B5_FUNCTION:
-MODBUS_ADR_B6_FUNCTION:
-;========================================================
-;==================MODBUS 活塞移動-向量-CCW==============
-;========================================================
-MODBUS_ADR_B7_FUNCTION:
-MODBUS_ADR_B8_FUNCTION:
-;========================================================
-;==================MODBUS 活塞移動-極限==================
-;========================================================
-MODBUS_ADR_B9_FUNCTION:
-;========================================================
-;==================MODBUS 零點偏移量設定=================
-;========================================================
-MODBUS_ADR_C0_FUNCTION:
-;========================================================
-;==================MODBUS 累計步數=======================
-;========================================================
-MODBUS_ADR_C1_FUNCTION:
-MODBUS_ADR_C2_FUNCTION:
-;========================================================
-;==================MODBUS 相對零點設定===================
-;========================================================
-MODBUS_ADR_C3_FUNCTION:
-MODBUS_ADR_C4_FUNCTION:
-;========================================================
-;==================MODBUS  反向間隙設定-CW===============
-;========================================================
-MODBUS_ADR_C5_FUNCTION:
-;========================================================
-;==================MODBUS  反向間隙設定-CCW==============
-;========================================================
-MODBUS_ADR_C6_FUNCTION:
-;========================================================
-;==================MODBUS  自動校正反向間隙==============
-;========================================================
-MODBUS_ADR_C7_FUNCTION:
-;========================================================
-;==================MODBUS  安全模式======================
-;========================================================
-MODBUS_ADR_D0_FUNCTION:
-;========================================================
-;==================MODBUS  設備狀態======================
-;========================================================
-MODBUS_ADR_D1_FUNCTION:
-;========================================================
-;==================MODBUS  設備辨識資料==================
-;========================================================
-MODBUS_ADR_D2_FUNCTION:
-;========================================================
-;==================MODBUS  溫度檢測======================
-;========================================================
-MODBUS_ADR_D3_FUNCTION:
-;========================================================
-;==================MODBUS  電流檢測======================
-;========================================================
-MODBUS_ADR_D4_FUNCTION:
-;========================================================
-;==================MODBUS  電壓檢測======================
-;========================================================
-MODBUS_ADR_D5_FUNCTION:
-;========================================================
-;==================MODBUS  上電初始化設定================
-;========================================================
-MODBUS_ADR_D6_FUNCTION:
-;========================================================
-;==================MODBUS  開發人員權限啟動==============
-;========================================================
-MODBUS_ADR_E0_FUNCTION:
-;========================================================
-;==================MODBUS  活塞最大行程設定==============
-;========================================================
-MODBUS_ADR_E1_FUNCTION:
-MODBUS_ADR_E2_FUNCTION:
-;========================================================
-;==================MODBUS  微步進模式====================
-;========================================================
-MODBUS_ADR_E3_FUNCTION:
-;========================================================
-;==================MODBUS  活塞移動-光耦合===============
-;========================================================
-MODBUS_ADR_E4_FUNCTION:
-
-
-
-;========================================================
-;==================MODBUS  速度設定======================
-;========================================================
-MODBUS_ADR_E5_FUNCTION:
-;========================================================
-;==================MODBUS  速度==========================
-;========================================================
-MODBUS_ADR_E6_FUNCTION:
-    RETFIE
-
-
-
-
-
-
 
 
 ;========================================================
@@ -612,7 +154,7 @@ BANKSEL     PORTA
 ;    BTFSS   STATUS,Z
 ;    GOTO    MODBUS_BUS_ID_ERROR_LOOP                      ;當今天收到的資料數量大於8表示異常
 ;---------------
-    INCF    FSR1L,F                                       ;資料為功能碼
+    INCF    FSR1L,F                                         ;資料為功能碼
     MOVLW   0X03
     XORWF   INDF1,W
     BTFSC   STATUS,Z
@@ -778,7 +320,9 @@ BANKSEL     PORTA
 ;----------------------------------------------------         由於後面會用TABLE，所以從0開始會比較好
     MOVF    STANDBY_LBYTE_DAT,W
     MOVWF   MODBUS_TABLE_ADR_TEMP
-    GOTO    MODBUS_ADR_FUNCTION                              ;MODBUS ADR TABLE
+BANKSEL     PORTA
+    BSF     FLAG1_BANK0,DEAL_WITH_MODBUS_FLAG
+    RETFIE
 ;----------------------------------------------------------------------------------------------------
 
 
@@ -1132,6 +676,7 @@ PAGESEL     0X0000
 ;========================================================
 ;TIMER2 BASE IS 1mS
 TMR2IF_FUNCTION_LOOP:
+
     BCF     PIR1,TMR2IF
 ;---------------------    
     BTFSS   FLAG3_BANK0,TEN_TIME_EN
@@ -1224,6 +769,7 @@ TEN_MS_FUNCTION_LOOP:
 ;========================================================
 ;==================中斷IOC   FUNCTION====================
 ;========================================================
+;設定上下極限當有觸發到時，會先觸發IOC
 IOC_INT_FUNCTION:
     BCF     INTCON,IOCIF
 BANKSEL     IOCBF
@@ -1506,8 +1052,6 @@ BANKSEL     PORTA
     MOVWF   TEN_MS_TEMP
     MOVLW   INT_TIMER_NUM
     MOVWF   INT_TIMER_TEMP
-   ; MOVLW   0X06
-    ;MOVWF   MODULE_ID_DAT
 BANKSEL     MOTOR_OE_RST_PORT
     BSF     MOTOR_OE_RST_PORT,M_OE
     BSF     MOTOR_OE_RST_PORT,M_RST
@@ -1518,6 +1062,14 @@ BANKSEL     MOTOR_OE_RST_PORT
 BANKSEL     PORTA
 MOVLW 0X04
 MOVWF MODULE_ID_DAT
+;BCF INTCON,GIE
+
+
+
+
+
+
+
 GOTO SYSTEM_START
 
 
@@ -1532,6 +1084,7 @@ GOTO SYSTEM_START
 ;========================================================
 ;=====================主程序迴圈=========================
 ;========================================================
+;缺少:ADC/馬達復位/馬達CW CCW
 SYSTEM_START:
 BANKSEL     PORTA
 ;    BTFSC   PORTE,0X00
@@ -1539,7 +1092,9 @@ BANKSEL     PORTA
 ;    GOTO    MOTOR_2_STOP
 ;BANKSEL     PORTA
 SYSTEM_START_LV1:
-;-------------------------------------------                      傳送ERROR CODE的地方
+    BTFSC   FLAG1_BANK0,DEAL_WITH_MODBUS_FLAG
+    CALL    DEAL_WITH_MODBUS_LOOP                                 ;中斷收值okCRCok，要判斷後續動作
+;-------------------------------------------                      ;傳送ERROR CODE的地方
     BTFSC   MODBUS_ERROR_FLAG,ERROR_01_F
     CALL    MODBUS_ERROR_CODE_01_LOOP
     BTFSC   MODBUS_ERROR_FLAG,ERROR_02_F
@@ -1560,8 +1115,15 @@ SYSTEM_START_LV1:
 
 
 
-
-
+;========================================================
+;====================處理MODBUS指令======================
+;========================================================
+DEAL_WITH_MODBUS_LOOP:
+    BCF     FLAG1_BANK0,DEAL_WITH_MODBUS_FLAG
+PAGESEL     0X0800
+    CALL    MODBUS_ADR_FUNCTION
+PAGESEL     0X0000
+    RETURN
 
 
 
@@ -1920,10 +1482,11 @@ MODBUS_ERROR_CODE_01_LOOP:
     MOVLW   0X01
     MOVWF   INDF1
 ;--------------------
+;--------------------
 MODBUS_ERROR_CODE_END:
     MOVLW   0X03
-    MOVWF   RTU_COUNTER_DATA
-    CALL    MODBUS_RTU_READ_LV2
+    MOVWF   RTU_COUNTER_DATA                          ;ID 功能碼 DATA 由這三個生成CRC16
+    CALL    MODBUS_RTU_READ_LV2                       ;CRC16生成副程式
     MOVLW   0X05
     MOVWF   TX_DATA_COUNTER
     BSF     FLAG1_BANK0,CAN_SEND_TX_FLAG
@@ -2647,7 +2210,6 @@ ADDWF FSR0L,F
 ;====================準備TX資料副程式====================
 ;========================================================
 PREPARE_TX_DATA_LOOP:
-BANKSEL     PORTA
     CALL    DELAY_10ms
     MOVLW   MODBUS_DAT_EXTRA_ADRH
     MOVWF   FSR1H

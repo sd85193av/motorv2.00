@@ -12,6 +12,7 @@
 ;========================================================
 ;INCLUDE  TITLE
 #include    "MODBUS-RTU.inc"
+#include    "MODBUS_COMMAND.inc"
 ;======================================================== 
 ;========================================================
 EEPROM_ADR              EQU     0X7E
@@ -177,6 +178,7 @@ CAN_WORK_FLAG           EQU     0X01          ;表示目前馬達可以動作
 TX_DATA_ERROR_FLAG      EQU     0X02          ;RX資料有錯誤
 MANDATORY_WORK_FLAG     EQU     0X03          ;強制命令執行後SET
 INT_TRIG_TIME_FLAG      EQU     0X04          ;表示INT地一次觸發啟動INT_TIMER功能
+DEAL_WITH_MODBUS_FLAG   EQU     0X05
 ;--------------------------------------------------------
 ;馬達1為轉向馬達(目前使用在注射泵)
 MOTOR1_FLAG0            EQU     0X31
@@ -260,7 +262,7 @@ FLAG5_BANK0             EQU     0X3C
 RESET_IN_NORMAL_FALG    EQU     0X00
 MODBUS_IN_03_F          EQU     0X01                      ;0表示沒有在功能碼03/1表示有在
 MODBUS_IN_06_F          EQU     0X02                      ;0表示沒有在功能碼06/1表示有在
-
+MODBUS_IN_10_F          EQU     0X03                      ;0表示沒有在功能碼10/1表示有在
 
 
 FLAG6_BANK0             EQU     0X3D                      ;FLAG6_BANK0，為MODBUS動作前FLAG

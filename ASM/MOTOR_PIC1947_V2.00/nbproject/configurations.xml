@@ -16,6 +16,8 @@
         <itemPath>modbus-rtu.s</itemPath>
         <itemPath>p16f1947.inc</itemPath>
         <itemPath>MODBUS-RTU.inc</itemPath>
+        <itemPath>MODBUS_COMMAND.s</itemPath>
+        <itemPath>MODBUS_COMMAND.inc</itemPath>
       </logicalFolder>
       <itemPath>MOTOR_16F1947_PA.inc</itemPath>
       <itemPath>MOTOR_1947_V2.00.s</itemPath>
@@ -164,7 +166,7 @@
         <property key="summary-sha256" value="false"/>
         <property key="summary-xml" value="false"/>
         <property key="summary-xmlfull" value="false"/>
-        <appendMe value="-Wa,-a -Wl,-pmain=0h,-ptool=0D00h"/>
+        <appendMe value="-Wa,-a -Wl,-pmain=0h,-ptool=0D00h,-pcmd=0800h"/>
       </pic-as-global>
       <pic-as-linker>
         <property key="linker-callgraph" value="std"/>
