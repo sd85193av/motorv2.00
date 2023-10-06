@@ -6,7 +6,7 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v2.40\pic\dat\20220703182018_en.msgs \
   -cs -h+dist/default/production\MOTOR_PIC1947_V2.00.production.sym \
   --cmf=dist/default/production\MOTOR_PIC1947_V2.00.production.cmf -z \
-  -Q16F1947 -oC:\Users\Peter\AppData\Local\Temp\xcAslp8.4 -pmain=0h \
+  -Q16F1947 -oC:\Users\Peter\AppData\Local\Temp\xcAsk0s.4 -pmain=0h \
   -ptool=0D00h -pcmd=0800h --fixupoverflow=error -ver=XC8 PIC(R) Assembler \
   --fixupoverflow=lstwarn \
   -Mdist/default/production/MOTOR_PIC1947_V2.00.production.map -E1 \
@@ -48,15 +48,15 @@ build/default/production/modbus-rtu.o
                 config                             8007     8007        2        0       4
 build/default/production/MOTOR_1947_V2.00.o
                 config                             8007     8007        2        0       4
-                main                                  0        0      596        0       0
+                main                                  0        0      56B        0       0
 build/default/production/MODBUS_COMMAND.o
-                cmd                                 800      800      184     1000       0
+                cmd                                 800      800      1B5     1000       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 tool                                D00      D00       4B         0
-                main                                  0        0      596         0
-                cmd                                 800      800      184         0
+                main                                  0        0      56B         0
+                cmd                                 800      800      1B5         0
 
         CLASS   STRCODE        
 
@@ -175,8 +175,8 @@ TOTAL           Name                               Link     Load   Length     Sp
 
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
-                main                           000000  000596  000596         0       0  CODE        2
-                cmd                            000800  000184  000984      1000       0  CODE        2
+                main                           000000  00056B  00056B         0       0  CODE        2
+                cmd                            000800  0001B5  0009B5      1000       0  CODE        2
                 tool                           000D00  00004B  000D4B      1A00       0  CODE        2
 
 
@@ -197,16 +197,16 @@ UNUSED ADDRESS RANGES
         BANK8            00420-0046F              50           1
         BANK9            004A0-004EF              50           1
         BIGRAM           02000-023EF             3F0           1
-        CODE             00596-007FF             26A           2
-                         00984-00CFF             37C
+        CODE             0056B-007FF             295           2
+                         009B5-00CFF             34B
                          00D4B-03FFF             800
         COMMON           00070-0007F              10           1
-        CONST            00596-007FF             100           2
-                         00984-00CFF             100
+        CONST            0056B-007FF             100           2
+                         009B5-00CFF             100
                          00D4B-03FFF             100
         EEDATA           0F000-0F0FF             100           2
-        ENTRY            00596-007FF             100           2
-                         00984-00CFF             100
+        ENTRY            0056B-007FF             100           2
+                         009B5-00CFF             100
                          00D4B-03FFF             100
         IDLOC            08000-08003               4           2
         RAM              00020-0006F              50           1
@@ -222,7 +222,8 @@ UNUSED ADDRESS RANGES
                          00520-0056F              50
                          005A0-005EF              50
                          00620-0064F              30
-        SFR22            00B2C-00B6F              44           1
+        SFR21            00AD6-00AEF              1A           1
+        SFR22            00B00-00B6F              70           1
         SFR23            00B80-00BEF              70           1
         SFR24            00C00-00C6F              70           1
         SFR25            00C80-00CEF              70           1
@@ -232,70 +233,72 @@ UNUSED ADDRESS RANGES
         SFR29            00E80-00EEF              70           1
         SFR30            00F00-00F6F              70           1
         SFR31            00F80-00FEF              70           1
-        STRCODE          00596-007FF             26A           2
-                         00984-00CFF             37C
+        STRCODE          0056B-007FF             295           2
+                         009B5-00CFF             34B
                          00D4B-03FFF            32B5
-        STRING           00596-007FF             100           2
-                         00984-00CFF             100
+        STRING           0056B-007FF             100           2
+                         009B5-00CFF             100
                          00D4B-03FFF             100
 
                                   Symbol Table
 
+AAAA_1800              main         004D8
 MODBUS_ADR_FUNCTION    cmd          00800
 MODBUS_INTPUT_FUNCTION tool         00D1F
+MODBUS_RTU_READ_LV2    main         00104
 SET_MODBUS_MODE_ENABLE tool         00D08
-__Hcmd                 cmd          00984
-__Hcode                code         01308
+__Hcmd                 cmd          009B5
+__Hcode                code         0136A
 __Hconfig              config       08009
-__Hdata                data         01308
-__Hedata               edata        01308
-__Hmain                main         00596
-__Hspace_0             (abs)        01308
+__Hdata                data         0136A
+__Hedata               edata        0136A
+__Hmain                main         0056B
+__Hspace_0             (abs)        0136A
 __Hspace_1             (abs)        00000
 __Hspace_3             (abs)        00000
 __Hspace_4             (abs)        10010
 __Htool                tool         00D4B
-__Hudata               udata        01308
-__Hudata_bank0         udata_bank0  01308
-__Hudata_bank1         udata_bank1  01308
-__Hudata_bank10        udata_bank10 01308
-__Hudata_bank11        udata_bank11 01308
-__Hudata_bank12        udata_bank12 01308
-__Hudata_bank2         udata_bank2  01308
-__Hudata_bank3         udata_bank3  01308
-__Hudata_bank4         udata_bank4  01308
-__Hudata_bank5         udata_bank5  01308
-__Hudata_bank6         udata_bank6  01308
-__Hudata_bank7         udata_bank7  01308
-__Hudata_bank8         udata_bank8  01308
-__Hudata_bank9         udata_bank9  01308
-__Hudata_shr           udata_shr    01308
+__Hudata               udata        0136A
+__Hudata_bank0         udata_bank0  0136A
+__Hudata_bank1         udata_bank1  0136A
+__Hudata_bank10        udata_bank10 0136A
+__Hudata_bank11        udata_bank11 0136A
+__Hudata_bank12        udata_bank12 0136A
+__Hudata_bank2         udata_bank2  0136A
+__Hudata_bank3         udata_bank3  0136A
+__Hudata_bank4         udata_bank4  0136A
+__Hudata_bank5         udata_bank5  0136A
+__Hudata_bank6         udata_bank6  0136A
+__Hudata_bank7         udata_bank7  0136A
+__Hudata_bank8         udata_bank8  0136A
+__Hudata_bank9         udata_bank9  0136A
+__Hudata_shr           udata_shr    0136A
 __Lcmd                 cmd          00800
-__Lcode                code         01308
+__Lcode                code         0136A
 __Lconfig              config       00000
-__Ldata                data         01308
-__Ledata               edata        01308
+__Ldata                data         0136A
+__Ledata               edata        0136A
 __Lmain                main         00000
 __Lspace_0             (abs)        00000
 __Lspace_1             (abs)        00000
 __Lspace_3             (abs)        00000
 __Lspace_4             (abs)        00000
 __Ltool                tool         00D00
-__Ludata               udata        01308
-__Ludata_bank0         udata_bank0  01308
-__Ludata_bank1         udata_bank1  01308
-__Ludata_bank10        udata_bank10 01308
-__Ludata_bank11        udata_bank11 01308
-__Ludata_bank12        udata_bank12 01308
-__Ludata_bank2         udata_bank2  01308
-__Ludata_bank3         udata_bank3  01308
-__Ludata_bank4         udata_bank4  01308
-__Ludata_bank5         udata_bank5  01308
-__Ludata_bank6         udata_bank6  01308
-__Ludata_bank7         udata_bank7  01308
-__Ludata_bank8         udata_bank8  01308
-__Ludata_bank9         udata_bank9  01308
-__Ludata_shr           udata_shr    01308
+__Ludata               udata        0136A
+__Ludata_bank0         udata_bank0  0136A
+__Ludata_bank1         udata_bank1  0136A
+__Ludata_bank10        udata_bank10 0136A
+__Ludata_bank11        udata_bank11 0136A
+__Ludata_bank12        udata_bank12 0136A
+__Ludata_bank2         udata_bank2  0136A
+__Ludata_bank3         udata_bank3  0136A
+__Ludata_bank4         udata_bank4  0136A
+__Ludata_bank5         udata_bank5  0136A
+__Ludata_bank6         udata_bank6  0136A
+__Ludata_bank7         udata_bank7  0136A
+__Ludata_bank8         udata_bank8  0136A
+__Ludata_bank9         udata_bank9  0136A
+__Ludata_shr           udata_shr    0136A
 __S0                   (abs)        00000
 __S1                   (abs)        00000
 __S3                   (abs)        00000

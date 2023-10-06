@@ -2168,6 +2168,8 @@ MODBUS_DAT_BUF_ADRL EQU 0XB0
 ;-------------------------------------------------------
 GLOBAL MODBUS_ADR_FUNCTION
 # 16 "./MOTOR_16F1947_PA.inc" 2
+GLOBAL MODBUS_RTU_READ_LV2
+GLOBAL AAAA_1800
 ;========================================================
 ;========================================================
 EEPROM_ADR EQU 0X7E
@@ -2207,18 +2209,16 @@ MODBUS_DAT_REAL_ADRL EQU 0X90
 ;MOTOR1 0X2190-0X21AF
 ;CW:4BYTE
 ;CCW:4BYTE
+;
 ;-----------------------------------------------
 ;MOTOR2 0X21B0-0X21CF
 
 ;MOTOR3 0X21D0-0X21EF
 
 ;MOTOR4 0X21F0-0X220F
-
-
-
-
-
-
+# 72 "./MOTOR_16F1947_PA.inc"
+;--------------------------------------------------------------
+;--------------------------------------------------------------
 ;0X21 0X40-0X21 0X54 MOTOR1
 ;0X21 0X55-0X21 0X69 MOTOR2
 ;0X21 0X6A-0X21 0X7E MOTOR3
@@ -2274,7 +2274,7 @@ M3_ST EQU 0X04
 M3_FR EQU 0X05
 M4_ST EQU 0X06
 M4_FR EQU 0X07
-# 132 "./MOTOR_16F1947_PA.inc"
+# 139 "./MOTOR_16F1947_PA.inc"
 POWER_CHECK_PORT EQU PORTB
 PWR_DECTET EQU 0X05 ;0->表示電源沒有進入 1->表示有電源
 
@@ -2343,7 +2343,7 @@ MOTOR_2_WORK EQU 0X01
 MOTOR_2_CW EQU 0X02
 MOTOR_2_CCW EQU 0X03
 MOTOR_2_RESET EQU 0X04
-MOTOR_2_ING_ZERO EQU 0X05
+MOTOR_2_ING_ZERO EQU 0X05 ;目前馬達正在復位當中
 
 
 MOTOR3_FLAG0 EQU 0X33
@@ -2361,11 +2361,11 @@ MOTOR1_IN_ROAT_FLAG EQU 0X01
 
 MOTOR2_FLAG1 EQU 0X36
 MOTOR2_IN_ZERO_FLAG EQU 0X00
-MOTOR2_IN_ROAT_FLAG EQU 0X01
+MOTOR2_IN_ROAT_FLAG EQU 0X01 ;目前馬達正在一般運作動作當中
 
 MOTOR3_FLAG1 EQU 0X37
 MOTOR4_FLAG1 EQU 0X38
-# 231 "./MOTOR_16F1947_PA.inc"
+# 238 "./MOTOR_16F1947_PA.inc"
 ;--------------------------------------------------------馬達參數設定
 
 FLAG2_BANK0 EQU 0X39 ;在通訊判斷使用哪個馬達的情況下使用
@@ -2388,7 +2388,7 @@ ERROR_03_F EQU 0X02
 ERROR_04_F EQU 0X03
 ERROR_05_F EQU 0X04
 ERROR_06_F EQU 0X05
-# 261 "./MOTOR_16F1947_PA.inc"
+# 268 "./MOTOR_16F1947_PA.inc"
 FLAG5_BANK0 EQU 0X3C
 RESET_IN_NORMAL_FALG EQU 0X00
 MODBUS_IN_03_F EQU 0X01 ;0表示沒有在功能碼03/1表示有在
@@ -2510,11 +2510,6 @@ BANKSEL PORTA
     BTFSC PIR1,TMR2IF
     GOTO TMR2IF_FUNCTION_LOOP ;TIMER2基準為1mS
 ;--------------------------
-
-
-
-
-
     BTFSC INTCON,INTF
     GOTO INT_INTF_FUNCTION ;PWM INT
 ;-----------
@@ -3103,7 +3098,7 @@ BANKSEL PORTA
 ;
 ;
 ;
-# 668 "MOTOR_1947_V2.00.s"
+# 663 "MOTOR_1947_V2.00.s"
 ;******************************************************************************
 ;******************************************************************************
 
@@ -3213,6 +3208,7 @@ TEN_MS_FUNCTION_LOOP:
 ;========================================================
 ;==================中斷IOC FUNCTION====================
 ;========================================================
+;設定上下極限當有觸發到時，會先觸發IOC
 IOC_INT_FUNCTION:
     BCF INTCON,IOCIF
 BANKSEL IOCBF
@@ -3514,12 +3510,13 @@ MOVWF MODULE_ID_DAT
 
 
 GOTO SYSTEM_START
-# 1086 "MOTOR_1947_V2.00.s"
+# 1082 "MOTOR_1947_V2.00.s"
 ;********************************************************************************
 ;********************************************************************************
 ;========================================================
 ;=====================主程序迴圈=========================
 ;========================================================
+;缺少:ADC/馬達復位/馬達CW CCW
 SYSTEM_START:
 BANKSEL PORTA
 ; BTFSC PORTE,0X00
@@ -3528,8 +3525,8 @@ BANKSEL PORTA
 ;BANKSEL PORTA
 SYSTEM_START_LV1:
     BTFSC FLAG1_BANK0,DEAL_WITH_MODBUS_FLAG
-    CALL DEAL_WITH_MODBUS_LOOP
-;------------------------------------------- 傳送ERROR CODE的地方
+    CALL DEAL_WITH_MODBUS_LOOP ;中斷收值okCRCok，要判斷後續動作
+;------------------------------------------- ;傳送ERROR CODE的地方
     BTFSC MODBUS_ERROR_FLAG,ERROR_01_F
     CALL MODBUS_ERROR_CODE_01_LOOP
     BTFSC MODBUS_ERROR_FLAG,ERROR_02_F
@@ -3551,7 +3548,7 @@ SYSTEM_START_LV1:
 
 
 ;========================================================
-;====================處理MODBUS指令=======================
+;====================處理MODBUS指令======================
 ;========================================================
 DEAL_WITH_MODBUS_LOOP:
     BCF FLAG1_BANK0,DEAL_WITH_MODBUS_FLAG
@@ -3777,6 +3774,7 @@ RETURN
 CLRF M1_NOT_COUNTER_TEMP
 CLRF M1_ZERO_COUNTER_LBYTE
 CLRF M1_ZERO_COUNTER_HBYTE
+# 1353 "MOTOR_1947_V2.00.s"
     RETURN
 ;========================================================
 ;=====================轉向馬達復位=======================
@@ -3787,9 +3785,9 @@ RETURN
 BTFSC MOTOR1_FLAG1,MOTOR1_IN_ROAT_FLAG
 RETURN
 BSF MOTOR1_FLAG1,MOTOR1_IN_ZERO_FLAG
-BANKSEL BANK7
-    MOVLW 0X01
-    MOVWF ADR_81_L_DAT
+;BANKSEL BANK7
+; MOVLW 0X01
+; MOVWF ADR_81_L_DAT
 BANKSEL PORTA
     BCF MOTOR1_FLAG0,MOTOR_1_RESET
 ;-----------
@@ -3833,7 +3831,7 @@ CLRF M1_ZERO_COUNTER_HBYTE
 CLRF M1_ZERO_COUNTER_LBYTE
 CLRF M1_NOT_COUNTER_TEMP
     RETURN
-# 1416 "MOTOR_1947_V2.00.s"
+# 1421 "MOTOR_1947_V2.00.s"
 ;========================================================
 ;=====================注射馬達復位進行中=================
 ;========================================================
@@ -3906,10 +3904,11 @@ MODBUS_ERROR_CODE_01_LOOP:
     MOVLW 0X01
     MOVWF INDF1
 ;--------------------
+;--------------------
 MODBUS_ERROR_CODE_END:
     MOVLW 0X03
-    MOVWF RTU_COUNTER_DATA
-    CALL MODBUS_RTU_READ_LV2
+    MOVWF RTU_COUNTER_DATA ;ID 功能碼 DATA 由這三個生成CRC16
+    CALL MODBUS_RTU_READ_LV2 ;CRC16生成副程式
     MOVLW 0X05
     MOVWF TX_DATA_COUNTER
     BSF FLAG1_BANK0,CAN_SEND_TX_FLAG
@@ -4043,10 +4042,7 @@ MOTOR_1_WORKING_LOOP:
 ;RETURN
     BTFSS MOTOR1_FLAG0,MOTOR_1_WORK
     RETURN
-;BSF MOTOR1_FLAG1,MOTOR1_IN_ROAT_FLAG
-BANKSEL BANK7
-    MOVLW 0X01
-    MOVWF ADR_81_L_DAT
+    ;BSF MOTOR1_FLAG1,MOTOR1_IN_ROAT_FLAG
 BANKSEL PORTA
     RETURN
 
@@ -4393,30 +4389,29 @@ CHECKC_IOC_IS_LO:
     BTFSS STATUS,C
     RETURN
     GOTO MOTOR_1_WORK_CCW_LV4
+# 1996 "MOTOR_1947_V2.00.s"
 ;========================================================
 ;================馬達2動作副程式=========================
 ;========================================================
 MOTOR_2_WORKING_LOOP:
-BTFSC MOTOR2_FLAG1,MOTOR2_IN_ZERO_FLAG
-RETURN
-    BTFSS MOTOR2_FLAG0,MOTOR_2_WORK
+    BTFSC MOTOR2_FLAG1,MOTOR2_IN_ZERO_FLAG ;馬達2目前正在復歸程序當中，直接離開
     RETURN
-BANKSEL BANK7
-    MOVLW 0X01
-    MOVWF ADR_81_L_DAT
+    BTFSS MOTOR2_FLAG0,MOTOR_2_WORK ;馬達2的ENABLE被啟動
+    RETURN
 BANKSEL PORTA
-BSF MOTOR2_FLAG1,MOTOR2_IN_ROAT_FLAG
-    BTFSC MOTOR2_FLAG0,MOTOR_2_CW
+    BSF MOTOR2_FLAG1,MOTOR2_IN_ROAT_FLAG ;設定馬達2正在進行一般動作當中
+    BTFSC MOTOR2_FLAG0,MOTOR_2_CW ;判斷馬達是否正在執行CW
     GOTO MOTOR_2_WORK_CW_LV1
-    BTFSC MOTOR2_FLAG0,MOTOR_2_CCW
+    BTFSC MOTOR2_FLAG0,MOTOR_2_CCW ;判斷馬達是否正在執行CCW
     GOTO MOTOR_2_WORK_CCW_LV1
 ;----------------------------------
-    MOVLW MODBUS_DAT_REAL_ADRH
-    MOVWF FSR0H
-    MOVLW MODBUS_DAT_REAL_ADRL
-    MOVWF FSR0L
-    MOVLW 0X15
-    ADDWF FSR0L,F
+;第一次進入不確定是CW還是CCW，由判斷該執行步數決定是要執行CW還是CCW
+MOVLW MODBUS_DAT_REAL_ADRH
+MOVWF FSR0H
+MOVLW MODBUS_DAT_REAL_ADRL
+MOVWF FSR0L
+MOVLW 0X15
+ADDWF FSR0L,F
 ;----------
     MOVF INDF0,W
     BTFSS STATUS,Z
@@ -4437,25 +4432,26 @@ BSF MOTOR2_FLAG1,MOTOR2_IN_ROAT_FLAG
     BTFSS STATUS,Z
     GOTO MOTOR_2_WORK_CCW_LOOP
 ;-------------
-MOTOR_2_IOC_STOP_LOOP:
+MOTOR_2_IOC_STOP_LOOP: ;最後步數如果都為0的話表示動作結束關閉馬達
 BANKSEL PORTA
     BCF MOTOR2_FLAG0,MOTOR_2_WORK
-    MOVLW MODBUS_DAT_REAL_ADRH
-    MOVWF FSR0H
-    MOVLW MODBUS_DAT_REAL_ADRL
-    MOVWF FSR0L
-    MOVLW 0X15
-    ADDWF FSR0L,F
-    MOVLW 0X07
-    ADDWF FSR0L,F
-    MOVLW 0X00
-    MOVWF INDF0
-;----------
-BCF MOTOR2_FLAG1,MOTOR2_IN_ROAT_FLAG
-BANKSEL BANK7
-    MOVLW 0X00
-    MOVWF ADR_81_L_DAT
-BANKSEL PORTA
+    BCF MOTOR2_FLAG1,MOTOR2_IN_ROAT_FLAG
+; MOVLW MODBUS_DAT_REAL_ADRH
+; MOVWF FSR0H
+; MOVLW MODBUS_DAT_REAL_ADRL
+; MOVWF FSR0L
+; MOVLW 0X15
+; ADDWF FSR0L,F
+; MOVLW 0X07
+; ADDWF FSR0L,F
+; MOVLW 0X00
+; MOVWF INDF0
+;;----------
+;
+;BANKSEL BANK7
+; MOVLW 0X00
+; MOVWF ADR_81_L_DAT
+;BANKSEL PORTA
     RETURN
 
 
@@ -4467,21 +4463,21 @@ BANKSEL MOTOR_CONTROL_PORT
     BSF MOTOR_CONTROL_PORT,M2_ST
     BCF MOTOR_CONTROL_PORT,M2_FR
 BANKSEL PORTA
-    MOVLW MODBUS_DAT_REAL_ADRH
-    MOVWF FSR0H
-    MOVLW MODBUS_DAT_REAL_ADRL
-    MOVWF FSR0L
-    MOVLW 0X15
-    ADDWF FSR0L,F
-    MOVLW 0X07
-    ADDWF FSR0L,F
-    MOVLW 0X01 ;MOTOR 2 IS WORKING
-    MOVWF INDF0
+; MOVLW MODBUS_DAT_REAL_ADRH
+; MOVWF FSR0H
+; MOVLW MODBUS_DAT_REAL_ADRL
+; MOVWF FSR0L
+; MOVLW 0X15
+; ADDWF FSR0L,F
+; MOVLW 0X07
+; ADDWF FSR0L,F
+; MOVLW 0X01 ;MOTOR 2 IS WORKING
+; MOVWF INDF0
 ;----------
     CLRF PWM_2_COUNT_DAT
     BSF MOTOR2_FLAG0,MOTOR_2_CW
 MOTOR_2_WORK_CW_LV1:
-
+;執行馬達動作前先確認光耦合的位置，如果已經碰觸到那就不進行馬達動作
     BTFSS PORTE,0X00
     GOTO MOTOR_2_WORK_CW_FINISH
 
@@ -4489,6 +4485,7 @@ MOTOR_2_WORK_CW_LV1:
     MOVF PWM_2_COUNT_DAT,W
     BTFSC STATUS,Z
     RETURN
+
     CLRF PWM_2_COUNT_DAT
     MOVLW MODBUS_DAT_REAL_ADRH
     MOVWF FSR0H
@@ -4558,16 +4555,16 @@ BANKSEL MOTOR_CONTROL_PORT
     BSF MOTOR_CONTROL_PORT,M2_ST
     BSF MOTOR_CONTROL_PORT,M2_FR
 BANKSEL PORTA
-    MOVLW MODBUS_DAT_REAL_ADRH
-    MOVWF FSR0H
-    MOVLW MODBUS_DAT_REAL_ADRL
-    MOVWF FSR0L
-    MOVLW 0X15
-    ADDWF FSR0L,F
-    MOVLW 0X07
-    ADDWF FSR0L,F
-    MOVLW 0X01 ;馬達正在運作中
-    MOVWF INDF0
+; MOVLW MODBUS_DAT_REAL_ADRH
+; MOVWF FSR0H
+; MOVLW MODBUS_DAT_REAL_ADRL
+; MOVWF FSR0L
+; MOVLW 0X15
+; ADDWF FSR0L,F
+; MOVLW 0X07
+; ADDWF FSR0L,F
+; MOVLW 0X01 ;馬達正在運作中
+; MOVWF INDF0
 ;----------
     CLRF PWM_2_COUNT_DAT
     BSF MOTOR2_FLAG0,MOTOR_2_CCW
@@ -4629,6 +4626,7 @@ ADDWF FSR0L,F
     MOVLW 0X00
     ADDWFC INDF0,F
     RETURN
+# 2255 "MOTOR_1947_V2.00.s"
 ;========================================================
 ;====================準備TX資料副程式====================
 ;========================================================

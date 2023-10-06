@@ -13,6 +13,8 @@
 ;INCLUDE  TITLE
 #include    "MODBUS-RTU.inc"
 #include    "MODBUS_COMMAND.inc"
+GLOBAL    MODBUS_RTU_READ_LV2
+GLOBAL    AAAA_1800
 ;======================================================== 
 ;========================================================
 EEPROM_ADR              EQU     0X7E
@@ -52,6 +54,7 @@ MODBUS_DAT_REAL_ADRL    EQU     0X90
 ;MOTOR1 0X2190-0X21AF
 ;CW:4BYTE
 ;CCW:4BYTE
+;
 ;-----------------------------------------------
 ;MOTOR2 0X21B0-0X21CF
 
@@ -64,6 +67,10 @@ MODBUS_DAT_REAL_ADRL    EQU     0X90
 
 
 
+
+
+;--------------------------------------------------------------
+;--------------------------------------------------------------
 ;0X21 0X40-0X21 0X54      MOTOR1
 ;0X21 0X55-0X21 0X69      MOTOR2
 ;0X21 0X6A-0X21 0X7E      MOTOR3
@@ -179,6 +186,7 @@ TX_DATA_ERROR_FLAG      EQU     0X02          ;RX¸ê®Æ¦³¿ù»~
 MANDATORY_WORK_FLAG     EQU     0X03          ;±j¨î©R¥O°õ¦æ«áSET
 INT_TRIG_TIME_FLAG      EQU     0X04          ;ªí¥ÜINT¦a¤@¦¸Ä²µo±Ò°ÊINT_TIMER¥\¯à
 DEAL_WITH_MODBUS_FLAG   EQU     0X05
+DATA_IS_NEGATIVE_FLAG   EQU     0X06          ;³oÃä¥D­n¬O¦bMODBUS¸ê®Æ¦³¾÷·|¦³­t¼Æ¥\¯à
 ;--------------------------------------------------------
 ;°¨¹F1¬°Âà¦V°¨¹F(¥Ø«e¨Ï¥Î¦bª`®g¬¦)
 MOTOR1_FLAG0            EQU     0X31
@@ -197,7 +205,7 @@ MOTOR_2_WORK            EQU     0X01
 MOTOR_2_CW              EQU     0X02
 MOTOR_2_CCW             EQU     0X03
 MOTOR_2_RESET           EQU     0X04
-MOTOR_2_ING_ZERO        EQU     0X05
+MOTOR_2_ING_ZERO        EQU     0X05          ;¥Ø«e°¨¹F¥¿¦b´_¦ì·í¤¤
 
 
 MOTOR3_FLAG0            EQU     0X33
@@ -215,7 +223,7 @@ MOTOR1_IN_ROAT_FLAG     EQU     0X01
 
 MOTOR2_FLAG1            EQU     0X36
 MOTOR2_IN_ZERO_FLAG     EQU     0X00
-MOTOR2_IN_ROAT_FLAG     EQU     0X01
+MOTOR2_IN_ROAT_FLAG     EQU     0X01          ;¥Ø«e°¨¹F¥¿¦b¤@¯ë¹B§@°Ê§@·í¤¤
 
 MOTOR3_FLAG1            EQU     0X37
 MOTOR4_FLAG1            EQU     0X38
@@ -313,10 +321,19 @@ STANDBY_LBYTE_DAT         EQU     0X4D                        ;¥Î¨Ó¼È¦sMODBUS¤¤¹
 
 
 
+
+
+
+
+
 M1_ZERO_COUNTER_HBYTE     EQU     0X50
 M1_ZERO_COUNTER_LBYTE     EQU     0X51
 M1_NOT_COUNTER_TEMP       EQU     0X53
 
+MODBUS_TOP_DAT_H        EQU     0X54
+MODBUS_TOP_DAT_L        EQU     0X55
+MODBUS_BTN_DAT_H        EQU     0X56
+MODBUS_BTN_DAT_L        EQU     0X57
 
 
 

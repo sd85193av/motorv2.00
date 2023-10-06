@@ -2142,6 +2142,8 @@ MODBUS_DAT_BUF_ADRL EQU 0XB0
 ;-------------------------------------------------------
 GLOBAL MODBUS_ADR_FUNCTION
 # 16 "./MOTOR_16F1947_PA.inc" 2
+GLOBAL MODBUS_RTU_READ_LV2
+GLOBAL AAAA_1800
 ;========================================================
 ;========================================================
 EEPROM_ADR EQU 0X7E
@@ -2181,18 +2183,16 @@ MODBUS_DAT_REAL_ADRL EQU 0X90
 ;MOTOR1 0X2190-0X21AF
 ;CW:4BYTE
 ;CCW:4BYTE
+;
 ;-----------------------------------------------
 ;MOTOR2 0X21B0-0X21CF
 
 ;MOTOR3 0X21D0-0X21EF
 
 ;MOTOR4 0X21F0-0X220F
-
-
-
-
-
-
+# 72 "./MOTOR_16F1947_PA.inc"
+;--------------------------------------------------------------
+;--------------------------------------------------------------
 ;0X21 0X40-0X21 0X54 MOTOR1
 ;0X21 0X55-0X21 0X69 MOTOR2
 ;0X21 0X6A-0X21 0X7E MOTOR3
@@ -2248,7 +2248,7 @@ M3_ST EQU 0X04
 M3_FR EQU 0X05
 M4_ST EQU 0X06
 M4_FR EQU 0X07
-# 132 "./MOTOR_16F1947_PA.inc"
+# 139 "./MOTOR_16F1947_PA.inc"
 POWER_CHECK_PORT EQU PORTB
 PWR_DECTET EQU 0X05 ;0->表示電源沒有進入 1->表示有電源
 
@@ -2317,7 +2317,7 @@ MOTOR_2_WORK EQU 0X01
 MOTOR_2_CW EQU 0X02
 MOTOR_2_CCW EQU 0X03
 MOTOR_2_RESET EQU 0X04
-MOTOR_2_ING_ZERO EQU 0X05
+MOTOR_2_ING_ZERO EQU 0X05 ;目前馬達正在復位當中
 
 
 MOTOR3_FLAG0 EQU 0X33
@@ -2335,11 +2335,11 @@ MOTOR1_IN_ROAT_FLAG EQU 0X01
 
 MOTOR2_FLAG1 EQU 0X36
 MOTOR2_IN_ZERO_FLAG EQU 0X00
-MOTOR2_IN_ROAT_FLAG EQU 0X01
+MOTOR2_IN_ROAT_FLAG EQU 0X01 ;目前馬達正在一般運作動作當中
 
 MOTOR3_FLAG1 EQU 0X37
 MOTOR4_FLAG1 EQU 0X38
-# 231 "./MOTOR_16F1947_PA.inc"
+# 238 "./MOTOR_16F1947_PA.inc"
 ;--------------------------------------------------------馬達參數設定
 
 FLAG2_BANK0 EQU 0X39 ;在通訊判斷使用哪個馬達的情況下使用
@@ -2362,7 +2362,7 @@ ERROR_03_F EQU 0X02
 ERROR_04_F EQU 0X03
 ERROR_05_F EQU 0X04
 ERROR_06_F EQU 0X05
-# 261 "./MOTOR_16F1947_PA.inc"
+# 268 "./MOTOR_16F1947_PA.inc"
 FLAG5_BANK0 EQU 0X3C
 RESET_IN_NORMAL_FALG EQU 0X00
 MODBUS_IN_03_F EQU 0X01 ;0表示沒有在功能碼03/1表示有在
@@ -2971,10 +2971,13 @@ BANKSEL PORTA
     BTFSC STATUS,Z
     GOTO MODBUS_BUS_03_ERROR_0800 ;資料都是0X00表示異常
     GOTO MODBUS_ADR_A4_LV1
-# 538 "MODBUS_COMMAND.s"
+;-----------------------------------------------------------------------------
+;-----------------------------------------------------------------------------
+;-----------------------------------------------------------------------------
 ;========================================================
 ;==================MODBUS 閥換向=========================
 ;========================================================
+;DATA只會有0X0000和0X0001如果出現其他的數值表示異常發生
 MODBUS_ADR_B0_FUNCTION:
     BTFSC FLAG5_BANK0,MODBUS_IN_03_F
     GOTO MODBUS_ADR_B0_03_LOOP ;ADR 為閥換向，使用READ 1 BYTE 功能碼
@@ -2986,7 +2989,6 @@ MODBUS_ADR_B0_FUNCTION:
     GOTO MODBUS_ADR_B0_10_LOOP ;寫MORE BYTE
 ;--------------------------------
     GOTO MODBUS_BUS_01_ERROR_0800 ;表示功能碼都不是
-MODBUS_ADR_B0_10_LOOP:
 ;-----------------------------------------------------------
 ;--------------------MODBUS B0 寫1BYTE----------------------
 ;-----------------------------------------------------------
@@ -2998,10 +3000,10 @@ BANKSEL PORTA
     MOVLW MODBUS_DAT_WORK_ADRL ;E0
     MOVWF FSR1L
     MOVLW 0X04
-    ADDWF FSR1L,F
+    ADDWF FSR1L,F ;將位置指向DATA_HBYTE
     MOVF INDF1,W
     BTFSS STATUS,Z
-    GOTO MODBUS_BUS_03_ERROR_0800 ;DATA的HBYTE必須為0X00
+    GOTO MODBUS_BUS_03_ERROR_0800 ;DATA的HBYTE必須為0X00，其他數值表示異常
 ;-----------------------
     INCF FSR1L,F
     MOVLW 0XFE
@@ -3014,32 +3016,114 @@ BANKSEL PORTA
     MOVWF FSR0H
     MOVLW MODBUS_DAT_REAL_ADRL
     MOVWF FSR0L
-    MOVLW 0X04
-    ADDWF FSR0L,F
+    MOVLW 0X03
+    ADDWF FSR0L,F ;這邊資料要確認INC那邊的馬達參數
     MOVF INDF1,W
     MOVWF INDF0
 ;------------------------
     BSF FLAG1_BANK0,CAN_SEND_TX_FLAG
     MOVLW 0X08
     MOVWF TX_DATA_COUNTER
-    RETFIE
+    RETURN
 ;-----------------------------------------------------------
 ;--------------------MODBUS B0 讀1BYTE----------------------
 ;-----------------------------------------------------------
+;先將WORD數*2當作BYTE數並放在+2[FSR]
+;重新計算CRC並且把資料重新整理送出TX
 MODBUS_ADR_B0_03_LOOP:
 ;設定好要讀取的位置之後用485功能碼0X03就可以了
+    CALL MODBUS_FUNC_03_BEFORE_LOOP
+;---------------------------------
+    MOVLW MODBUS_DAT_REAL_ADRH
+    MOVWF FSR0H
+    MOVLW MODBUS_DAT_REAL_ADRL
+    MOVWF FSR0L
+;--------------------------------- ;03差異點在於說要讀取哪個位置的資料
+    GOTO MODBUS_FUNC_03_AFTER_LOOP
+;-----------------------------------------------------------
+;--------------------MODBUS B0 寫MORE BYTE------------------
+;-----------------------------------------------------------
+MODBUS_ADR_B0_10_LOOP:
+    RETURN
 
 
 
 
-    RETFIE
-# 618 "MODBUS_COMMAND.s"
+;*****************************************************************************
+;*****************************************************************************
+;========================================================
+;=========MODBUS 功能碼0X03後面準備的資料================
+;========================================================
+;將03前面要讀取的資料數先確認出來
+MODBUS_FUNC_03_AFTER_LOOP:
+    MOVF INDF0,W
+    MOVWF INDF1
+    INCF FSR0L,F
+    INCF FSR1L,F
+    DECFSZ CAL_TEMP_LBYTE,F
+    GOTO MODBUS_FUNC_03_AFTER_LOOP
+;----------
+    MOVF RTU_COUNTER_DATA,W
+    MOVWF CAL_TEMP_LBYTE
+    MOVLW 0X03
+    ADDWF RTU_COUNTER_DATA,F
+PAGESEL 0X0000
+    CALL MODBUS_RTU_READ_LV2
+PAGESEL 0X0800
+    MOVF CAL_TEMP_LBYTE,W
+    MOVWF TX_DATA_COUNTER
+    MOVLW 0X05
+    ADDWF TX_DATA_COUNTER,F
+    BSF FLAG1_BANK0,CAN_SEND_TX_FLAG
+    RETURN
+
+;========================================================
+;=========MODBUS 功能碼0X03前面準備的資料================
+;========================================================
+MODBUS_FUNC_03_BEFORE_LOOP:
+    MOVLW MODBUS_DAT_WORK_ADRH ;21
+    MOVWF FSR1H
+    MOVLW MODBUS_DAT_WORK_ADRL ;E0
+    MOVWF FSR1L
+    MOVLW 0X05
+    ADDWF FSR1L,F
+    MOVF INDF1,W
+    MOVWF CAL_TEMP_LBYTE ;紀錄要讀取的WORD數量
+;---------------------------------
+    BCF STATUS,C
+    RLF CAL_TEMP_LBYTE,F
+    MOVF CAL_TEMP_LBYTE,W
+    MOVWF RTU_COUNTER_DATA
+;---------------------------------
+    MOVLW MODBUS_DAT_EXTRA_ADRH
+    MOVWF FSR1H
+    MOVLW MODBUS_DAT_EXTRA_ADRL
+    MOVWF FSR1L
+    MOVLW 0X0A
+    ADDWF FSR1L,F
+    MOVLW 0X02
+    ADDWF FSR1L,F
+    MOVF RTU_COUNTER_DATA,W
+    MOVWF INDF1
+    INCF FSR1L,F
+    RETURN
+;*****************************************************************************
+;*****************************************************************************
+
+
+
+
+
+
+
 ;========================================================
 ;==================MODBUS 活塞移動-絕對位置==============
 ;========================================================
 ;這邊的資料主要是4個BYTE，所以要執行動作的話，需要等到ADR_B2被寫入才會動作
 MODBUS_ADR_B1_FUNCTION:
+# 673 "MODBUS_COMMAND.s"
 MODBUS_ADR_B2_FUNCTION:
+# 698 "MODBUS_COMMAND.s"
 ;========================================================
 ;==================MODBUS 活塞移動-相對位置==============
 ;========================================================

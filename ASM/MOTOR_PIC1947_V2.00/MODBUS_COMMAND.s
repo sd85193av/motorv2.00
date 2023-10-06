@@ -21,6 +21,7 @@ PSECT cmd, class=CODE, delta=2
 ;========================================================
 MODBUS_ADR_FUNCTION:
 BANKSEL     PORTA
+    CLRF    MODBUS_ERROR_FLAG
     MOVLW   0X08
     MOVWF   PCLATH
     MOVF    MODBUS_TABLE_ADR_TEMP,W
@@ -512,32 +513,13 @@ BANKSEL     PORTA
     BTFSC   STATUS,Z
     GOTO    MODBUS_BUS_03_ERROR_0800                    ;資料都是0X00表示異常
     GOTO    MODBUS_ADR_A4_LV1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+;-----------------------------------------------------------------------------
+;-----------------------------------------------------------------------------
+;-----------------------------------------------------------------------------
 ;========================================================
 ;==================MODBUS 閥換向=========================
 ;========================================================
+;DATA只會有0X0000和0X0001如果出現其他的數值表示異常發生
 MODBUS_ADR_B0_FUNCTION:
     BTFSC   FLAG5_BANK0,MODBUS_IN_03_F
     GOTO    MODBUS_ADR_B0_03_LOOP                           ;ADR 為閥換向，使用READ 1 BYTE 功能碼
@@ -549,7 +531,6 @@ MODBUS_ADR_B0_FUNCTION:
     GOTO    MODBUS_ADR_B0_10_LOOP                           ;寫MORE BYTE
 ;--------------------------------
     GOTO    MODBUS_BUS_01_ERROR_0800                        ;表示功能碼都不是
-MODBUS_ADR_B0_10_LOOP:
 ;-----------------------------------------------------------
 ;--------------------MODBUS B0 寫1BYTE----------------------
 ;-----------------------------------------------------------
@@ -561,10 +542,10 @@ BANKSEL     PORTA
     MOVLW   MODBUS_DAT_WORK_ADRL                        ;E0
     MOVWF   FSR1L
     MOVLW   0X04
-    ADDWF   FSR1L,F
+    ADDWF   FSR1L,F                                     ;將位置指向DATA_HBYTE
     MOVF    INDF1,W
     BTFSS   STATUS,Z
-    GOTO    MODBUS_BUS_03_ERROR_0800                   ;DATA的HBYTE必須為0X00
+    GOTO    MODBUS_BUS_03_ERROR_0800                    ;DATA的HBYTE必須為0X00，其他數值表示異常
 ;-----------------------
     INCF    FSR1L,F
     MOVLW   0XFE
@@ -577,25 +558,115 @@ BANKSEL     PORTA
     MOVWF   FSR0H
     MOVLW   MODBUS_DAT_REAL_ADRL
     MOVWF   FSR0L
-    MOVLW   0X04
-    ADDWF   FSR0L,F 
+    MOVLW   0X03
+    ADDWF   FSR0L,F                                     ;這邊資料要確認INC那邊的馬達參數
     MOVF    INDF1,W
     MOVWF   INDF0
 ;------------------------
     BSF     FLAG1_BANK0,CAN_SEND_TX_FLAG
     MOVLW   0X08
     MOVWF   TX_DATA_COUNTER
-    RETFIE
+    RETURN
 ;-----------------------------------------------------------
 ;--------------------MODBUS B0 讀1BYTE----------------------
 ;-----------------------------------------------------------
+;先將WORD數*2當作BYTE數並放在+2[FSR]
+;重新計算CRC並且把資料重新整理送出TX
 MODBUS_ADR_B0_03_LOOP:
 ;設定好要讀取的位置之後用485功能碼0X03就可以了
+    CALL    MODBUS_FUNC_03_BEFORE_LOOP
+;---------------------------------
+    MOVLW   MODBUS_DAT_REAL_ADRH
+    MOVWF   FSR0H
+    MOVLW   MODBUS_DAT_REAL_ADRL
+    MOVWF   FSR0L
+;---------------------------------                        ;03差異點在於說要讀取哪個位置的資料
+    GOTO    MODBUS_FUNC_03_AFTER_LOOP
+;-----------------------------------------------------------
+;--------------------MODBUS B0 寫MORE BYTE------------------
+;-----------------------------------------------------------
+MODBUS_ADR_B0_10_LOOP:
+    CALL    MODBUS_FUNC_10_CHECK_WORD_BYTE_LOOP            ;先判斷WORD是否和BYTE相同
+    MOVF    MODBUS_ERROR_FLAG,W
+    BTFSC   STATUS,Z
+    RETURN
+;----------------------------------------                  ;表示MODBUS有錯誤碼發生
+    MOVLW   0X02
+    MOVWF   MODBUS_TOP_DAT_L                               ;先將該資料數量可以允許的設定出來
+    CALL    MODBUS_FUNC_10_BYTE_NUMBER_LOP
+    MOVF    MODBUS_ERROR_FLAG,W
+    BTFSC   STATUS,Z
+    RETURN
+;----------------------------------------                  ;表示MODBUS有錯誤碼發生
+    CLRF    MODBUS_TOP_DAT_H
+    MOVLW   0X01
+    MOVWF   MODBUS_TOP_DAT_L
+    CLRF    MODBUS_BTN_DAT_H
+    CLRF    MODBUS_BTN_DAT_L                                ;設定上下限數值
+    BCF     FLAG1_BANK0,DATA_IS_NEGATIVE_FLAG               ;0表示下限數值為0X00/1:表示下限數值是負數
+    CALL    MODBUS_FUNC_10_DATA_CHECK_LOOP
+    MOVF    MODBUS_ERROR_FLAG,W
+    BTFSC   STATUS,Z
+    RETURN
+
+
+
+    RETURN
 
 
 
 
-    RETFIE
+;*****************************************************************************
+;*****************************************************************************
+;========================================================
+;=====MODBUS 功能碼0X10先檢查數量WORD和BYTE是否正確======
+;========================================================
+MODBUS_FUNC_10_CHECK_WORD_BYTE_LOOP:
+BANKSEL     PORTA
+    MOVLW   MODBUS_DAT_WORK_ADRH                        ;21
+    MOVWF   FSR1H
+    MOVLW   MODBUS_DAT_WORK_ADRL                        ;E0
+    MOVWF   FSR1L
+    MOVLW   0X05
+    ADDWF   FSR1L,F 
+    MOVWF   CAL_TEMP_LBYTE
+    INCF    FSR1L,F
+    BCF     STATUS,C
+    RLF     CAL_TEMP_LBYTE,F
+    MOVF    CAL_TEMP_LBYTE,W
+    XORWF   INDF1,W
+    BTFSS   STATUS,Z
+    BSF     MODBUS_ERROR_FLAG,ERROR_02_F
+    RETURN
+;========================================================
+;=====MODBUS 功能碼0X10先檢查數量是否正確================
+;========================================================
+;MODBUS_TOP_DAT_L       根據每個不同的ADR決定不同NUMBER數的
+
+MODBUS_FUNC_10_BYTE_NUMBER_LOP:
+    MOVLW   MODBUS_DAT_WORK_ADRH                        ;21
+    MOVWF   FSR1H
+    MOVLW   MODBUS_DAT_WORK_ADRL                        ;E0
+    MOVWF   FSR1L
+    MOVLW   0X06
+    ADDWF   FSR1L,F
+    MOVF    MODBUS_TOP_DAT_L,W
+    BTFSS   STATUS,Z
+    BSF     MODBUS_ERROR_FLAG,ERROR_02_F
+    RETURN
+;========================================================
+;=====MODBUS 功能碼0X10先檢查資料範圍是否正確============
+;========================================================
+;MODBUS_TOP_DAT_H        上限HBYTE
+;MODBUS_TOP_DAT_L        上限LBYTE
+;MODBUS_BTN_DAT_H        下限HBYTE
+;MODBUS_BTN_DAT_L        下限LBYTE
+MODBUS_FUNC_10_DATA_CHECK_LOOP:
+
+
+
+
+    RETURN
 
 
 
@@ -608,6 +679,70 @@ MODBUS_ADR_B0_03_LOOP:
 
 
 
+
+
+
+
+
+
+;========================================================
+;=========MODBUS 功能碼0X03後面準備的資料================
+;========================================================
+;將03前面要讀取的資料數先確認出來
+MODBUS_FUNC_03_AFTER_LOOP:
+    MOVF    INDF0,W
+    MOVWF   INDF1
+    INCF    FSR0L,F
+    INCF    FSR1L,F
+    DECFSZ  CAL_TEMP_LBYTE,F
+    GOTO    MODBUS_FUNC_03_AFTER_LOOP                         
+;----------
+    MOVF    RTU_COUNTER_DATA,W
+    MOVWF   CAL_TEMP_LBYTE
+    MOVLW   0X03
+    ADDWF   RTU_COUNTER_DATA,F
+PAGESEL     0X0000
+    CALL    MODBUS_RTU_READ_LV2
+PAGESEL     0X0800
+    MOVF    CAL_TEMP_LBYTE,W
+    MOVWF   TX_DATA_COUNTER
+    MOVLW   0X05
+    ADDWF   TX_DATA_COUNTER,F
+    BSF     FLAG1_BANK0,CAN_SEND_TX_FLAG
+    RETURN
+
+;========================================================
+;=========MODBUS 功能碼0X03前面準備的資料================
+;========================================================
+MODBUS_FUNC_03_BEFORE_LOOP:
+    MOVLW   MODBUS_DAT_WORK_ADRH                        ;21
+    MOVWF   FSR1H
+    MOVLW   MODBUS_DAT_WORK_ADRL                        ;E0
+    MOVWF   FSR1L
+    MOVLW   0X05
+    ADDWF   FSR1L,F  
+    MOVF    INDF1,W
+    MOVWF   CAL_TEMP_LBYTE                              ;紀錄要讀取的WORD數量
+;---------------------------------
+    BCF     STATUS,C
+    RLF     CAL_TEMP_LBYTE,F
+    MOVF    CAL_TEMP_LBYTE,W
+    MOVWF   RTU_COUNTER_DATA
+;---------------------------------
+    MOVLW   MODBUS_DAT_EXTRA_ADRH
+    MOVWF   FSR1H
+    MOVLW   MODBUS_DAT_EXTRA_ADRL
+    MOVWF   FSR1L
+    MOVLW   0X0A
+    ADDWF   FSR1L,F
+    MOVLW   0X02
+    ADDWF   FSR1L,F
+    MOVF    RTU_COUNTER_DATA,W
+    MOVWF   INDF1
+    INCF    FSR1L,F
+    RETURN
+;*****************************************************************************
+;*****************************************************************************
 
 
 
@@ -620,7 +755,39 @@ MODBUS_ADR_B0_03_LOOP:
 ;========================================================
 ;這邊的資料主要是4個BYTE，所以要執行動作的話，需要等到ADR_B2被寫入才會動作
 MODBUS_ADR_B1_FUNCTION:
+
+
+
+
+
+
+
+
 MODBUS_ADR_B2_FUNCTION:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ;========================================================
 ;==================MODBUS 活塞移動-相對位置==============
 ;========================================================
